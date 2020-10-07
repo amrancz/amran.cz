@@ -1,6 +1,6 @@
 // custom typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
+import 'typeface-rubik'
+import 'typeface-work-sans'
 
 import { wrapRootElement as wrap } from './wrap-root-element'
 

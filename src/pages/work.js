@@ -6,17 +6,16 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm } from '../utils/typography'
 
-class BlogIndex extends React.Component {
+class WorkIndex extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="Work"
+          keywords={[`product design`, `case studies`, `ux design`,]}
         />
         <Bio />
         {posts.map(({ node }) => {
@@ -42,7 +41,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default WorkIndex
 
 export const pageQuery = graphql`
   query {
@@ -51,7 +50,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(filter: {frontmatter: {type: {eq: "blog-post"}}}, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(filter: {frontmatter: {type: {eq: "case-study"}}}, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
@@ -61,6 +60,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            type
           }
         }
       }
