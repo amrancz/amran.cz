@@ -86,8 +86,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allBlogPosts } }) => {
-              return allBlogPosts.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   data: edge.node.frontmatter.date,
@@ -100,7 +100,7 @@ module.exports = {
 
             query: `
             {
-              allBlogPosts(
+              allMdx(
                 limit: 1000,
                 sort: { order: DESC, fields: [frontmatter___date] },
                 filter: { frontmatter: { published: { ne: false } } }
@@ -123,8 +123,8 @@ module.exports = {
             title: 'Gatsby RSS feed',
           },
           {
-            serialize: ({ query: { site, allCaseStudies } }) => {
-              return allCaseStudies.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   data: edge.node.frontmatter.date,
@@ -137,7 +137,7 @@ module.exports = {
 
             query: `
             {
-              allCaseStudies(
+              allMdx(
                 limit: 1000,
                 sort: { order: DESC, fields: [frontmatter___date] },
                 filter: { frontmatter: { published: { ne: false } } }
