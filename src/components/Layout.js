@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
+import './layout.css'
 import Header from './Header'
+import Footer from './Footer'
 
 class Layout extends React.Component {
   render() {
@@ -60,14 +62,10 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <Header></Header>
+        <Footer></Footer>
         {header}
         {children}
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Header></Header>
       </div>
     )
   }
