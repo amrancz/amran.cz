@@ -8,6 +8,9 @@ module.exports = {
       twitter: `amrancz`,
     },
   },
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -64,12 +67,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
+    `gatsby-plugin-postcss`,
+   /* {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
-    },
+    }, */
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -176,11 +180,5 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
   ],
 }

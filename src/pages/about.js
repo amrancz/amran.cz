@@ -2,8 +2,6 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
-
 class About extends React.Component {
   render() {
     const { data } = this.props

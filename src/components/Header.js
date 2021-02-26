@@ -1,15 +1,28 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import { rhythm } from '../utils/typography'
-
 function Header() {
   return (
-          <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+          <div
+            className={'bg-white dark:bg-black'}
+          >
+              <div>
+                <Link to={`/`} >
+                    Adam Amran
+                </Link>
+              </div>
+              <div>
+                <Link to={`/work`}>
+                    Work
+                </Link>
+                <Link to={`/writing`}>
+                    Writing
+                </Link>
+                <Link to={`/about`}>
+                    About
+                </Link>
+              </div>
+          </div>
         )
 }
 

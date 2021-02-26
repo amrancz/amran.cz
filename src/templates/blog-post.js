@@ -5,8 +5,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm, scale } from '../utils/typography'
-
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
@@ -18,33 +16,14 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
+        <p>
           {post.frontmatter.date}
         </p>
         <MDXRenderer>{post.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr/>
         <Bio />
 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <ul>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">

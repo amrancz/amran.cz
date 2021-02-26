@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Bio from '../components/Bio'
+import Button from '../components/Button'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
 
 class Index extends React.Component {
   render() {
@@ -18,24 +17,31 @@ class Index extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
-        })}
+        <p>
+              Product designer and maker.
+              Currently designing at <a href={'https://www.productboard.com'}>Productboard</a>
+        </p>
+        <div>
+          <Button primary={true} link={'/about'} text={'More about me'}></Button>
+          <Button primary={false} link={'/about'} text={'Follow me on Twitter'}></Button>
+        </div>
+        <div className={'relative py-10 sm:mx-auto'}>
+          <h2>Latest posts</h2>
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <div key={node.fields.slug}>
+                <h3>
+                  <Link to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <small>{node.frontmatter.date}</small>
+                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              </div>
+            )
+          })}
+        </div>
       </Layout>
     )
   }
@@ -50,7 +56,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(filter: {frontmatter: {type: {eq: "blog-post"}}}, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt

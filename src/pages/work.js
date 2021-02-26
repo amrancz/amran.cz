@@ -4,8 +4,6 @@ import { Link, graphql } from 'gatsby'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
-
 class WorkIndex extends React.Component {
   render() {
     const { data } = this.props
@@ -22,12 +20,8 @@ class WorkIndex extends React.Component {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+              <h3>
+                <Link to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>

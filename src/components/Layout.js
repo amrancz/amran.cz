@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 
-import { rhythm, scale } from '../utils/typography'
-import './layout.css'
 import Header from './Header'
 import Footer from './Footer'
+import Image from 'gatsby-image'
 
 class Layout extends React.Component {
   render() {
@@ -14,61 +13,55 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
+        <StaticQuery
+      query={imgQuery}
+      render={data => {
+        return (
+          <div>
+          <Image
+              fixed={data.file.childImageSharp.fixed}
+              alt={'A profile picture of me'}
+              className={'rounded-10xl w-8 h-8'}
+            />
+          <h1>
             {title}
-          </Link>
-        </h1>
+          </h1>
+        </div>
+        )
+      }}
+    />
       )
     } else {
       header = (
-        <h2
-          style={{
-            fontFamily: `Rubik, sans-serif`,
-
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
+        <h2>
             {title}
-          </Link>
         </h2>
       )
     }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <Footer></Footer>
+      <div className={'bg-grey-900'}>
+        <Header></Header>
+        <div className={'relative py-10 px-10 sm:max-w-4xl sm:mx-auto'}>
         {header}
         {children}
-        <Header></Header>
+        </div>
+        <Footer></Footer>
       </div>
     )
   }
 }
 
+const imgQuery = graphql`
+  query ImgQuery {
+    file: file(relativePath: { eg: "adam.png" })  {
+      childImageSharp {
+        fixed(width: 48, height: 48) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
+
 export default Layout
+
