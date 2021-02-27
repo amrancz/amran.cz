@@ -12,7 +12,7 @@ class Index extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} title={'Hey! I am Adam'}>
+      <Layout location={this.props.location} title={`Hey! I'm Adam`}>
         <SEO
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
