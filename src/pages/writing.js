@@ -11,10 +11,10 @@ class WritingIndex extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} title={"Blog"}>
+      <Layout location={this.props.location} title={"Writing"}>
         <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="Writing"
+          keywords={[`blog`, `design`, `product design`]}
         />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug

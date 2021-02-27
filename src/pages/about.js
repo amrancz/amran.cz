@@ -10,10 +10,9 @@ class About extends React.Component {
     return (
       <Layout location={this.props.location} title={"About"}>
         <SEO
-          title="Work"
-          keywords={[`product design`, `case studies`, `ux design`,]}
+          title="About"
+          keywords={[`product designer`,]}
         />
-        {/* Case studies go below */}
         <p>This is a page about me!</p>
       </Layout>
     )

@@ -14,22 +14,22 @@ class Layout extends React.Component {
     if (location.pathname === rootPath) {
       header = (
         <StaticQuery
-      query={imgQuery}
-      render={data => {
-        return (
-          <div>
-          <Image
-              fixed={data.file.childImageSharp.fixed}
-              alt={'A profile picture of me'}
-              className={'rounded-10xl w-8 h-8'}
-            />
-          <h1>
-            {title}
-          </h1>
-        </div>
-        )
-      }}
-    />
+          query={imgQuery}
+          render={data => {
+            return (
+              <div>
+              <Image
+                  fixed={data.file.childImageSharp.fixed}
+                  alt={'A profile picture of me'}
+                  className={'rounded-10xl w-8 h-8'}
+                />
+              <h1>
+                {title}
+              </h1>
+            </div>
+            )
+          }}
+        />
       )
     } else {
       header = (
@@ -53,9 +53,9 @@ class Layout extends React.Component {
 
 const imgQuery = graphql`
   query ImgQuery {
-    file: file(relativePath: { eg: "adam.png" })  {
+    file: file(relativePath: { eq: "adam.png" })  {
       childImageSharp {
-        fixed(width: 48, height: 48) {
+        fixed(width: 80, height: 80) {
           ...GatsbyImageSharpFixed
         }
       }
