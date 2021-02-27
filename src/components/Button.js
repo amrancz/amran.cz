@@ -5,7 +5,7 @@ function Button({ primary, link, target, text }) {
   if (primary=true){
     return (
       <a href={link} target={target} className={'bg-blue-600 rounded-xl px-5 py-4 hover:bg-blue-500 text-white font-bold'}>
-        {text} Primary
+        {text}
       </a>
     )
   } else {

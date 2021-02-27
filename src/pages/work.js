@@ -15,7 +15,13 @@ class WorkIndex extends React.Component {
           title="Work"
           keywords={[`product design`, `case studies`, `ux design`,]}
         />
-        {/* Case studies go below */}
+        <h2>Side projects</h2>
+        <div>
+          <div>Untools <span>2020</span></div>
+          <h3>Tools for better thinking</h3>
+          <a href={'https://untools.co'} target={'blank'}>Visit untools.co</a>
+        </div>
+        <h2>Case studies</h2>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (

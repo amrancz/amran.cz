@@ -21,11 +21,10 @@ class Index extends React.Component {
               Product designer and maker.
               Currently designing at <a href={'https://www.productboard.com'}>Productboard</a>
         </p>
-        <div>
+        <div className={'py-8'}>
           <Button primary={true} link={'/about'} text={'More about me'}></Button>
-          <Button primary={false} link={'/about'} text={'Follow me on Twitter'}></Button>
         </div>
-        <div className={'relative py-10 sm:mx-auto'}>
+        <div className={'relative py-10 sm:mx-auto space-y-8'}>
           <h2>Latest posts</h2>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug

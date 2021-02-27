@@ -1,39 +1,25 @@
 import React from 'react'
-import { StaticQuery, Link } from 'gatsby'
-import Image from './Image'
+import { Link } from 'gatsby'
 
 function Header() {
   return (<div
-    className={'bg-white dark:bg-black'}
+    className={'bg-gray-900 flex flex-row flex-grow justify-between py-5 px-8'}
   >
       <div>
-        <Link to={`/`} >
+        <Link to={`/`}>
             Adam Amran
         </Link>
       </div>
-      <div>
-        <Link to={`/work`}>
+      <div className={'float-right'}>
+        <Link to={`/work`} className={'mr-8'}>
             Work
         </Link>
-        <Link to={`/writing`}>
+        <Link to={`/writing`} className={'mr-8'}>
             Writing
         </Link>
         <Link to={`/about`}>
             About
         </Link>
-      </div>
-      <div>
-        <div></div>
-        <Image
-          src={"moon.svg"}
-          className={"mx-auto shadow-xl w-8 h-8"}
-          alt={"moon"}
-        />
-        <Image
-          src={"sun.svg"}
-          className={"mx-auto shadow-xl w-8 h-8"}
-          alt={"sun"}
-        />
       </div>
   </div>
 )

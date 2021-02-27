@@ -4,12 +4,15 @@
 
 @layer base {
   body {
-    @apply text-xl leading-relaxed;
+    @apply text-xl leading-relaxed bg-gray-800 text-white;
   }
   h1 {
     @apply text-4xl font-bold;
   }
   h2 {
     @apply text-2xl font-bold;
+  }
+  a {
+    @apply text-white;
   }
 }

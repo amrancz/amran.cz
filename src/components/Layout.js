@@ -3,7 +3,7 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 
 import Header from './Header'
 import Footer from './Footer'
-import Image from 'gatsby-image'
+import Image from './Image'
 
 class Layout extends React.Component {
   render() {
@@ -13,23 +13,16 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <StaticQuery
-          query={imgQuery}
-          render={data => {
-            return (
-              <div>
-              <Image
-                  fixed={data.file.childImageSharp.fixed}
-                  alt={'A profile picture of me'}
+          <div>
+            <Image
+                  src={"adam.png"}
                   className={'rounded-10xl w-8 h-8'}
+                  alt={"moon"}
                 />
-              <h1>
-                {title}
-              </h1>
-            </div>
-            )
-          }}
-        />
+          <h1>
+            {title}
+          </h1>
+        </div>
       )
     } else {
       header = (
@@ -50,7 +43,7 @@ class Layout extends React.Component {
     )
   }
 }
-
+/*
 const imgQuery = graphql`
   query ImgQuery {
     file: file(relativePath: { eq: "adam.png" })  {
@@ -62,6 +55,6 @@ const imgQuery = graphql`
     }
   }
 `
-
+*/
 export default Layout
 

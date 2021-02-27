@@ -1,49 +1,42 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import PropTypes from 'prop-types';
 
-const Image = ({ src, alt }) => {
-  const data = StaticQuery(graphql`
-    query {
-      images: allFile(
-        filter: { internal: { mediaType: { regex: "/image/" } } }
-      ) {
-        edges {
-          node {
-            relativePath
-            extension
-            publicURL
-            childImageSharp {
-              fluid(maxWidth: 600) {
-                ...GatsbyImageSharpFluid
+const Image = (props) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        images: allFile {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                sizes(maxWidth: 600) {
+                  ...GatsbyImageSharpSizes
+                }
               }
             }
           }
         }
       }
-    }
-  `);
+    `}
 
-  const match = useMemo(
-    () => data.images.edges.find(({ node }) => src === node.relativePath),
-    [data, src]
-  );
+    render={(data) => {
+      const image = data.images.edges.find(n => {
+        return n.node.relativePath.includes(props.filename);
+      });
+      if (!image) { return null; }
+      
+      const imageSizes = image.node.childImageSharp.sizes;
+      return (
+        <Img
+          alt={props.alt}
+          sizes={imageSizes}
+        />
+      );
+    }}
+  />
+)
 
-  if (!match) return null;
-
-  const { node: { childImageSharp, publicURL, extension } = {} } = match;
-
-  if (extension === 'svg' || !childImageSharp) {
-    return <img src={publicURL} {...rest} />;
-  }
-
-  return <Img fluid={childImageSharp.fluid} {...rest} />;
-};
-
-Image.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string,
-};
-
-export default Image;
+export default Image
