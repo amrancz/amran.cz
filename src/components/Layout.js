@@ -17,7 +17,7 @@ class Layout extends React.Component {
             <Image
                   src={"adam.png"}
                   className={'rounded-10xl w-8 h-8'}
-                  alt={"moon"}
+                  alt={"profile picture of Adam"}
                 />
           <h1>
             {title}
@@ -26,9 +26,9 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h2>
+        <h1>
             {title}
-        </h2>
+        </h1>
       )
     }
     return (
