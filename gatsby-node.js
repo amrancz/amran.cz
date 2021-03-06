@@ -5,6 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const caseStudy = path.resolve(`./src/templates/case-study.js`)
   return graphql(
     `
       {
@@ -20,6 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                type
               }
               body
             }
@@ -39,15 +41,27 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
 
-      createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
+      if (post.node.frontmatter.type === 'case-study'){
+        createPage({
+          path: post.node.fields.slug,
+          component: caseStudy,
+          context: {
+            slug: post.node.fields.slug,
+            previous,
+            next,
+          },
+        })
+      } else {
+        createPage({
+          path: post.node.fields.slug,
+          component: blogPost,
+          context: {
+            slug: post.node.fields.slug,
+            previous,
+            next,
+          },
+        })
+      }
     })
   })
 }

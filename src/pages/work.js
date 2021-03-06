@@ -17,7 +17,7 @@ class WorkIndex extends React.Component {
         />
         <h2 className={'my-10'}>Side projects</h2>
         <a href={'https://untools.co'} className={'hover:bg-opacity-20'} target={'blank'}>
-          <div className={'bg-pink-700 bg-opacity-10 hover:bg-opacity-20 rounded-xl p-16 w-10xl space-y-4'}>
+          <div className={'bg-pink-700 bg-opacity-10 hover:bg-opacity-20 rounded-xl p-16 w-10xl space-y-4 mb-12'}>
             <div className={'font-bold'}>Untools <span className={'opacity-50'}>2020</span></div>
             <h3>Tools for better thinking</h3>
             <div className={'mt-4'}>
@@ -30,15 +30,19 @@ class WorkIndex extends React.Component {
         <h2 className={'my-10'}>Case studies</h2>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          const product = node.frontmatter.product
+          const color = node.frontmatter.color
           return (
-            <div key={node.fields.slug}>
+            <div key={node.fields.slug}  className={`bg-${color}-700 bg-opacity-10 hover:bg-opacity-20 rounded-xl p-16 w-10xl space-y-4 mb-12`}>
+              <div className={'font-bold'}>{product}  <span className={'opacity-50'}>2020</span></div>
               <h3>
                 <Link to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <div className={'mt-4'}>
+                <div className={`inline px-5 py-3 rounded-4xl font-bold text-${color}-700 bg-${color}-700 bg-opacity-10`} >Read case study</div>
+              </div>
             </div>
           )
         })}
@@ -66,7 +70,9 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            product
             type
+            color
           }
         }
       }

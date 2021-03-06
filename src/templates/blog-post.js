@@ -20,7 +20,6 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <MDXRenderer>{post.body}</MDXRenderer>
-        <hr/>
         <Bio />
 
         <ul>

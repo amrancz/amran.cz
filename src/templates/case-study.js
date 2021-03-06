@@ -20,7 +20,7 @@ class CaseStudyTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <MDXRenderer>{post.body}</MDXRenderer>
-        <hr/>
+        <hr />
         <Bio />
 
         <ul>

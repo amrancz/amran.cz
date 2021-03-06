@@ -13,7 +13,14 @@ class About extends React.Component {
           title="About"
           keywords={[`product designer`,]}
         />
-        <p>This is a page about me!</p>
+        <h2>My approach to design</h2>
+        <p>
+I start every project with learning about the business and its users. I explore the problem thoroughly before designing a solution.
+
+I value data over opinions and I regard every design as a hypothesis that needs to be tested. I believe designers are facilitators who enable their teams to create good design.
+
+I like to share my thoughts, knowledge and experience through writing. I publish articles on my blog﻿ from time to time.
+</p>
       </Layout>
     )
   }

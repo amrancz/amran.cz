@@ -9,7 +9,7 @@ function Bio() {
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
-          <div>
+          <div className={'bg-gray-700 bg-opacity-10 hover:bg-opacity-20 rounded-xl p-16 w-10xl space-y-4 mb-12'}>
             <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
@@ -17,7 +17,7 @@ function Bio() {
             <p>
               Written by <strong>{author}</strong> – product designer from Brno, Czechia.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
+              <a href={`https://twitter.com/${social.twitter}`} className={'font-bold hover:underline'}>
                 Follow me on Twitter
               </a>
             </p>
