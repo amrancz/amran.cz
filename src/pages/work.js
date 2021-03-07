@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import Image from '../components/Image'
+import { StaticImage } from "gatsby-plugin-image"
 class WorkIndex extends React.Component {
   render() {
     const { data } = this.props
@@ -21,10 +22,10 @@ class WorkIndex extends React.Component {
             <div className={'font-bold'}>Untools <span className={'opacity-50'}>2020</span></div>
             <h3>Tools for better thinking</h3>
             <div className={'mt-4'}>
-              <div className={'inline px-5 py-3 rounded-4xl font-bold text-pink-700 bg-pink-700 bg-opacity-10'} >Visit untools.co</div>
+              <div className={'inline px-5 py-3 rounded-4xl font-bold text-pink-500 bg-pink-700 bg-opacity-10'} >Visit untools.co</div>
             </div>
-            <Image src={'untools-thumbnail.png'} className={'w-10 h-10'}></Image>
-            
+            <Image src={'https://untools.co/untools-worksheets.png'}></Image>
+            <StaticImage src={'https://untools.co/untools-worksheets.png'} alt={'Untools preview'}></StaticImage>
           </div>
         </a>
         <h2 className={'my-10'}>Case studies</h2>
@@ -41,7 +42,7 @@ class WorkIndex extends React.Component {
                 </Link>
               </h3>
               <div className={'mt-4'}>
-                <div className={`inline px-5 py-3 rounded-4xl font-bold text-${color}-700 bg-${color}-700 bg-opacity-10`} >Read case study</div>
+                <div className={`inline px-5 py-3 rounded-4xl font-bold text-${color}-500 bg-${color}-700 bg-opacity-10`} >Read case study</div>
               </div>
             </div>
           )
@@ -74,6 +75,15 @@ export const pageQuery = graphql`
             type
             color
           }
+        }
+      }
+    }
+    file(absolutePath: {
+      regex: "/\\/images\\/untools\\.png/"
+    }) {
+      childImageSharp {
+        fixed(width: 924) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

@@ -27,7 +27,7 @@ const Image = (props) => (
         return n.node.relativePath.includes(props.filename);
       });
       if (!image) { return null; }
-      
+      console.log(data)
       const imageSizes = image.node.childImageSharp.sizes;
       return (
         <Img
