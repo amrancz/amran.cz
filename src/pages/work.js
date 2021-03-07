@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import Image from '../components/Image'
-import { StaticImage } from "gatsby-plugin-image"
 class WorkIndex extends React.Component {
   render() {
     const { data } = this.props
@@ -24,8 +23,7 @@ class WorkIndex extends React.Component {
             <div className={'mt-4'}>
               <div className={'inline px-5 py-3 rounded-4xl font-bold text-pink-500 bg-pink-700 bg-opacity-10'} >Visit untools.co</div>
             </div>
-            <Image src={'https://untools.co/untools-worksheets.png'}></Image>
-            <StaticImage src={'https://untools.co/untools-worksheets.png'} alt={'Untools preview'}></StaticImage>
+            <Image filename={'untoolsThumb.png'} className={'position-absolute'}></Image>
           </div>
         </a>
         <h2 className={'my-10'}>Case studies</h2>
