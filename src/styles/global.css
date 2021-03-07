@@ -16,6 +16,6 @@
     @apply text-3xl font-bold font-heading;
   }
   a {
-    @apply text-white hover:underline;
+    @apply text-white hover:opacity-80;
   }
 }

@@ -15,10 +15,13 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
-        <p>
-          {post.frontmatter.date}
-        </p>
+        <div className={'space-y-6'}>
+          <h1>{post.frontmatter.title}</h1>
+          <p className={'text-gray-600'}>
+            {post.frontmatter.date}
+          </p>
+        <hr className={'opacity-10'} />
+        </div>
         <MDXRenderer>{post.body}</MDXRenderer>
         <Bio />
 
