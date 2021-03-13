@@ -15,8 +15,8 @@ class Layout extends React.Component {
       header = (
           <div>
             <Image
-                  src={"adam.png"}
-                  className={'rounded-10xl w-8 h-8'}
+                  filename={"adam.png"}
+                  className={'rounded-10xl w-4 h-4'}
                   alt={"profile picture of Adam"}
                 />
           <h1>
@@ -34,27 +34,27 @@ class Layout extends React.Component {
     return (
       <div className={'bg-grey-900'}>
         <Header></Header>
-        <div className={'relative py-10 px-10 sm:max-w-4xl sm:mx-auto space-y-12'}>
-        {header}
-        {children}
+        <div className={'relative py-10 px-10 sm:max-w-4xl sm:mx-auto space-y-16'}>
+          {header}
+          {children}
         </div>
         <Footer></Footer>
       </div>
     )
   }
 }
-/*
+
 const imgQuery = graphql`
   query ImgQuery {
     file: file(relativePath: { eq: "adam.png" })  {
       childImageSharp {
-        fixed(width: 80, height: 80) {
+        fixed(width: 160, height: 160) {
           ...GatsbyImageSharpFixed
         }
       }
     }
   }
 `
-*/
+
 export default Layout
 

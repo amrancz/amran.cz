@@ -17,26 +17,28 @@ class Index extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <p>
-              Product designer and maker.
-              Currently designing at <a href={'https://www.productboard.com'}>Productboard</a>
-        </p>
-        <div className={'py-8'}>
-          <Button primary={true} link={'/about'} text={'More about me'}></Button>
+        <div className={'space-y-6'}>
+          <p>
+                Product designer and maker.
+                Currently designing at <a href={'https://www.productboard.com'}>Productboard</a>
+          </p>
+          <div className={'py-8'}>
+            <Button primary={true} link={'/about'} text={'More about me'}></Button>
+          </div>
         </div>
         <div className={'relative py-10 sm:mx-auto space-y-8'}>
-          <h2>Latest posts</h2>
+          <h2>Recent writings</h2>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug} className={'bg-gray-700 bg-opacity-10 hover:bg-opacity-20 rounded-xl p-16 w-10xl space-y-4 mb-12'}>
+              <div key={node.fields.slug} className={'bg-gray-700 bg-opacity-10 hover:bg-opacity-20 rounded-xl p-12 w-10xl space-y-4 mb-12'}>
                 <h3>
                   <Link to={node.fields.slug}>
                     {title}
                   </Link>
                 </h3>
                 <small>{node.frontmatter.date}</small>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <p>{node.frontmatter.perex}</p>
               </div>
             )
           })}
@@ -65,6 +67,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            perex
           }
         }
       }
