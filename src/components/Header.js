@@ -5,7 +5,7 @@ function Header() {
   return (<div
     className={'bg-gray-900 flex flex-row flex-grow justify-between py-5 px-8'}
   >
-      <div>
+      <div className={'font-label'}>
         <Link to={`/`}>
             Adam Amran
         </Link>

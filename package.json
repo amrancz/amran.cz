@@ -36,8 +36,6 @@
     "react-live": "^2.2.3",
     "react-toggle": "^4.1.1",
     "react-typography": "^0.16.13",
-    "typeface-rubik": "^1.1.13",
-    "typeface-work-sans": "^1.1.13",
     "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.16.19"
   },

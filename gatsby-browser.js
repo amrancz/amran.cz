@@ -1,6 +1,6 @@
 // custom typefaces
-import 'typeface-rubik'
-import 'typeface-work-sans'
+import "@fontsource/poppins/700.css"
+import "@fontsource/lora"
 
 // CSS
 import './src/styles/global.css'
