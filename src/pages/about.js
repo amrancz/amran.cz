@@ -8,7 +8,7 @@ class About extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} title={"About"}>
+      <Layout location={this.props.location} title={"About"}  width={'4xl'}>
         <SEO
           title="About"
           keywords={[`product designer`,]}

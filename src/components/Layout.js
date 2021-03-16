@@ -7,23 +7,12 @@ import Image from './Image'
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, width } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
     if (location.pathname === rootPath) {
-      header = (
-          <div>
-            <Image
-                  filename={"adam.png"}
-                  className={'rounded-10xl w-4 h-4'}
-                  alt={"profile picture of Adam"}
-                />
-          <h1>
-            {title}
-          </h1>
-        </div>
-      )
+
     } else {
       header = (
         <h1>
@@ -34,7 +23,7 @@ class Layout extends React.Component {
     return (
       <div className={'bg-grey-900'}>
         <Header></Header>
-        <div className={'relative py-10 px-10 sm:max-w-4xl sm:mx-auto space-y-16'}>
+        <div className={`relative py-10 px-10 sm:max-w-${width} sm:mx-auto space-y-16`}>
           {header}
           {children}
         </div>

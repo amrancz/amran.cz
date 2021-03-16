@@ -11,7 +11,7 @@ class WritingIndex extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} title={"Writing"}>
+      <Layout location={this.props.location} title={"Writing"}  width={'4xl'}>
         <SEO
           title="Writing"
           keywords={[`blog`, `design`, `product design`]}

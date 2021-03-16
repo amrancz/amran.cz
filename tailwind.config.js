@@ -5,9 +5,8 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
       fontFamily: {
-        'heading': ['Poppins', 'sans-serif'],
-        'label': ['Poppins', 'sans-serif'],
-        'body': ['"Lora"', 'serif'],
+        'heading': ['Inter', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
       },
       container: {
         center: true,
@@ -24,7 +23,7 @@ module.exports = {
           '4xl': '2rem',
         },
         fontFamily: {
-          serif: ['"Lora"']
+          sans: ['"Inter"']
         }
       }
   },

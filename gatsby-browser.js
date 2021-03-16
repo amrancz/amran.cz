@@ -1,6 +1,5 @@
 // custom typefaces
-import "@fontsource/poppins/700.css"
-import "@fontsource/lora"
+import './static/fonts/Inter.var.woff2'
 
 // CSS
 import './src/styles/global.css'

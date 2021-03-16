@@ -10,7 +10,7 @@ class WorkIndex extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} title={"Work"}>
+      <Layout location={this.props.location} title={"Work"} width={'4xl'}>
         <SEO
           title="Work"
           keywords={[`product design`, `case studies`, `ux design`,]}

@@ -7,15 +7,29 @@
     @apply text-xl leading-relaxed bg-gray-900 font-body text-white;
   }
   h1 {
-    @apply text-6xl font-bold font-heading;
+    @apply text-5xl font-black font-heading;
   }
   h2 {
-    @apply text-4xl font-bold font-heading;
+    @apply text-4xl font-black font-heading;
   }
   h3 {
-    @apply text-3xl font-bold font-heading;
+    @apply text-3xl font-black font-heading;
+  }
+  h4 {
+    @apply text-2xl font-black font-heading;
   }
   a {
     @apply text-white hover:opacity-80;
   }
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal italic;
+  font-weight: 400 700 900;
+  font-display: swap;
+  src: url('/fonts/Inter.var.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }

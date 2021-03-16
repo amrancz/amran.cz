@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Button from '../components/Button'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+import Image from '../components/Image'
 
 class Index extends React.Component {
   render() {
@@ -12,37 +13,49 @@ class Index extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} title={`Hey! I'm Adam`}>
+      <Layout location={this.props.location} width={'8xl'}>
         <SEO
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <div className={'space-y-6'}>
-          <p>
-                Product designer and maker.
-                Currently designing at <a href={'https://www.productboard.com'}>Productboard</a>
-          </p>
-          <div className={'py-8'}>
-            <Button primary={true} link={'/about'} text={'More about me'}></Button>
+        <div className={'flex space-x-8'}>
+          <div className={'bg-gray-700 flex-grow-1 bg-opacity-10 rounded-xl p-12 space-y-4 mb-12'}>
+              <Image
+                    filename={"adam.png"}
+                    className={'rounded-10xl w-2 h-2'}
+                    alt={"profile picture of Adam"}
+                  />
+            <h1>Hey, I'm Adam</h1>
+            <p>
+                  Product designer and maker.
+            </p>
+            <p>
+                  Currently designing at <a href={'https://www.productboard.com'}>Productboard</a> <br />
+                  Making <a href={'https://www.untools.co'}>Untools.co</a> on the side.
+            </p>
+            <div className={'py-8'}>
+              <Button primary={true} link={'/about'} text={'More about me'}></Button>
+            </div>
+          </div>
+          <div className={'bg-gray-700 flex-grow-1 bg-opacity-10 rounded-xl p-12 space-y-8 mb-12'}>
+            <h2>Recent writings</h2>
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <div key={node.fields.slug} className={'py-8 space-y-4 mb-12'}>
+                  <h4>
+                    <Link to={node.fields.slug}>
+                      {title}
+                    </Link>
+                  </h4>
+                  <small>{node.frontmatter.date}</small>
+                  <p>{node.frontmatter.perex}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
-        <div className={'relative py-10 sm:mx-auto space-y-8'}>
-          <h2>Recent writings</h2>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <div key={node.fields.slug} className={'bg-gray-700 bg-opacity-10 hover:bg-opacity-20 rounded-xl p-12 w-10xl space-y-4 mb-12'}>
-                <h3>
-                  <Link to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-                <p>{node.frontmatter.perex}</p>
-              </div>
-            )
-          })}
-        </div>
+        
       </Layout>
     )
   }
