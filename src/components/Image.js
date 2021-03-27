@@ -31,6 +31,7 @@ const Image = (props) => (
         <Img
           alt={props.alt}
           fixed={image.node.childImageSharp.fixed}
+          className={props.style}
         />
       );
     }}

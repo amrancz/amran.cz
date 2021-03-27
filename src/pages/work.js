@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import Button from '../components/Button'
 import SEO from '../components/seo'
 import Image from '../components/Image'
 class WorkIndex extends React.Component {
@@ -10,55 +11,45 @@ class WorkIndex extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} title={"Work"} width={'4xl'}>
+      <Layout location={this.props.location} width={'8xl'} spacing={'16'}>
         <SEO
           title="Work"
           keywords={[`product design`, `case studies`, `ux design`,]}
         />
-        <h1>{title}</h1>
-        <p>
-          I'm currently a product designer at Productboard. <br />
-          Below is some of my past work.
-          </p>
-        <div className={'space-y-6'}>
-          <h2>Side projects</h2>
-          <div><a href={'https://untools.co'} className={'hover:bg-opacity-20'} target={'blank'}>
-            <div className={'bg-pink-700 bg-opacity-10 hover:bg-opacity-20 rounded-xl flex w-10xl'}>
-              <div className={'p-16 space-y-4'}>
-                <div className={'font-bold font-label'}>Untools <span className={'font-label opacity-50'}>2020</span></div>
-                <h3>Tools for better thinking</h3>
-                <div>
-                  <div className={'inline px-5 py-3 rounded-4xl font-label font-bold text-pink-500 bg-pink-700 bg-opacity-10 hover:bg-opacity-20'} >Visit untools.co</div>
-                </div>
-              </div>
-              <div className={'self-end pr-8'}>
-                <Image key={'untoolsThumb'} filename={'untoolsThumb.png'} className={'mb-4'}></Image>
-              </div>
-            </div>
-          </a></div>
-          
-        </div>
-        <div className={'space-y-6'}>
-          <h2>Case studies</h2>
-          {posts.map(({ node }) => {
+        <div className={'flex flex-col xl:flex-row xl:items-stretch xl:space-x-8 space-y-8 xl:space-y-0'}>
+        {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             const product = node.frontmatter.product
             const color = node.frontmatter.color
-            const date = node.frontmatter.years
+            const thumbnail = node.frontmatter.thumbnail
             return (
-              <div>
-                <a href={node.fields.slug} className={'hover:bg-opacity-20'}>
-                  <div key={node.fields.slug}  className={`bg-${color}-700 bg-opacity-10 hover:bg-opacity-20 rounded-xl hover:no-underline  p-16 w-10xl space-y-4`}>
-                    <div className={'font-bold font-label'}>{product}  <span className={'font-label opacity-50'}>{date}</span></div>
-                    <h3>{title}</h3>
-                    <div className={'mt-4'}>
-                      <div className={`inline px-5 py-3 rounded-4xl font-label font-bold text-${color}-500 bg-${color}-700 bg-opacity-10 hover:bg-opacity-20`} >Read case study</div>
-                    </div>
+              <div className={'w-full relative text-white overflow-hidden rounded-3xl flex shadow-lg'}>
+                <div key={node.fields.slug}  className={`w-full flex flex-col md:flex-row xl:flex-col bg-gradient-to-br from-${color}-500 to-${color}-700`}>
+                  <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-16'}>
+                    <span className={`font-medium text-${color}-200 mb-2`}>{product}</span>
+                    <h3 className={'mb-8'}>{title}</h3>
+                    <Button primary={true} link={node.fields.slug} text={'Read case study'}></Button>
                   </div>
-                </a>
+                  <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
+                    <Image key={`${thumbnail}`} filename={`${thumbnail}.png`} style={'relative mb-4'}></Image>
+                  </div>
+                </div>
               </div>
             )
           })}
+          <div className={'w-full relative text-white overflow-hidden rounded-3xl flex shadow-lg'}>
+            <div className={`w-full flex flex-col md:flex-row xl:flex-col bg-opacity-10 bg-purple-600 `}>
+              <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-16'}>
+                <span className={'font-medium text-white opacity-50 mb-2'}>Untools (Side project)</span>
+                <h3 className={'mb-8'}>Building a collection of tools for better thinking</h3>
+                <Button primary={true} link={'https://untools.co'} target={'_blank'} text={'Visit untools.co'}></Button>
+              </div>
+              <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
+                <Image key={'untoolsThumb'} filename={'untoolsThumb.png'} style={'relative mb-4'}></Image>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </Layout>
     )
@@ -82,11 +73,11 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            years
             title
             product
             type
             color
+            thumbnail
           }
         }
       }

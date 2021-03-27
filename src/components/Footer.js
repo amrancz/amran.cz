@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import CustomLink from '../components/CustomLink'
+
 
 function Footer() {
   return (
-    <footer className={'p-8'}>
-      <div className={'relative py-10 px-10 sm:max-w-4xl sm:mx-auto space-y-12'}>
-            <div className={'font-label'}>
-              {`👋 Come say hi on `}<a href={"https://twitter.com/amrancz"} target={"_blank"}>Twitter</a>
-            </div>
-          </div>  
-          </footer>
+    <footer>
+      <div className={'relative pb-8 px-12'}>
+              {`👋 Come say hi on `}<CustomLink link={'https://twitter.com/amrancz'} target={'_blank'} text={'Twitter'}></CustomLink>
+      </div>  
+    </footer>
         )
 }
 

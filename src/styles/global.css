@@ -19,7 +19,7 @@
     @apply text-2xl font-bold font-heading;
   }
   a {
-    @apply text-white hover:opacity-80 duration-100;
+    @apply text-white duration-100;
   }
 }
 

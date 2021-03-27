@@ -13,7 +13,7 @@ class Index extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} width={'8xl'}>
+      <Layout location={this.props.location} width={'8xl'} spacing={'12'}>
         <SEO
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -27,16 +27,16 @@ class Index extends React.Component {
                   />
             <h1>Hey, I'm Adam</h1>
             <p className={"leading-10"}>
-                  Product Designer at <a className={"bg-opacity-0 border-2 border-white py-1.5 px-2 rounded-lg text-white hover:bg-blue-100 hover:text-gray-900 hover:border-blue-100 duration-100"} href={'https://www.productboard.com'} target={"_blank"}>Productboard</a> <br />
-                  Making <a className={"bg-opacity-0 border-2 border-white py-1.5 px-2 rounded-lg text-white hover:bg-blue-100 hover:text-gray-900 hover:border-blue-100 duration-100"} href={'https://www.untools.co'} target={"_blank"}>Untools.co</a> on the side.
+                  Product Designer at <a className={"bg-opacity-0 border-2 border-white border-opacity-20 font-medium py-1 px-1 rounded-lg text-white hover:bg-blue-100 hover:text-gray-900 hover:border-blue-100 duration-100"} href={'https://www.productboard.com'} target={"_blank"}>Productboard</a> <br />
+                  Making <a className={"bg-opacity-0 border-2 border-white border-opacity-20 font-medium py-1 px-1 rounded-lg text-white hover:bg-blue-100 hover:text-gray-900 hover:border-blue-100 duration-100"} href={'https://www.untools.co'} target={"_blank"}>Untools.co</a> on the side.
             </p>
             <div className={'py-8'}>
-              <Button primary={true} link={'/about'} text={'More about me'}></Button>
+              <Button primary={true} link={'/work'} text={'See my work'}></Button>
             </div>
           </div>
           <div className={'bg-gray-700 flex-1 bg-opacity-10 rounded-xl p-12 space-y-8 last:space-y-0'}>
             <Link to={'/writing'}>
-              <h4 className={"text-gray-400 uppercase hover:text-blue-100 duration-150"}>Recent writings</h4>
+              <h4 className={"text-gray-400 uppercase hover:text-blue-400 duration-150"}>Recent writings</h4>
             </Link>
             <div className={'space-y-4 last:space-y-0'}>
               {posts.map(({ node }) => {
@@ -44,7 +44,7 @@ class Index extends React.Component {
                 return (
                   <div key={node.fields.slug} className={'py-4 space-y-1'}>
                     <Link to={node.fields.slug}>
-                      <h4 className={"hover:text-blue-100 rounded-md duration-150"}>
+                      <h4 className={"hover:text-blue-400 rounded-md duration-150"}>
                           {title}
                       </h4>
                     </Link>

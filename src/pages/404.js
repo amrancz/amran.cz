@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 class NotFoundPage extends React.Component {
   render() {
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.props.location} spacing={'12'}>
         <SEO title="404: Not Found" />
         <h1>Not Found</h1>
         <p>If you got there via a link on this page, please let me know.</p>

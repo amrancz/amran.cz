@@ -3,20 +3,20 @@ import { Link } from 'gatsby'
 
 function Header() {
   return (
-  <div className={'bg-gray-900 flex flex-row flex-grow justify-between py-5 px-12'}>
-      <div className={'font-label'}>
-        <Link to={`/`} className={'font-bold'}>
+  <div className={'bg-gray-900 flex flex-row flex-grow justify-between pt-6 px-12'}>
+      <div>
+        <Link to={`/`} className={'font-semibold tracking-tight hover:text-green-400'}>
             Adam Amran
         </Link>
       </div>
-      <div className={'float-right duration-150'}>
-        <Link to={`/work`} className={'mr-10'}>
+      <div className={'float-right space-x-10 duration-150'}>
+        <Link to={`/work`} className={'hover:text-blue-400'}>
             Work
         </Link>
-        <Link to={`/writing`} className={'mr-10'}>
+        <Link to={`/writing`} className={'hover:text-blue-400'}>
             Writing
         </Link>
-        <Link to={`/about`}>
+        <Link to={`/about`}className={'hover:text-blue-400'}>
             About
         </Link>
       </div>

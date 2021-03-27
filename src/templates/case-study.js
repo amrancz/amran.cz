@@ -12,7 +12,7 @@ class CaseStudyTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}  width={'4xl'}>
+      <Layout location={this.props.location} title={siteTitle}  width={'4xl'} spacing={'12'}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
         <p>

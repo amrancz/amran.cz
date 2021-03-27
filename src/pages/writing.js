@@ -11,19 +11,20 @@ class WritingIndex extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} title={"Writing"}  width={'4xl'}>
+      <Layout location={this.props.location} width={'4xl'} spacing={'12'}>
         <SEO
           title="Writing"
           keywords={[`blog`, `design`, `product design`]}
         />
+        <h1>Writing</h1>
         <div  className={'bg-gray-700 bg-opacity-10 rounded-xl p-16 w-10xl space-y-6 mb-12'}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <a href={node.fields.slug}>
                 <div key={node.fields.slug}  className={'space-y-2 mb-12'}>
-                  <h3 className={'hover:text-blue-100'}>
-                    <Link to={node.fields.slug}>
+                  <h3>
+                    <Link to={node.fields.slug} className={'hover:text-blue-400'}>
                       {title}
                     </Link>
                   </h3>
