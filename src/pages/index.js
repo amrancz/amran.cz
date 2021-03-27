@@ -18,8 +18,8 @@ class Index extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <div className={'flex space-x-8'}>
-          <div className={'bg-gray-700 flex-grow-1 bg-opacity-10 rounded-xl p-12 space-y-4 mb-12'}>
+        <div className={'flex items-stretch space-x-8'}>
+          <div className={'bg-gray-700 flex-1 bg-opacity-10 rounded-xl p-12 space-y-4 mb-12'}>
               <Image
                     filename={"adam.png"}
                     className={'rounded-10xl w-2 h-2'}
@@ -30,14 +30,14 @@ class Index extends React.Component {
                   Product designer and maker.
             </p>
             <p>
-                  Currently designing at <a href={'https://www.productboard.com'}>Productboard</a> <br />
-                  Making <a href={'https://www.untools.co'}>Untools.co</a> on the side.
+                  Currently designing at <a href={'https://www.productboard.com'} target={"_blank"}>Productboard</a> <br />
+                  Making <a href={'https://www.untools.co'} target={"_blank"}>Untools.co</a> on the side.
             </p>
             <div className={'py-8'}>
               <Button primary={true} link={'/about'} text={'More about me'}></Button>
             </div>
           </div>
-          <div className={'bg-gray-700 flex-grow-1 bg-opacity-10 rounded-xl p-12 space-y-8 mb-12'}>
+          <div className={'bg-gray-700 flex-1 bg-opacity-10 rounded-xl p-12 space-y-8 mb-12'}>
             <h2>Recent writings</h2>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
