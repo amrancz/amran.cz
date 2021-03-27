@@ -7,19 +7,19 @@
     @apply text-xl leading-relaxed bg-gray-900 font-body text-white;
   }
   h1 {
-    @apply text-5xl font-black font-heading;
+    @apply text-5xl font-bold font-heading;
   }
   h2 {
-    @apply text-4xl font-black font-heading;
+    @apply text-4xl font-bold font-heading;
   }
   h3 {
-    @apply text-3xl font-black font-heading;
+    @apply text-3xl font-bold font-heading;
   }
   h4 {
-    @apply text-2xl font-black font-heading;
+    @apply text-2xl font-bold font-heading;
   }
   a {
-    @apply text-white hover:opacity-80;
+    @apply text-white hover:opacity-80 duration-100;
   }
 }
 

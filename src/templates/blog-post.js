@@ -15,7 +15,8 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}  width={'4xl'}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <div className={'space-y-6'}>
-          <h1>{post.frontmatter.title}</h1>
+        <Link to={'/writing'} className={"text-gray-600 hover:text-blue-100"}>← Back to all articles</Link>
+          <h1 className={'leading-tight'}>{post.frontmatter.title}</h1>
           <p className={'text-gray-600'}>
             {post.frontmatter.date}
           </p>

@@ -23,7 +23,7 @@ class Layout extends React.Component {
     return (
       <div className={'bg-grey-900'}>
         <Header></Header>
-        <div className={`relative py-10 px-10 sm:max-w-${width} sm:mx-auto space-y-16`}>
+        <div className={`relative py-10 px-10 sm:max-w-${width} sm:mx-auto space-y-12`}>
           {header}
           {children}
         </div>

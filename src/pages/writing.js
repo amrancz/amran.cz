@@ -16,22 +16,24 @@ class WritingIndex extends React.Component {
           title="Writing"
           keywords={[`blog`, `design`, `product design`]}
         />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <a href={node.fields.slug} className={'hover:bg-opacity-20'}>
-              <div key={node.fields.slug}  className={'bg-gray-700 bg-opacity-10 hover:bg-opacity-20 rounded-xl p-16 w-10xl space-y-4 mb-12'}>
-                <h3>
-                  <Link to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              </div>
-            </a>
-          )
-        })}
+        <div  className={'bg-gray-700 bg-opacity-10 rounded-xl p-16 w-10xl space-y-6 mb-12'}>
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <a href={node.fields.slug}>
+                <div key={node.fields.slug}  className={'space-y-2 mb-12'}>
+                  <h3 className={'hover:text-blue-100'}>
+                    <Link to={node.fields.slug}>
+                      {title}
+                    </Link>
+                  </h3>
+                  <p className={"text-gray-300"}>{node.frontmatter.perex}</p>
+                  <p className={"text-gray-600"}>— {node.frontmatter.date}</p>
+                </div>
+              </a>
+            )
+          })}
+        </div>
       </Layout>
     )
   }
@@ -56,6 +58,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            perex
           }
         }
       }

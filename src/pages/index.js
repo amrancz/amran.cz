@@ -18,41 +18,42 @@ class Index extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <div className={'flex items-stretch space-x-8'}>
-          <div className={'bg-gray-700 flex-1 bg-opacity-10 rounded-xl p-12 space-y-4 mb-12'}>
+        <div className={'flex flex-col lg:flex-row lg:items-stretch lg:space-x-8 space-y-8 lg:space-y-0'}>
+          <div className={'bg-gradient-to-br from-green-500 to-blue-600 text-white flex-1 rounded-xl p-12 space-y-4'}>
               <Image
                     filename={"adam.png"}
                     className={'rounded-10xl w-2 h-2'}
                     alt={"profile picture of Adam"}
                   />
             <h1>Hey, I'm Adam</h1>
-            <p>
-                  Product designer and maker.
-            </p>
-            <p>
-                  Currently designing at <a href={'https://www.productboard.com'} target={"_blank"}>Productboard</a> <br />
-                  Making <a href={'https://www.untools.co'} target={"_blank"}>Untools.co</a> on the side.
+            <p className={"leading-10"}>
+                  Product Designer at <a className={"bg-opacity-0 border-2 border-white py-1.5 px-2 rounded-lg text-white hover:bg-blue-100 hover:text-gray-900 hover:border-blue-100 duration-100"} href={'https://www.productboard.com'} target={"_blank"}>Productboard</a> <br />
+                  Making <a className={"bg-opacity-0 border-2 border-white py-1.5 px-2 rounded-lg text-white hover:bg-blue-100 hover:text-gray-900 hover:border-blue-100 duration-100"} href={'https://www.untools.co'} target={"_blank"}>Untools.co</a> on the side.
             </p>
             <div className={'py-8'}>
               <Button primary={true} link={'/about'} text={'More about me'}></Button>
             </div>
           </div>
-          <div className={'bg-gray-700 flex-1 bg-opacity-10 rounded-xl p-12 space-y-8 mb-12'}>
-            <h2>Recent writings</h2>
-            {posts.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug
-              return (
-                <div key={node.fields.slug} className={'py-8 space-y-4 mb-12'}>
-                  <h4>
+          <div className={'bg-gray-700 flex-1 bg-opacity-10 rounded-xl p-12 space-y-8 last:space-y-0'}>
+            <Link to={'/writing'}>
+              <h4 className={"text-gray-400 uppercase hover:text-blue-100 duration-150"}>Recent writings</h4>
+            </Link>
+            <div className={'space-y-4 last:space-y-0'}>
+              {posts.map(({ node }) => {
+                const title = node.frontmatter.title || node.fields.slug
+                return (
+                  <div key={node.fields.slug} className={'py-4 space-y-1'}>
                     <Link to={node.fields.slug}>
-                      {title}
+                      <h4 className={"hover:text-blue-100 rounded-md duration-150"}>
+                          {title}
+                      </h4>
                     </Link>
-                  </h4>
-                  <small>{node.frontmatter.date}</small>
-                  <p>{node.frontmatter.perex}</p>
-                </div>
-              )
-            })}
+                    <p className={"text-gray-300"}>{node.frontmatter.perex}</p>
+                    <p className={"text-gray-600"}>— {node.frontmatter.date}</p>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
         
@@ -70,7 +71,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(filter: {frontmatter: {type: {eq: "blog-post"}}}, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(limit:3, filter: {frontmatter: {type: {eq: "blog-post"}}}, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
