@@ -17,7 +17,7 @@ class WritingIndex extends React.Component {
           keywords={[`blog`, `design`, `product design`]}
         />
         <h1>Writing</h1>
-        <div  className={'bg-gray-700 bg-opacity-10 rounded-xl p-16 w-10xl space-y-6 mb-12'}>
+        <div  className={'bg-gray-700 bg-opacity-10 rounded-2xl p-16 w-10xl space-y-6 mb-12'}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (

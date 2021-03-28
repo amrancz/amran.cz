@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CustomLink from '../components/CustomLink'
+import Portrait from '../images/portraitLarge.png'
 import SEO from '../components/seo'
 class About extends React.Component {
   render() {
@@ -14,38 +15,31 @@ class About extends React.Component {
           title="About"
           keywords={[`product designer`,]}
         />
-        <div className={'flex flex-col lg:flex-row lg:items-stretch lg:space-x-8 space-y-8 lg:space-y-0'}>
-          <div className={'bg-gray-700 flex-1 bg-opacity-10 rounded-xl p-12 space-y-8 last:space-y-0'}>
-            <h1>Nice to meet you!</h1>
-            <p>
-            I'm a product designer at <CustomLink link={"https://www.productboard.com"} target={"_blank"} text={"Productboard"}></CustomLink>, based in Brno, Czechia.<br />
-            </p>
-            <p>
-            I've been doing various forms of digital designs since 2010: from web designs, mobile apps to product design. <br />
-            Previously, I was a designer at <CustomLink link={"https://www.kontent.ai"} target={"_blank"} text={"Kontent"}></CustomLink> and led the design team at <CustomLink link={"https://www.futured.app"} target={"_blank"} text={"Futured"}></CustomLink>.
-            </p>
-            <p>
-              In my spare time, I'm making <CustomLink link={"https://untools.co"} target={"_blank"} text={"Untools"}></CustomLink> – a collection of thinking tools. I also love to stay active (lift weights, play football or jog), read non-fiction, cook, travel or mix music.
-            </p>
-            <p>
-              You can reach out to me on <CustomLink link={"https://twitter.com/amrancz"} target={"_blank"} text={"Twitter"}></CustomLink>.
-            </p>
-          </div>
-          <div className={'bg-gradient-to-br from-blue-500 to-purple-700 text-white flex-1 rounded-xl p-12 space-y-4'}>
-            <h1>Nice to meet you!</h1>
-            <p>
-            I'm a product designer at <CustomLink link={"https://www.productboard.com"} target={"_blank"} text={"Productboard"}></CustomLink>, based in Brno, Czechia.<br />
-            </p>
-            <p>
-            I've been doing various forms of digital designs since 2010: from web designs, mobile apps to product design. <br />
-            Previously, I was a designer at <CustomLink link={"https://www.kontent.ai"} target={"_blank"} text={"Kontent"}></CustomLink> and led the design team at <CustomLink link={"https://www.futured.app"} target={"_blank"} text={"Futured"}></CustomLink>.
-            </p>
-            <p>
-              In my spare time, I'm making <CustomLink link={"https://untools.co"} target={"_blank"} text={"Untools"}></CustomLink> – a collection of thinking tools. I also love to stay active (lift weights, play football or jog), read non-fiction, cook, travel or mix music.
-            </p>
-            <p>
-              You can reach out to me on <CustomLink link={"https://twitter.com/amrancz"} target={"_blank"} text={"Twitter"}></CustomLink>.
-            </p>
+          <div className={'flex flex-col xl:flex-row lg:items-stretch lg:space-x-16 space-y-12 lg:space-y-0 bg-gradient-to-br from-blue-500 to-purple-700 flex flex-col lg:flex-row text-white flex-1 rounded-2xl p-12 space-y-4'}>
+            <div className={'flex-1'}>
+              <img src={Portrait} alt={'Portrait of Adam Amran'} className={'rounded-xl'}></img>
+            </div>
+            <div className={'flex-1 space-y-6 py-4 last:space-y-0'}>
+              <h1>{`😊 Nice to meet you!`}</h1>
+              <p>
+              I'm a product designer and maker based in Brno 🇨🇿.<br />
+              </p>
+              <p>
+              Currently designing a product management system at <CustomLink link={"https://www.productboard.com"} target={"_blank"} text={`Productboard 🚀`}></CustomLink>. <br />
+              </p>
+              <p>
+              Before that I was a designer at <CustomLink link={"https://www.kontent.ai"} target={"_blank"} text={`Kentico ✍️`}></CustomLink> and led the design team at <CustomLink link={"https://www.futured.app"} target={"_blank"} text={`Futured 📱`}></CustomLink>.
+              More about my work experience on <CustomLink link={'https://www.linkedin.com/in/adam-amran-98950222/'} target={'_blank'} text={'LinkedIn'}></CustomLink>.
+              </p>
+              <p>
+                On the side, I'm building <CustomLink link={"https://untools.co"} target={"_blank"} text={`Untools 🧠`}></CustomLink> – a collection of thinking tools.
+              </p>
+              <p>
+                In my spare time I like to stay active (lift weights, play football or jog), read non-fiction, cook, travel or mix music.
+              </p>
+              <p>
+                And I guess you noticed I like emojis ✌️
+              </p>
           </div>
         </div>
         </Layout>

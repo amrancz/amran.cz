@@ -5,7 +5,7 @@ function Header() {
   return (
   <div className={'bg-gray-900 flex flex-row flex-grow justify-between pt-6 px-12'}>
       <div>
-        <Link to={`/`} className={'font-semibold tracking-tight hover:text-green-400'}>
+        <Link to={`/`} className={'font-semibold tracking-tighter hover:text-green-400'}>
             Adam Amran
         </Link>
       </div>

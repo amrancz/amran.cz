@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Image from 'gatsby-image'
+import Portrait from '../images/portraitSmall.png'
 
 function Bio() {
   return (
@@ -9,11 +9,8 @@ function Bio() {
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
-          <div className={'bg-gray-700 bg-opacity-10 hover:bg-opacity-20 rounded-xl p-16 w-10xl space-y-4 mb-12'}>
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-            />
+          <div className={'bg-gray-700 bg-opacity-10 hover:bg-opacity-20 flex flex-row space-x-6 rounded-xl p-16 w-10xl space-y-4 mb-12'}>
+            <img src={Portrait} alt={'Portrait of Adam Amran'} className={'rounded-2xl w-24 h-24'}></img> 
             <p>
               Written by <strong>{author}</strong> – product designer from Brno, Czechia.
               {` `}

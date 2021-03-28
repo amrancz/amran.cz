@@ -15,7 +15,7 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}  width={'4xl'} spacing={'12'}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <div className={'space-y-6'}>
-        <Link to={'/writing'} className={"text-gray-600 hover:text-blue-100"}>← Back to all articles</Link>
+        <Link to={'/writing'} className={"text-gray-600 hover:text-blue-400"}>← Back to all articles</Link>
           <h1 className={'leading-tight'}>{post.frontmatter.title}</h1>
           <p className={'text-gray-600'}>
             {post.frontmatter.date}
@@ -25,20 +25,34 @@ class BlogPostTemplate extends React.Component {
         <MDXRenderer>{post.body}</MDXRenderer>
         <Bio />
 
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
+        <ul className={'flex flex-row flex-grow justify-between space-x-6'}>
+          <li className={'flex flex-row flex-1'}>
+            <div>
+              {previous && (
+                <Link className={'hover:text-blue-400 flex flex-row flex-1 space-x-1 '} to={previous.fields.slug} rel="prev">
+                  <div>
+                  ←
+                  </div>
+                  <div>
+                  {previous.frontmatter.title}
+                  </div>
+                </Link>
+              )}
+            </div>
           </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
+          <li className={'flex flex-row flex-1'}>
+            <div className={'text-right'}>
+              {next && (
+                <Link className={'hover:text-blue-400 flex flex-row flex-1 space-x-1 '} to={next.fields.slug} rel="ntext">
+                  <div>
+                  {next.frontmatter.title}
+                  </div>
+                  <div>
+                    →
+                  </div>
+                </Link>
+              )}
+            </div>
           </li>
         </ul>
       </Layout>
@@ -61,6 +75,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       frontmatter {
         title
+        type
         date(formatString: "MMMM YYYY")
       }
       body
