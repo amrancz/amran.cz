@@ -11,6 +11,9 @@ class CaseStudyTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={post.frontmatter.title}  width={'4xl'} spacing={'12'}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <div>
+        <Link to={'/work'} className={"text-gray-600 hover:text-blue-400"}>← Work</Link>
+        </div>
         <div className={'w-full relative text-white overflow-hidden rounded-2xl flex shadow-lg'}>
           <div className={`w-full flex flex-col md:flex-row xl:flex-col bg-gradient-to-br from-${post.frontmatter.color}-500 to-${post.frontmatter.color}-700`}>
               <div className={'sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-16'}>

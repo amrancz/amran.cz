@@ -11,29 +11,34 @@ class WritingIndex extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} width={'4xl'} spacing={'12'}>
+      <Layout location={this.props.location} width={'8xl'} spacing={'12'}>
         <SEO
           title="Writing"
           keywords={[`blog`, `design`, `product design`]}
         />
-        <h1>Writing</h1>
-        <div  className={'bg-gray-700 bg-opacity-10 rounded-2xl p-16 w-10xl space-y-6 mb-12'}>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <a href={node.fields.slug}>
-                <div key={node.fields.slug}  className={'space-y-2 mb-12'}>
-                  <h3>
-                    <Link to={node.fields.slug} className={'hover:text-blue-400'}>
-                      {title}
+        <div className={'flex flex-col lg:flex-row lg:items-stretch lg:space-x-8 space-y-8 lg:space-y-0'}>
+          <div className={'bg-opacit-0 text-white lg:flex-1 rounded-2xl pt-12 space-y-6'}>
+            <h1>Writing</h1>
+            <p className={"leading-10 text-gray-300"}>
+                  From time to time, I publish thoughts about design, side-projects and whatever else interests me at the moment.
+            </p>
+          </div>
+          <div className={'bg-gray-700 lg:flex-2 lg:flex-grow bg-opacity-10 rounded-2xl p-12 space-y-4 last:space-y-0'}>
+              {posts.map(({ node }) => {
+                const title = node.frontmatter.title || node.fields.slug
+                return (
+                  <div key={node.fields.slug} className={'py-4 space-y-1'}>
+                    <Link to={node.fields.slug}>
+                      <h4 className={"hover:text-blue-400 rounded-md duration-150"}>
+                          {title}
+                      </h4>
                     </Link>
-                  </h3>
-                  <p className={"text-gray-300"}>{node.frontmatter.perex}</p>
-                  <p className={"text-gray-600"}>— {node.frontmatter.date}</p>
-                </div>
-              </a>
-            )
-          })}
+                    <p className={"text-gray-300"}>{node.frontmatter.perex}</p>
+                    <p className={"text-gray-600"}>— {node.frontmatter.date}</p>
+                  </div>
+                )
+              })}
+          </div>
         </div>
       </Layout>
     )

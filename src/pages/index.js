@@ -27,14 +27,14 @@ class Index extends React.Component {
                   Product Designer at <CustomLink link={'https://www.productboard.com'} target={"_blank"} text={`Productboard`}></CustomLink> <br />
                   Making <CustomLink link={'https://www.untools.co'} target={"_blank"} text={`Untools.co`}></CustomLink> on the side.
             </p>
-            <div className={'py-8 flex-col space-x-6'}>
+            <div className={'py-8 flex flex-col md:flex-row lg:flex-row flex-shrink space-y-4 space-x-0 md:space-y-0 md:space-x-4'}>
               <Button primary={true} link={'/work'} text={'See my work'} textColor={'green-500'}></Button>
               <Button link={'/about'} text={'Learn more about me'}></Button>
             </div>
           </div>
           <div className={'bg-gray-700 lg:flex-1 lg:flex-grow bg-opacity-10 rounded-2xl p-12 space-y-8 last:space-y-0'}>
             <Link to={'/writing'}>
-              <h4 className={"text-gray-400 uppercase hover:text-blue-400 duration-150"}>Recent writings</h4>
+              <h4 className={"text-gray-600 uppercase hover:text-blue-400 duration-150"}>Recent writings</h4>
             </Link>
             <div className={'space-y-4 last:space-y-0'}>
               {posts.map(({ node }) => {
