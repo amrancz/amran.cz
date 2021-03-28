@@ -43,7 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       if (post.node.frontmatter.type === 'case-study'){
         createPage({
-          path: post.node.fields.slug,
+          path: `/work${post.node.fields.slug}`,
           component: caseStudy,
           context: {
             slug: post.node.fields.slug,
@@ -53,7 +53,7 @@ exports.createPages = ({ graphql, actions }) => {
         })
       } else {
         createPage({
-          path: post.node.fields.slug,
+          path: `/writing${post.node.fields.slug}`,
           component: blogPost,
           context: {
             slug: post.node.fields.slug,

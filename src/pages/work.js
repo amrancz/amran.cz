@@ -28,7 +28,7 @@ class WorkIndex extends React.Component {
                   <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-16'}>
                     <span className={`font-medium text-${color}-200 mb-2`}>{product}</span>
                     <h3 className={'mb-8'}>{title}</h3>
-                    <Button primary={true} link={node.fields.slug} text={'Read case study'} textColor={`${color}-700`}></Button>
+                    <Button primary={true} link={`work${node.fields.slug}`} text={'Read case study'} textColor={`${color}-700`}></Button>
                   </div>
                   <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
                     <Image key={`${thumbnail}`} filename={`${thumbnail}.png`} style={'relative mb-4'}></Image>

@@ -41,7 +41,7 @@ class Index extends React.Component {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
                   <div key={node.fields.slug} className={'py-4 space-y-1'}>
-                    <Link to={node.fields.slug}>
+                    <Link to={`/writing${node.fields.slug}`}>
                       <h4 className={"hover:text-blue-400 rounded-md duration-150"}>
                           {title}
                       </h4>
