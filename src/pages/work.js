@@ -5,9 +5,9 @@ import Layout from '../components/Layout'
 import Button from '../components/Button'
 import SEO from '../components/seo'
 import Image from '../components/Image'
-class WorkIndex extends React.Component {
+class Work extends React.Component {
   render() {
-    const { data, title } = this.props
+    const { data } = this.props
     const posts = data.allMdx.edges
 
     return (
@@ -57,7 +57,7 @@ class WorkIndex extends React.Component {
   }
 }
 
-export default WorkIndex
+export default Work
 
 export const pageQuery = graphql`{
   site {

@@ -2,31 +2,31 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-function Image(props) {
-      console.log(data.images.edges)
-      const image = data.images.edges.find(n => {
-        return n.node.relativePath.includes(props.filename);
+function Image({filename,alt,style}) {
+    return (
+      <StaticQuery
+        query={query}
+        render={data => {
+      console.log(`Data is ${data}`)
+      /* const image = data.images.edges.find(n => {
+        return n.node.relativePath.includes(filename);
       });
-      console.log(image)
-      if (!image) { return null; }
+      if (!image) { return null; } */
       return (
         <GatsbyImage
-          key={props.filename}
-          image={image}
-          alt={props.alt}
-          className={props.style}
+          key={filename}
+          image={'untoolsThumbs.png'}
+          alt={alt}
+          className={style}
         />
       )
+    }}
+    />
+  )
 }
 
-Image.defaultProps = {
-  alt: '',
-}
-
-export default Image
-
-export const data = graphql`
-  {
+const query = graphql`
+  query ImageQuery {
     images: allFile {
       edges {
         node {
@@ -40,3 +40,6 @@ export const data = graphql`
     }
   }
 `
+
+export default Image
+
