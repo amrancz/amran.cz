@@ -5,7 +5,7 @@ module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     options: {
       safelist: ['bg', 'text-green', 'from', 'to'],
-      whitelist: ['green', 'yellow', 'blue', 'orange','pink','purple']
+      whitelist: ['green', 'yellow', 'blue', 'orange','pink','purple'],
       whitelistPatterns: ['/^text/','/^bg','/^w','/^space','/^from','/^to']
     },
   },
