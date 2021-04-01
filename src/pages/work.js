@@ -26,6 +26,7 @@ class WorkIndex extends React.Component {
             return (
               <div className={'w-full relative text-white overflow-hidden rounded-2xl flex shadow-lg'}>
                 <div key={node.fields.slug}  className={`w-full flex flex-col md:flex-row xl:flex-col bg-gradient-to-br from-${color}-500 to-${color}-700`}>
+                  {/* purgecss: from-yellow-500 to-yellow-700 from-blue-500 to-blue-500 */}
                   <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-12'}>
                     <span className={`font-medium text-${color}-200 mb-2`}>{product}</span>
                     <h3 className={'mb-8'}>{title}</h3>
