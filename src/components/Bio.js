@@ -14,7 +14,7 @@ function Bio() {
             <p>
               Written by <strong>{author}</strong> – product designer from Brno, Czechia.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`} className={'font-bold hover:underline'}>
+              <a href={`https://twitter.com/${social.twitter}`} className={'text-blue-400 hover:underline'}>
                 Follow me on Twitter
               </a>
             </p>
@@ -27,7 +27,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/portraitSmall.jpg/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed

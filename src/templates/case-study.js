@@ -8,8 +8,6 @@ class CaseStudyTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
 
-    const images = this.props.data.allFile.edges.map(({ node }) => node.childImageSharp)
-
     return (
       <Layout location={this.props.location} title={post.frontmatter.title}  width={'4xl'} spacing={'12'}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
@@ -30,7 +28,7 @@ class CaseStudyTemplate extends React.Component {
         <p>
           {post.frontmatter.date}
         </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <MDXRenderer className={'a:text-blue-400 a:hover:underline'}>{post.body}</MDXRenderer>
 
       </Layout>
     )
