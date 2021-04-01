@@ -13,7 +13,7 @@ class WorkIndex extends React.Component {
     return (
       <Layout location={this.props.location} width={'8xl'} spacing={'16'}>
         <SEO
-          title="Work"
+          title="Work / Adam Amran"
           keywords={[`product design`, `case studies`, `ux design`,]}
         />
         <div className={'flex flex-col xl:flex-row xl:items-stretch xl:space-x-8 space-y-8 xl:space-y-0'}>

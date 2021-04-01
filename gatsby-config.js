@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Adam Amran`,
+    title: ``,
     author: `Adam Amran`,
     description: `Adam Amran's writing and portfolio`,
     siteUrl: `https://amran.cz`,
@@ -49,6 +49,20 @@ module.exports = {
             'Cache-Control: immutable',
           ],
         },
+      },
+    },
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
       },
     },
     {
@@ -191,7 +205,7 @@ module.exports = {
         name: `Gatsby Starter Blog`,
         short_name: `GatsbyJS`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#111111`,
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,

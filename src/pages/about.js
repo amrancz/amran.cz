@@ -12,7 +12,7 @@ class About extends React.Component {
     return (
       <Layout location={this.props.location} width={'8xl'} spacing={'8'}>
         <SEO
-          title="About"
+          title="About / Adam Amran"
           keywords={[`product designer`,]}
         />
           <div className={'flex flex-col xl:flex-row lg:items-stretch lg:space-x-16 space-y-12 lg:space-y-0 bg-gradient-to-br from-blue-500 to-purple-700 flex flex-col lg:flex-row text-white flex-1 rounded-2xl p-12 space-y-4'}>

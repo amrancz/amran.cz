@@ -1,10 +1,8 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
   body {
-    @apply text-xl leading-relaxed bg-gray-900 text-gray-100 font-body text-white;
+    @apply text-xl list-disc list-inside leading-relaxed bg-gray-900 text-gray-100 font-body text-white;
   }
   h1 {
     @apply text-5xl font-bold tracking-tighter font-heading;
@@ -21,7 +19,16 @@
   a {
     @apply text-white duration-100;
   }
+  ul {
+    @apply list-disc list-inside space-y-2;
+  }
+  ol {
+    @apply list-decimal list-inside space-y-2;
+  }
 }
+
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: 'Inter';
@@ -32,4 +39,5 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
+  font-feature-settings: 'zero', 'ss01', 'ss03', 'calt';
 }

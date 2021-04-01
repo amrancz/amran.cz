@@ -16,7 +16,7 @@ class Index extends React.Component {
     return (
       <Layout location={this.props.location} width={'8xl'} spacing={'12'}>
         <SEO
-          title="All posts"
+          title="Adam Amran – Product Designer"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <div className={'flex flex-col lg:flex-row lg:items-stretch lg:space-x-8 space-y-8 lg:space-y-0'}>

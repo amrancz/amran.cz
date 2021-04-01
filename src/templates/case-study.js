@@ -8,6 +8,8 @@ class CaseStudyTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
 
+    const images = this.props.data.allFile.edges.map(({ node }) => node.childImageSharp)
+
     return (
       <Layout location={this.props.location} title={post.frontmatter.title}  width={'4xl'} spacing={'12'}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
@@ -58,5 +60,5 @@ export const pageQuery = graphql`
       }
       body
     }
-  }
+}
 `
