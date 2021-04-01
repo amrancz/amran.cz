@@ -22,10 +22,11 @@ class WorkIndex extends React.Component {
             const product = node.frontmatter.product
             const color = node.frontmatter.color
             const thumbnail = node.frontmatter.thumbnail
+            console.log(`The COLOR is ${color}`)
             return (
               <div className={'w-full relative text-white overflow-hidden rounded-2xl flex shadow-lg'}>
                 <div key={node.fields.slug}  className={`w-full flex flex-col md:flex-row xl:flex-col bg-gradient-to-br from-${color}-500 to-${color}-700`}>
-                  <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-16'}>
+                  <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-12'}>
                     <span className={`font-medium text-${color}-200 mb-2`}>{product}</span>
                     <h3 className={'mb-8'}>{title}</h3>
                     <Button primary={true} link={`work${node.fields.slug}`} text={'Read case study'} textColor={`${color}-700`}></Button>
@@ -39,7 +40,7 @@ class WorkIndex extends React.Component {
           })}
           <div className={'w-full relative text-white overflow-hidden rounded-2xl flex shadow-lg'}>
             <div className={`w-full flex flex-col md:flex-row xl:flex-col bg-opacity-10 bg-purple-600 `}>
-              <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-16'}>
+              <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-12'}>
                 <span className={'font-medium text-white opacity-50 mb-2'}>Untools (Side project)</span>
                 <h3 className={'mb-8'}>Building a collection of tools for better thinking</h3>
                 <Button primary={true} link={'https://untools.co'} target={'_blank'} text={'Visit untools.co'} textColor={'purple-800'}></Button>

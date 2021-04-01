@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 function Button({ primary, link, target, text, textColor }) {
   if (primary){
     return (
-      <a href={link} target={target} className={`border-4 border-white rounded-xl px-4 py-3 tracking-tighter font-semibold text-center bg-white hover:bg-opacity-0 text-${textColor} hover:text-white duration-100`}>
+      <a href={link} target={target} className={`bg-white border-4 border-white rounded-xl px-4 py-3 tracking-tighter font-semibold text-center text-${textColor} hover:bg-opacity-0 hover:text-white duration-100`}>
         {text}
       </a>
     )

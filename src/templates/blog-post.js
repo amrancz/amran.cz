@@ -11,7 +11,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location}  width={'4xl'} spacing={'12'}>
+      <Layout location={this.props.location}  width={'3xl'} spacing={'12'}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <div className={'space-y-6'}>
         <Link to={'/writing'} className={"text-gray-600 hover:text-blue-400"}>← Writing</Link>
