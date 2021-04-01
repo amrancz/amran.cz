@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Image from '../components/Image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 class CaseStudyTemplate extends React.Component {
@@ -55,8 +56,8 @@ export const pageQuery = graphql`
         product
         color
         thumbnail
-      }
+        }
       body
     }
-}
+  }
 `

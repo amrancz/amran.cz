@@ -34,19 +34,17 @@ class Layout extends React.Component {
 }
 
 Layout.defaultProps = {
+  width: '4xl',
   spacing: '12',
 }
 
-const imgQuery = graphql`
-  query ImgQuery {
-    file: file(relativePath: { eq: "adam.png" })  {
-      childImageSharp {
-        fixed(width: 160, height: 160) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+const imgQuery = graphql`query ImgQuery {
+  file: file(relativePath: {eq: "adam.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 160, height: 160, layout: FIXED)
     }
   }
+}
 `
 
 export default Layout

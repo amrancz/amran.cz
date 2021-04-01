@@ -30,7 +30,6 @@ class Index extends React.Component {
             alt='Portrait of Adam'
             width={240}
             height={240}
-            grayscale={true}
             style={{
               borderRadius: '16px',
               overflow:'hidden'

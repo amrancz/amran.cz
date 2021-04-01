@@ -22,7 +22,6 @@ class WorkIndex extends React.Component {
             const product = node.frontmatter.product
             const color = node.frontmatter.color
             const thumbnail = node.frontmatter.thumbnail
-            console.log(`The COLOR is ${color}`)
             return (
               <div className={'w-full relative text-white overflow-hidden rounded-2xl flex shadow-lg'}>
                 <div key={node.fields.slug}  className={`w-full flex flex-col md:flex-row xl:flex-col bg-gradient-to-br from-${color}-500 to-${color}-700`}>
@@ -33,7 +32,7 @@ class WorkIndex extends React.Component {
                     <Button primary={true} link={`work${node.fields.slug}`} text={'Read case study'} textColor={`${color}-700`}></Button>
                   </div>
                   <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
-                    <Image key={`${thumbnail}`} filename={`${thumbnail}.png`} style={'relative mb-4'}></Image>
+                    <Image filename={`${thumbnail}.png`} style={'relative mb-4'} />
                   </div>
                 </div>
               </div>
@@ -47,7 +46,7 @@ class WorkIndex extends React.Component {
                 <Button primary={true} link={'https://untools.co'} target={'_blank'} text={'Visit untools.co'} textColor={'purple-800'}></Button>
               </div>
               <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
-                <Image key={'untoolsThumb'} filename={'untoolsThumb.png'} style={'relative mb-4'}></Image>
+              <Image filename={`untoolsThumb.png`} style={'relative mb-4'} />
               </div>
             </div>
           </div>
@@ -60,38 +59,47 @@ class WorkIndex extends React.Component {
 
 export default WorkIndex
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
+export const pageQuery = graphql`{
+  site {
+    siteMetadata {
+      title
     }
-    allMdx(filter: {frontmatter: {type: {eq: "case-study"}}}, sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            product
-            type
-            color
-            thumbnail
-          }
+  }
+  allMdx(
+    filter: {frontmatter: {type: {eq: "case-study"}}}
+    sort: {fields: [frontmatter___date], order: DESC}
+  ) {
+    edges {
+      node {
+        excerpt
+        fields {
+          slug
         }
-      }
-    }
-    file(absolutePath: {
-      regex: "/\\/images\\/untools\\.png/"
-    }) {
-      childImageSharp {
-        fixed(width: 924) {
-          ...GatsbyImageSharpFixed
+        frontmatter {
+          title
+          product
+          type
+          color
+          thumbnail
         }
       }
     }
   }
+  file(absolutePath: {regex: "/\\/images\\/untools\\.png/"}) {
+    childImageSharp {
+      gatsbyImageData(width: 924, layout: FIXED)
+    }
+  }
+  images: allFile {
+    edges {
+      node {
+        childImageSharp {
+          thumb: gatsbyImageData(placeholder: BLURRED)
+          full: gatsbyImageData(layout: FULL_WIDTH)
+          meta: gatsbyImageData(placeholder: BLURRED, layout: FIXED)
+        }
+      }
+    }
+  }
+}
 `
