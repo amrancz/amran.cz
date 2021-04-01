@@ -4,8 +4,8 @@ module.exports = {
   purge: {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     options: {
-      safelist: ['bg-*-*', 'text-*-*', 'from-*-*', 'to-*-*'],
-      whitelistPatterns: ['/^text/','/^bg','/^w','/^space']
+      safelist: ['bg', 'text-green', 'from', 'to'],
+      whitelistPatterns: ['/^text/','/^bg','/^w','/^space','/^from','/^to']
     },
   },
 
