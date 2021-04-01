@@ -107,6 +107,7 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     }, */
+    /* 
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -167,7 +168,7 @@ module.exports = {
                   data: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.Mdx.body }],
                 })
               })
             },
@@ -198,7 +199,7 @@ module.exports = {
           },
         ],
       },
-    },
+    }, */
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
