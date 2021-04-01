@@ -38,6 +38,7 @@ class Index extends React.Component {
             className='w-48 h-48 overflow-hidden rounded-2xl'
             ></StaticImage>
               </div>
+            {/* purgecss: w-48 h-48 overflow-hidden rounded-2xl flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block */}
             </div>
             <h1>{`👋 Hey, I'm Adam`}</h1>
             <p className={"leading-10"}>

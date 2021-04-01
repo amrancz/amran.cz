@@ -24,6 +24,7 @@ class Layout extends React.Component {
       <div className={'bg-grey-900'}>
         <Header></Header>
         <div className={`relative py-10 px-10 sm:max-w-${width} sm:mx-auto space-y-${spacing}`}>
+          {/* purgecss: max-w-4xl max-w-8xl space-y-8 space-y-12 space-y-16 */}
           {children}
         </div>
         <Footer></Footer>
