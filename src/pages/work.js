@@ -31,7 +31,7 @@ class Work extends React.Component {
                     <h3 className={'mb-8'}>{title}</h3>
                     <Button primary={true} link={`work${node.fields.slug}`} text={'Read case study'} textColor={`${color}-700`}></Button>
                   </div>
-                  <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto flex justify-center sm:block'}>
+                  <div className={'relative pt-4 max-h-48 flex justify-center'}>
                     <GatsbyImage
                       key={product}
                       image={image}
@@ -49,7 +49,7 @@ class Work extends React.Component {
                 <h3 className={'mb-8'}>Building a collection of tools for better thinking</h3>
                 <Button primary={true} link={'https://untools.co'} target={'_blank'} text={'Visit untools.co'} textColor={'purple-800'}></Button>
               </div>
-              <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto flex justify-center sm:block'}>
+              <div className={'relative pt-4 max-h-48 flex justify-center'}>
                 <StaticImage 
                   src={'../images/untoolsThumb.png'}
                   alt='Untools Thumbnail'

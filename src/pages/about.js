@@ -17,11 +17,7 @@ class About extends React.Component {
             <StaticImage 
                 src={'../images/portraitLarge.jpg'}
                 alt='Portrait of Adam'
-                style={{
-                  borderRadius: '16px',
-                  overflow:'hidden'
-                  }}
-                className='w-48 h-48 overflow-hidden rounded-2xl'
+                imgClassName='w-48 h-48 overflow-hidden rounded-2xl'
               ></StaticImage>
             </div>
             <div className={'flex-1 space-y-6 py-4 last:space-y-0'}>

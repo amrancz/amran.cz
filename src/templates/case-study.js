@@ -3,11 +3,12 @@ import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image'
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 class CaseStudyTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
+    const image = getImage(this.props.data[post.frontmatter.thumbnail])
 
     return (
       <Layout location={this.props.location} title={post.frontmatter.title}  width={'4xl'} spacing={'12'}>
@@ -23,9 +24,10 @@ class CaseStudyTemplate extends React.Component {
               </div>
               <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
                 <GatsbyImage
-                        image={`data.${post.frontmatter.thumbnail}.childImageSharp.gatsbyImageData`}
-                        alt={`data.${post.frontmatter.thumbnail} thumbnail`}
-                        className={'relative mb-4'}
+                        image={image}
+                        key={post.frontmatter.thumbnail}
+                        alt={`${post.frontmatter.thumbnail} thumbnail`}
+                        imgClassName={'relative mb-4'}
                 ></GatsbyImage>
               </div>
           </div>
@@ -44,12 +46,6 @@ export default CaseStudyTemplate
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     mdx(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
@@ -65,12 +61,20 @@ export const pageQuery = graphql`
     }
     grasonThumb: file(relativePath: {eq: "grasonThumb.png"}) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(
+          backgroundColor: "transparent"
+          placeholder: BLURRED
+          layout: CONSTRAINED
+        )
       }
     }
     kontentThumb: file(relativePath: {eq: "kontentThumb.png"}) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(
+          backgroundColor: "transparent"
+          placeholder: BLURRED
+          layout: CONSTRAINED
+        )
       }
     }
   }
