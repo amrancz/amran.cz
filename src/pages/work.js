@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Button from '../components/Button'
 import SEO from '../components/seo'
-import Image from '../components/Image'
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
 class Work extends React.Component {
   render() {
     const { data } = this.props
@@ -21,6 +21,7 @@ class Work extends React.Component {
             const product = node.frontmatter.product
             const color = node.frontmatter.color
             const thumbnail = node.frontmatter.thumbnail
+            const image = getImage(data[thumbnail])
             return (
               <div className={'w-full relative text-white overflow-hidden rounded-2xl flex shadow-lg'}>
                 <div key={node.fields.slug}  className={`w-full flex flex-col md:flex-row xl:flex-col bg-gradient-to-br from-${color}-500 to-${color}-700`}>
@@ -30,8 +31,12 @@ class Work extends React.Component {
                     <h3 className={'mb-8'}>{title}</h3>
                     <Button primary={true} link={`work${node.fields.slug}`} text={'Read case study'} textColor={`${color}-700`}></Button>
                   </div>
-                  <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
-                    <Image imageName={thumbnail} alt={`${product} thumbnail`} style={'relative mb-4'} />
+                  <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto flex justify-center sm:block'}>
+                    <GatsbyImage
+                      key={product}
+                      image={image}
+                      alt={`${product} thumbnail`}
+                    ></GatsbyImage>
                   </div>
                 </div>
               </div>
@@ -44,8 +49,15 @@ class Work extends React.Component {
                 <h3 className={'mb-8'}>Building a collection of tools for better thinking</h3>
                 <Button primary={true} link={'https://untools.co'} target={'_blank'} text={'Visit untools.co'} textColor={'purple-800'}></Button>
               </div>
-              <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
-                <Image imageName={`untoolsThumb.png`} alt={'Untools Thumbnail'} style={'relative mb-4'} />
+              <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto flex justify-center sm:block'}>
+                <StaticImage 
+                  src={'../images/untoolsThumb.png'}
+                  alt='Untools Thumbnail'
+                  key='Untools Thumbnail'
+                  width={711}
+                  height={400}
+                  layout={'constrained'}
+                ></StaticImage>
               </div>
             </div>
           </div>
@@ -59,11 +71,6 @@ class Work extends React.Component {
 export default Work
 
 export const pageQuery = graphql`{
-  site {
-    siteMetadata {
-      title
-    }
-  }
   allMdx(
     filter: {frontmatter: {type: {eq: "case-study"}}}
     sort: {fields: [frontmatter___date], order: DESC}
@@ -82,6 +89,24 @@ export const pageQuery = graphql`{
           thumbnail
         }
       }
+    }
+  }
+  grasonThumb: file(relativePath: {eq: "grasonThumb.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        backgroundColor: "transparent"
+        placeholder: BLURRED
+        layout: CONSTRAINED
+      )
+    }
+  }
+  kontentThumb: file(relativePath: {eq: "kontentThumb.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        backgroundColor: "transparent"
+        placeholder: BLURRED
+        layout: CONSTRAINED
+      )
     }
   }
 }

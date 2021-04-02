@@ -5,7 +5,7 @@ import Button from '../components/Button'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import CustomLink from '../components/CustomLink'
-import { StaticImage } from 'gatsby-plugin-image'
+import { StaticImage, GatsbyImage } from 'gatsby-plugin-image'
 
 class Index extends React.Component {
   render() {
@@ -24,7 +24,7 @@ class Index extends React.Component {
             className={'w-48 h-48 flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block'}>
               <div>
               <StaticImage 
-                src={'../images/portraitSmall.png'}
+                src={'../images/portraitSmall.jpg'}
                 alt='Portrait of Adam'
                 width={240}
                 height={240}

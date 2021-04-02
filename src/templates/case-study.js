@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Image from '../components/Image'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+import { StaticImage, GatsbyImage } from 'gatsby-plugin-image'
+
 class CaseStudyTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
@@ -21,7 +22,11 @@ class CaseStudyTemplate extends React.Component {
                 <h1 className={'mb-8'}>{post.frontmatter.title}</h1>
               </div>
               <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
-                <Image imageName={`${post.frontmatter.thumbnail}.png`} alt={`${post.frontmatter.thumbnail}.png`} style={'relative mb-4'}></Image>
+                <GatsbyImage
+                        image={`data.${post.frontmatter.thumbnail}.childImageSharp.gatsbyImageData`}
+                        alt={`data.${post.frontmatter.thumbnail} thumbnail`}
+                        className={'relative mb-4'}
+                ></GatsbyImage>
               </div>
           </div>
         </div>
@@ -57,6 +62,16 @@ export const pageQuery = graphql`
         thumbnail
         }
       body
+    }
+    grasonThumb: file(relativePath: {eq: "grasonThumb.png"}) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    kontentThumb: file(relativePath: {eq: "kontentThumb.png"}) {
+      childImageSharp {
+        gatsbyImageData
+      }
     }
   }
 `

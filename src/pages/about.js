@@ -1,8 +1,8 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import CustomLink from '../components/CustomLink'
-import Image from '../components/Image'
 import SEO from '../components/seo'
+import { StaticImage, GatsbyImage } from 'gatsby-plugin-image'
 class About extends React.Component {
   render() {
 
@@ -14,7 +14,15 @@ class About extends React.Component {
         />
           <div className={'flex flex-col xl:flex-row lg:items-stretch lg:space-x-16 space-y-12 lg:space-y-0 bg-gradient-to-br from-blue-500 to-purple-700 flex flex-col lg:flex-row text-white flex-1 rounded-2xl p-12 space-y-4'}>
             <div className={'flex-1'}>
-              <Image imageName={'../images/portraitLarge.png'} alt={'Portrait of Adam Amran'} style={'rounded-xl'}></Image> 
+            <StaticImage 
+                src={'../images/portraitLarge.jpg'}
+                alt='Portrait of Adam'
+                style={{
+                  borderRadius: '16px',
+                  overflow:'hidden'
+                  }}
+                className='w-48 h-48 overflow-hidden rounded-2xl'
+              ></StaticImage>
             </div>
             <div className={'flex-1 space-y-6 py-4 last:space-y-0'}>
               <h1>{`😊 Nice to meet you!`}</h1>
