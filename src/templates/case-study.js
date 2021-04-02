@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Image from '../components/Image'
-import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 class CaseStudyTemplate extends React.Component {
@@ -22,7 +21,7 @@ class CaseStudyTemplate extends React.Component {
                 <h1 className={'mb-8'}>{post.frontmatter.title}</h1>
               </div>
               <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
-                <Image key={`${post.frontmatter.thumbnail}`} filename={`${post.frontmatter.thumbnail}.png`} style={'relative mb-4'}></Image>
+                <Image imageName={`${post.frontmatter.thumbnail}.png`} alt={`${post.frontmatter.thumbnail}.png`} style={'relative mb-4'}></Image>
               </div>
           </div>
         </div>

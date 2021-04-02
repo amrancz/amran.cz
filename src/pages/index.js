@@ -4,14 +4,12 @@ import { Link, graphql } from 'gatsby'
 import Button from '../components/Button'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import Portrait from '../images/portraitSmall.png'
 import CustomLink from '../components/CustomLink'
 import { StaticImage } from 'gatsby-plugin-image'
 
 class Index extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
     const posts = data.allMdx.edges
     return (
       <Layout location={this.props.location} width={'8xl'} spacing={'12'}>
@@ -26,16 +24,16 @@ class Index extends React.Component {
             className={'w-48 h-48 flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block'}>
               <div>
               <StaticImage 
-            src={'../images/portraitSmall.png'}
-            alt='Portrait of Adam'
-            width={240}
-            height={240}
-            style={{
-              borderRadius: '16px',
-              overflow:'hidden'
-            }}
-            className='w-48 h-48 overflow-hidden rounded-2xl'
-            ></StaticImage>
+                src={'../images/portraitSmall.png'}
+                alt='Portrait of Adam'
+                width={240}
+                height={240}
+                style={{
+                  borderRadius: '16px',
+                  overflow:'hidden'
+                  }}
+                className='w-48 h-48 overflow-hidden rounded-2xl'
+              ></StaticImage>
               </div>
             {/* purgecss: w-48 h-48 overflow-hidden rounded-2xl flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block */}
             </div>

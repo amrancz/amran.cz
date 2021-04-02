@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
 import Button from '../components/Button'
 import SEO from '../components/seo'
@@ -32,7 +31,7 @@ class Work extends React.Component {
                     <Button primary={true} link={`work${node.fields.slug}`} text={'Read case study'} textColor={`${color}-700`}></Button>
                   </div>
                   <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
-                    <Image filename={`${thumbnail}.png`} style={'relative mb-4'} />
+                    <Image imageName={thumbnail} alt={`${product} thumbnail`} style={'relative mb-4'} />
                   </div>
                 </div>
               </div>
@@ -46,7 +45,7 @@ class Work extends React.Component {
                 <Button primary={true} link={'https://untools.co'} target={'_blank'} text={'Visit untools.co'} textColor={'purple-800'}></Button>
               </div>
               <div className={'relative pr-6 pt-4 max-h-48 sm:mx-auto sm:block'}>
-              <Image filename={`untoolsThumb.png`} style={'relative mb-4'} />
+                <Image imageName={`untoolsThumb.png`} alt={'Untools Thumbnail'} style={'relative mb-4'} />
               </div>
             </div>
           </div>

@@ -1,30 +1,40 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-function Image({filename,alt,style}) {
-    return (
-      <StaticQuery
-        query={query}
-        render={data => {
-      console.log(`Data is ${data}`)
-      /* const image = data.images.edges.find(n => {
-        return n.node.relativePath.includes(filename);
-      });
-      if (!image) { return null; } */
-      return (
-        <GatsbyImage
-          key={filename}
-          image={'untoolsThumbs.png'}
-          alt={alt}
-          className={style}
-        />
-      )
-    }}
+export default function Image({imageName,alt,style}) {
+  return (
+    <StaticQuery
+      query={
+        graphql`
+          query ImageQuery {
+            allFile(filter: {extension: {eq: "png"}}){
+              nodes {
+                relativePath
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+          }`
+      }
+      render={data => {
+        const image = data.allFile.nodes.find((images) => images.relativePath === imageName)
+        return(
+          <GatsbyImage
+            key={imageName}
+            image={image.childImageSharp.gatsbyImageData}
+            alt={alt}
+            className={style}
+          />
+        )
+        }
+      }
+    // close StaticQuery and the whole function  
     />
   )
 }
-
+/* 
 const query = graphql`
   query ImageQuery {
     images: allFile {
@@ -38,8 +48,11 @@ const query = graphql`
         }
       }
     }
+    image: file(absolutePath: {regex: "/portraitSmall.png/"}) {
+      childImageSharp {
+        gatsbyImageData(width: 50, height: 50, layout: FIXED)
+      }
+    }
   }
 `
-
-export default Image
-
+*/

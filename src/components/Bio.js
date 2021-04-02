@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Portrait from '../images/portraitSmall.png'
+import { data } from 'autoprefixer'
 
 function Bio() {
   return (
@@ -26,7 +27,7 @@ function Bio() {
 }
 
 const bioQuery = graphql`query BioQuery {
-  avatar: file(absolutePath: {regex: "/portraitSmall.jpg/"}) {
+  avatar: file(absolutePath: {regex: "/portraitSmall.png/"}) {
     childImageSharp {
       gatsbyImageData(width: 50, height: 50, layout: FIXED)
     }

@@ -1,10 +1,6 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
-
 import Header from './Header'
 import Footer from './Footer'
-import Image from './Image'
-
 class Layout extends React.Component {
   render() {
     const { location, title, children, width, spacing } = this.props
@@ -37,15 +33,6 @@ Layout.defaultProps = {
   width: '4xl',
   spacing: '12',
 }
-
-const imgQuery = graphql`query ImgQuery {
-  file: file(relativePath: {eq: "adam.png"}) {
-    childImageSharp {
-      gatsbyImageData(width: 160, height: 160, layout: FIXED)
-    }
-  }
-}
-`
 
 export default Layout
 
