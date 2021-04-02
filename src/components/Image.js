@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function Image({imageName,alt,style}) {
   return (
@@ -20,6 +20,7 @@ export default function Image({imageName,alt,style}) {
       }
       render={data => {
         const image = data.allFile.nodes.find((images) => images.relativePath === imageName)
+        console.log(image)
         return(
           <GatsbyImage
             key={imageName}
