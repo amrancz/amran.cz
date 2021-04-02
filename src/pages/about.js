@@ -1,23 +1,20 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CustomLink from '../components/CustomLink'
-import Portrait from '../images/portraitLarge.png'
+import Image from '../components/Image'
 import SEO from '../components/seo'
 class About extends React.Component {
   render() {
-    const { data } = this.props
-    const posts = data.allMdx.edges
 
     return (
       <Layout location={this.props.location} width={'8xl'} spacing={'8'}>
         <SEO
           title="About / Adam Amran"
-          keywords={[`product designer`,]}
+          keywords={[`product designer`]}
         />
           <div className={'flex flex-col xl:flex-row lg:items-stretch lg:space-x-16 space-y-12 lg:space-y-0 bg-gradient-to-br from-blue-500 to-purple-700 flex flex-col lg:flex-row text-white flex-1 rounded-2xl p-12 space-y-4'}>
             <div className={'flex-1'}>
-              <img src={Portrait} alt={'Portrait of Adam Amran'} className={'rounded-xl'}></img>
+              <Image imageName={'../images/portraitLarge.png'} alt={'Portrait of Adam Amran'} style={'rounded-xl'}></Image> 
             </div>
             <div className={'flex-1 space-y-6 py-4 last:space-y-0'}>
               <h1>{`😊 Nice to meet you!`}</h1>
@@ -48,28 +45,3 @@ class About extends React.Component {
 }
 
 export default About
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMdx(filter: {frontmatter: {type: {eq: "case-study"}}}, sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date
-            title
-            type
-          }
-        }
-      }
-    }
-  }
-`

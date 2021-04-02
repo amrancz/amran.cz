@@ -20,17 +20,20 @@ export default function Image({imageName,alt,style}) {
       }
       render={data => {
         const image = data.allFile.nodes.find((images) => images.relativePath === imageName)
-        console.log(image)
-        return(
-          <GatsbyImage
-            key={imageName}
-            image={image.childImageSharp.gatsbyImageData}
-            alt={alt}
-            className={style}
-          />
-        )
+        if (image === undefined){
+          null
+        } else {
+          return(
+            <GatsbyImage
+              key={imageName}
+              image={image.childImageSharp.gatsbyImageData}
+              alt={alt}
+              className={style}
+            />
+          )
         }
       }
+    }
     // close StaticQuery and the whole function  
     />
   )

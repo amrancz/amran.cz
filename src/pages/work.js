@@ -84,21 +84,5 @@ export const pageQuery = graphql`{
       }
     }
   }
-  file(absolutePath: {regex: "/\\/images\\/untools\\.png/"}) {
-    childImageSharp {
-      gatsbyImageData(width: 924, layout: FIXED)
-    }
-  }
-  images: allFile {
-    edges {
-      node {
-        childImageSharp {
-          thumb: gatsbyImageData(placeholder: BLURRED)
-          full: gatsbyImageData(layout: FULL_WIDTH)
-          meta: gatsbyImageData(placeholder: BLURRED, layout: FIXED)
-        }
-      }
-    }
-  }
 }
 `
