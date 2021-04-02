@@ -16,7 +16,7 @@ class WritingIndex extends React.Component {
         <div className={'flex flex-col lg:flex-row lg:items-stretch lg:space-x-8 space-y-8 lg:space-y-0'}>
           <div className={'bg-opacit-0 text-white lg:flex-1 rounded-2xl pt-12 space-y-6'}>
             <h1>Writing</h1>
-            <p className={"leading-10 text-gray-300"}>
+            <p className={"leading-8 text-gray-300"}>
                   My thoughts about (product) design, side-projects and whatever else interests me at the moment.
             </p>
           </div>

@@ -21,18 +21,15 @@ class Index extends React.Component {
           <div className={'bg-gradient-to-br from-green-500 to-blue-600 text-white lg:flex-1 rounded-2xl p-12 space-y-6'}>
             {/* <img src={Portrait} alt={'Portrait of Adam Amran'} className={'rounded-6xl hidden lg:block w-48 h-48'}></img> */}
             <div
-            className={'w-48 h-48 flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block'}>
+            className={'w-32 h-32 flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block'}>
               <div>
               <StaticImage 
                 src={'../images/portraitSmall.jpg'}
                 alt='Portrait of Adam'
-                width={240}
-                height={240}
-                style={{
-                  borderRadius: '16px',
-                  overflow:'hidden'
-                  }}
-                className='w-48 h-48 overflow-hidden rounded-2xl'
+                width={200}
+                height={200}
+                imgclassName='w-24 h-24 overflow-hidden rounded-2xl'
+                imgClassName='w-24 h-24 overflow-hidden rounded-2xl'
               ></StaticImage>
               </div>
             {/* purgecss: w-48 h-48 overflow-hidden rounded-2xl flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block */}
@@ -55,7 +52,7 @@ class Index extends React.Component {
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
-                  <div key={node.fields.slug} className={'py-2 space-y-1'}>
+                  <div key={node.fields.slug} className={'pt-2 space-y-1'}>
                     <Link to={`/writing${node.fields.slug}`}>
                       <h4 className={"hover:text-blue-400 rounded-md duration-150"}>
                           {title}

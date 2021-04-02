@@ -22,6 +22,8 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 title
                 type
+                thumbnail
+                product
               }
               body
             }

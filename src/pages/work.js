@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Button from '../components/Button'
 import SEO from '../components/seo'
@@ -49,7 +49,7 @@ class Work extends React.Component {
                 <h3 className={'mb-8'}>Building a collection of tools for better thinking</h3>
                 <Button primary={true} link={'https://untools.co'} target={'_blank'} text={'Visit untools.co'} textColor={'purple-800'}></Button>
               </div>
-              <div className={'relative pt-4 max-h-48 flex justify-center'}>
+              <div className={'relative pt-4 max-h-48 mx-auto flex justify-center'}>
                 <StaticImage 
                   src={'../images/untoolsThumb.png'}
                   alt='Untools Thumbnail'

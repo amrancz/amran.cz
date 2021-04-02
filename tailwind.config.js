@@ -9,12 +9,10 @@ module.exports = {
       whitelistPatterns: ['/^text/','/^bg','/^w','/^space','/^from','/^to']
     },
   },
-
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
       fontFamily: {
-        'heading': ['Inter', 'sans-serif'],
-        'body': ['"Inter"', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
       },
       container: {
         center: true,
@@ -30,9 +28,6 @@ module.exports = {
         borderRadius: {
           '4xl': '2rem',
         },
-        fontFamily: {
-          sans: ['"Inter"']
-        }
       }
   },
   variants: {
