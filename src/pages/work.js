@@ -23,7 +23,7 @@ class Work extends React.Component {
             const thumbnail = node.frontmatter.thumbnail
             const image = getImage(data[thumbnail])
             return (
-              <div className={'w-full relative text-white overflow-hidden rounded-2xl flex shadow-lg'}>
+              <div className={'w-full relative text-white overflow-hidden rounded-2xl flex items-end shadow-lg'}>
                 <div key={node.fields.slug}  className={`w-full flex flex-col md:flex-row xl:flex-col bg-gradient-to-br from-${color}-500 to-${color}-700`}>
                   {/* purgecss: from-yellow-500 to-yellow-700 from-blue-500 to-blue-700 */}
                   <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-12'}>

@@ -18,7 +18,7 @@ class Index extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <div className={'flex flex-col lg:flex-row lg:items-stretch lg:space-x-8 space-y-8 lg:space-y-0'}>
-          <div className={'bg-gradient-to-br from-green-500 to-blue-600 text-white lg:flex-1 rounded-2xl p-8 md:p-12 space-y-6'}>
+          <div className={'bg-gradient-to-br from-green-500 to-blue-600 text-white lg:flex-1 rounded-2xl p-6 md:p-12 space-y-4 md:space-y-6'}>
             {/* <img src={Portrait} alt={'Portrait of Adam Amran'} className={'rounded-6xl hidden lg:block w-48 h-48'}></img> */}
             <div
             className={'w-32 h-32 flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block'}>
@@ -40,7 +40,7 @@ class Index extends React.Component {
               <Button link={'/about'} text={'Learn more about me'}></Button>
             </div>
           </div>
-          <div className={'bg-gray-700 lg:flex-1 lg:flex-grow bg-opacity-10 rounded-2xl p-8 md:p-12 space-y-6 last:space-y-0'}>
+          <div className={'bg-gray-700 lg:flex-1 lg:flex-grow bg-opacity-10 rounded-2xl p-6 md:p-12 space-y-6 last:space-y-0'}>
             <Link to={'/writing'}>
               <h4 className={"text-gray-600 uppercase hover:text-blue-400 duration-150"}>Recent writings</h4>
             </Link>
