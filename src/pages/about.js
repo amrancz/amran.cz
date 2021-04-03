@@ -12,7 +12,7 @@ class About extends React.Component {
           title="About / Adam Amran"
           keywords={[`product designer`]}
         />
-          <div className={'flex flex-col xl:flex-row lg:items-stretch lg:space-x-16 space-y-12 lg:space-y-0 bg-gradient-to-br from-blue-500 to-purple-700 flex flex-col lg:flex-row text-white flex-1 rounded-2xl p-12 space-y-4'}>
+          <div className={'flex flex-col xl:flex-row lg:items-stretch lg:space-x-16 space-y-12 lg:space-y-0 bg-gradient-to-br from-blue-500 to-purple-700 flex flex-col lg:flex-row text-white flex-1 rounded-2xl p-8 md:p-12 space-y-4'}>
             <div className={'flex-1'}>
             <StaticImage 
                 src={'../images/portraitLarge.jpg'}

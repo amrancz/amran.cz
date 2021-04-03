@@ -2,19 +2,19 @@
 
 @layer base {
   body {
-    @apply text-lg list-disc list-inside leading-relaxed bg-gray-900 text-gray-100 font-inter text-white;
+    @apply text-base md:text-lg list-disc list-inside leading-relaxed bg-gray-900 text-gray-100 font-inter text-white;
   }
   h1 {
-    @apply text-5xl font-bold tracking-tighter;
+    @apply text-4xl md:text-5xl font-bold tracking-tighter;
   }
   h2 {
-    @apply text-4xl font-bold tracking-tight;
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
   }
   h3 {
-    @apply text-3xl font-bold tracking-tight;
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
   }
   h4 {
-    @apply text-2xl font-bold tracking-tight;
+    @apply text-xl md:text-2xl font-bold tracking-tight;
   }
   a {
     @apply text-white duration-100;
