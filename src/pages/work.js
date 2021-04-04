@@ -23,15 +23,15 @@ class Work extends React.Component {
             const thumbnail = node.frontmatter.thumbnail
             const image = getImage(data[thumbnail])
             return (
-              <div className={'w-full relative text-white overflow-hidden rounded-2xl flex items-end shadow-lg'}>
-                <div key={node.fields.slug}  className={`w-full flex flex-col md:flex-row xl:flex-col bg-gradient-to-br from-${color}-500 to-${color}-700`}>
+              <div className={'w-full relative text-white overflow-hidden rounded-2xl flex'}>
+                <div key={node.fields.slug}  className={`w-full flex flex-1 flex-col md:flex-row xl:flex-col bg-gradient-to-br from-${color}-500 to-${color}-700`}>
                   {/* purgecss: from-yellow-500 to-yellow-700 from-blue-500 to-blue-700 */}
-                  <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-12'}>
+                  <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative p-8 xl:p-12'}>
                     <span className={`font-medium text-${color}-200 mb-2`}>{product}</span>
                     <h3 className={'mb-8'}>{title}</h3>
                     <Button primary={true} link={`work${node.fields.slug}`} text={'Read case study'} textColor={`${color}-700`}></Button>
                   </div>
-                  <div className={'relative pt-4 max-h-48 flex justify-center'}>
+                  <div className={'relative max-h-48 overflow-visible'}>
                     <GatsbyImage
                       key={product}
                       image={image}
@@ -49,7 +49,7 @@ class Work extends React.Component {
                 <h3 className={'mb-8'}>Building a collection of tools for better thinking</h3>
                 <Button primary={true} link={'https://untools.co'} target={'_blank'} text={'Visit untools.co'} textColor={'purple-800'}></Button>
               </div>
-              <div className={'relative pt-4 max-h-48 mx-auto flex justify-center'}>
+              <div className={'relative max-h-48 overflow-visible'}>
                 <StaticImage 
                   src={'../images/untoolsThumb.png'}
                   alt='Untools Thumbnail'

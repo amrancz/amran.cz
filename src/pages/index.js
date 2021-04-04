@@ -22,12 +22,14 @@ class Index extends React.Component {
             {/* <img src={Portrait} alt={'Portrait of Adam Amran'} className={'rounded-6xl hidden lg:block w-48 h-48'}></img> */}
             <div
             className={'w-32 h-32 flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block'}>
-              <div>
               <StaticImage 
                 src={'../images/portraitSmall.jpg'}
                 alt='Portrait of Adam'
+                imgStyle={'border-radius: 20px; overflow:hidden'}
+                style={'border-radius:50px; overflow:hidden'}
+                className={'rounded-2xl overflow-hidden'}
+                imgClassName={'rounded-4xl overflow-hidden'}
               ></StaticImage>
-              </div>
             {/* purgecss: w-48 h-48 overflow-hidden rounded-2xl flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block */}
             </div>
             <h1>{`👋 Hey, I'm Adam`}</h1>
@@ -36,7 +38,7 @@ class Index extends React.Component {
                   Making <CustomLink link={'https://www.untools.co'} target={"_blank"} text={`Untools.co`}></CustomLink> on the side.
             </p>
             <div className={'py-2 flex flex-col md:flex-row lg:flex-row flex-shrink space-y-4 space-x-0 md:space-y-0 md:space-x-4'}>
-              <Button primary={true} link={'/work'} text={'See my work'} textColor={'green-500'}></Button>
+              <Button primary={true} link={'/work'} text={'See my work'} textColor={'green-800'}></Button>
               <Button link={'/about'} text={'Learn more about me'}></Button>
             </div>
           </div>
