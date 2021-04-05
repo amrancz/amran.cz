@@ -1,16 +1,22 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer} from "gatsby-plugin-mdx"
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-class BlogPostTemplate extends React.Component {
+export default class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
 
+    // Custom typography components
+    const H2 = props => <h2 className='pt-8' {...props} />
+    const H3 = props => <h3 className='pt-4' {...props} />
+    const H4 = props => <h4 className='pt-2' {...props} />
+
     return (
-      <Layout location={this.props.location}  width={'3xl'} spacing={'12'}>
+      <Layout location={this.props.location}  width={'3xl'} spacing={'6'}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <div className={'space-y-6'}>
         <Link to={'/writing'} className={"text-gray-600 hover:text-blue-400"}>← Writing</Link>
@@ -20,7 +26,15 @@ class BlogPostTemplate extends React.Component {
           </p>
         <hr className={'opacity-10'} />
         </div>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <MDXProvider
+          components={{
+            h2: H2,
+            h3: H3,
+            h4: H4
+          }}>
+           <MDXRenderer>{post.body}</MDXRenderer>
+        </MDXProvider>
+
         <Bio />
 
         <ul className={'flex flex-row flex-grow justify-between space-x-6'}>
@@ -57,8 +71,6 @@ class BlogPostTemplate extends React.Component {
     )
   }
 }
-
-export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query($slug: String!) {

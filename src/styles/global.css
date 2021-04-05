@@ -11,10 +11,10 @@
     @apply text-3xl md:text-4xl font-bold tracking-tight;
   }
   h3 {
-    @apply text-2xl md:text-3xl font-bold tracking-tight;
+    @apply text-xl md:text-2xl font-bold tracking-tight;
   }
   h4 {
-    @apply text-xl md:text-2xl font-bold tracking-tight;
+    @apply text-lg md:text-xl font-bold tracking-tight;
   }
   a {
     @apply text-white duration-100;

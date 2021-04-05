@@ -21,8 +21,6 @@ class About extends React.Component {
                   borderRadius: '12px',
                   overflow: 'hidden'
                 }}
-                className={'rounded-2xl'}
-                imgClassName={'rounded-4xl'}
               ></StaticImage>
             </div>
             <div className={'flex-1 space-y-4 lg:space-y-6 py-4 lg:py-0 last:space-y-0'}>

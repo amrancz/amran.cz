@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer} from "gatsby-plugin-mdx"
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -9,6 +10,11 @@ class CaseStudyTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
     const image = getImage(this.props.data[post.frontmatter.thumbnail])
+
+    // Custom typography components
+    const H2 = props => <h2 className='pt-8' {...props} />
+    const H3 = props => <h3 className='pt-4' {...props} />
+    const H4 = props => <h4 className='pt-2' {...props} />
 
     return (
       <Layout location={this.props.location} title={post.frontmatter.title}  width={'3xl'} spacing={'8'}>
@@ -34,7 +40,14 @@ class CaseStudyTemplate extends React.Component {
         <p>
           {post.frontmatter.date}
         </p>
-        <MDXRenderer className={'a:text-blue-400 a:hover:underline'}>{post.body}</MDXRenderer>
+        <MDXProvider
+          components={{
+            h2: H2,
+            h3: H3,
+            h4: H4
+          }}>
+           <MDXRenderer>{post.body}</MDXRenderer>
+        </MDXProvider>
 
       </Layout>
     )
