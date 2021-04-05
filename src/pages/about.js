@@ -16,14 +16,16 @@ class About extends React.Component {
             <div className={'flex-1'}>
             <StaticImage 
                 src={'../images/portraitLarge.jpg'}
-                alt='Portrait of Adam'
-                imgStyle={'border-radius: 20px'}
-                style={'border-radius:50px'}
+                alt={'Portrait of Adam'}
+                imgStyle={{
+                  borderRadius: '12px',
+                  overflow: 'hidden'
+                }}
                 className={'rounded-2xl'}
                 imgClassName={'rounded-4xl'}
               ></StaticImage>
             </div>
-            <div className={'flex-1 space-y-6 py-4 last:space-y-0'}>
+            <div className={'flex-1 space-y-4 lg:space-y-6 py-4 lg:py-0 last:space-y-0'}>
               <h1>{`Nice to meet you!`}</h1>
               <p>
               I'm a product designer and maker based in Brno 🇨🇿.<br />
@@ -32,7 +34,7 @@ class About extends React.Component {
               Currently designing a product management system at <CustomLink link={"https://www.productboard.com"} target={"_blank"} text={`Productboard${'\u00A0'}🚀`}></CustomLink>. <br />
               </p>
               <p>
-              Preivously, I was a designer at <CustomLink link={"https://www.kontent.ai"} target={"_blank"} text={`Kentico${'\u00A0'}✍️`}></CustomLink> and led the design team at <CustomLink link={"https://www.futured.app"} target={"_blank"} text={`Futured${'\u00A0'}📱`}></CustomLink>.
+              Previously, I was a designer at <CustomLink link={"https://www.kontent.ai"} target={"_blank"} text={`Kentico${'\u00A0'}✍️`}></CustomLink> and led the design team at <CustomLink link={"https://www.futured.app"} target={"_blank"} text={`Futured${'\u00A0'}📱`}></CustomLink>.
               More about my work experience on <CustomLink link={'https://www.linkedin.com/in/adam-amran-98950222/'} target={'_blank'} text={'LinkedIn'}></CustomLink>.
               </p>
               <p>

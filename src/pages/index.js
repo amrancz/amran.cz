@@ -19,20 +19,18 @@ class Index extends React.Component {
         />
         <div className={'flex flex-col lg:flex-row lg:items-stretch lg:space-x-8 space-y-8 lg:space-y-0'}>
           <div className={'bg-gradient-to-br from-green-500 to-blue-600 text-white lg:flex-1 rounded-2xl p-6 md:p-12 space-y-4 md:space-y-6'}>
-            {/* <img src={Portrait} alt={'Portrait of Adam Amran'} className={'rounded-6xl hidden lg:block w-48 h-48'}></img> */}
             <div
-            className={'w-32 h-32 flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block'}>
+            className={'w-32 h-32 flex rounded-2xl overflow-visible bg-green-800 hidden lg:block'}>
               <StaticImage 
                 src={'../images/portraitSmall.jpg'}
                 alt='Portrait of Adam'
-                imgStyle={'border-radius: 20px; overflow:hidden'}
-                style={'border-radius:50px; overflow:hidden'}
-                className={'rounded-2xl overflow-hidden'}
-                imgClassName={'rounded-4xl overflow-hidden'}
+                imgStyle={{
+                  borderRadius: '1rem',
+                  overflow: 'hidden'
+                }}
               ></StaticImage>
-            {/* purgecss: w-48 h-48 overflow-hidden rounded-2xl flex rounded-2xl overflow-hidden bg-green-800 hidden lg:block */}
             </div>
-            <h1>{`👋 Hey, I'm Adam`}</h1>
+            <h1>{`Hi! I'm Adam`}</h1>
             <p className={"leading-10"}>
                   Product Designer at <CustomLink link={'https://www.productboard.com'} target={"_blank"} text={`Productboard`}></CustomLink> <br />
                   Making <CustomLink link={'https://www.untools.co'} target={"_blank"} text={`Untools.co`}></CustomLink> on the side.
