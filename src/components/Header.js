@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 function Header() {
   const activeStyle = 'font-semibold tracking-tighter text-blue-400'
   return (
-  <div className={'bg-gray-900 flex flex-column md:flex-row flex-grow justify-between py-8 px-6 md:px-10'}>
+  <div className={'fixed top-0 z-10 w-full backdrop-blur bg-gray-900 bg-opacity-80 flex flex-column md:flex-row flex-grow justify-between py-4 md:py-8 px-6 md:px-10'}>
       <div>
         <Link to={`/`} className={'font-semibold tracking-tighter hover:text-green-400'}>
             Adam Amran

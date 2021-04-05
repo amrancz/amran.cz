@@ -38,6 +38,7 @@
     "react-live": "^2.2.3",
     "react-toggle": "^4.1.2",
     "react-typography": "^0.16.19",
+    "tailwindcss-filters": "^3.0.0",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },

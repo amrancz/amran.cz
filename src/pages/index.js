@@ -29,11 +29,12 @@ class Index extends React.Component {
                   textAlign: 'center',
                   borderRadius: '10rem',
                   overflow: 'hidden',
-                  backgroundColor: 'transparent',
+                  backgroundColor: 'none',
                 }}
                 imgStyle={{
                   borderRadius: '10rem',
-                  overflow: 'hidden'
+                  overflow: 'hidden',
+                  backgroundColor: 'none',
                 }}
               ></StaticImage>
             </div>
@@ -43,7 +44,7 @@ class Index extends React.Component {
                   Making <CustomLink link={'https://www.untools.co'} target={"_blank"} text={`Untools.co`}></CustomLink> on the side.
             </p>
             <div className={'py-2 flex flex-col justify-center sm:flex-row md:flex-row space-y-4 space-x-0 sm:space-y-0 sm:space-x-4'}>
-              <Button primary={true} link={'/work'} text={'See my work'} textColor={'green-800'}></Button>
+              <Button primary={true} link={'/work'} text={'See my work'} textColor={'gray-900'}></Button>
               <Button link={'/about'} text={'Learn more about me'}></Button>
             </div>
           </div>

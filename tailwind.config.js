@@ -17,6 +17,10 @@ module.exports = {
       container: {
         center: true,
       },
+      backdropFilter: {
+      'none': 'none',
+      'blur': 'blur(10px)',
+    },
       extend: {
         colors: {
           gray: colors.trueGray,
@@ -32,8 +36,11 @@ module.exports = {
   },
   variants: {
     extend: {},
+    backdropFilter: ['responsive']
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-filters')
+  ],
   corePlugins: {
     preFlight: true,
   }
