@@ -1,11 +1,17 @@
 @tailwind base;
 
+@layer utilities {
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
+
 @layer base {
   html {
     @apply smooth-scroll;
   }
   body {
-    @apply text-base md:text-lg list-disc list-inside leading-loose bg-gray-900 text-gray-100 font-inter text-white;
+    @apply text-base md:text-lg list-disc list-inside leading-relaxed bg-gray-900 text-gray-100 font-inter text-white;
   }
   h1 {
     @apply text-4xl md:text-5xl font-bold tracking-tighter;
@@ -32,12 +38,6 @@
 
 @tailwind components;
 @tailwind utilities;
-
-@layer utilities {
-  .smooth-scroll {
-    scroll-behavior: 'smooth';
-  }
-}
 
 @font-face {
   font-family: 'Inter';

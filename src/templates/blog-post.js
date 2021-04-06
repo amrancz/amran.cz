@@ -8,12 +8,23 @@ import SEO from '../components/seo'
 export default class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
-    const { previous, next } = this.props.pageContext
+    const allBlogPosts = this.props.data.allMdx.edges
+    function recommendArticle(article){
+      function filterArticles(a){
+        return a.node.frontmatter.title != post.frontmatter.title
+      }
+      const result = article.filter(filterArticles)
+      return (
+        result[Math.floor(Math.random()*result.length)]
+      )
+    }
 
     // Custom typography components
     const H2 = props => <h2 className='pt-8' {...props} />
     const H3 = props => <h3 className='pt-4' {...props} />
     const H4 = props => <h4 className='pt-2' {...props} />
+    const P = props => <p className='leading-loose' {...props} />
+    const nextArticle = recommendArticle(allBlogPosts).node
 
     return (
       <Layout location={this.props.location}  width={'3xl'} spacing={'8'}>
@@ -31,7 +42,8 @@ export default class BlogPostTemplate extends React.Component {
             components={{
               h2: H2,
               h3: H3,
-              h4: H4
+              h4: H4,
+              p: P,
             }}>
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXProvider>
@@ -40,38 +52,17 @@ export default class BlogPostTemplate extends React.Component {
         <BlogFooter />
         
         <div className={'px-0 md:px-12'}>
-          <div className={'pt-8'}>
-            <h3>More articles</h3>
-            <ul className={'flex py-6 space-y-0 space-x-6'}>
-              <li className={'flex flex-row flex-1'}>
-                <div>
-                  {previous && (
-                    <Link className={'hover:text-blue-400 flex flex-row flex-1 space-x-1 '} to={`writing${previous.fields.slug}`} rel="prev">
-                      <span>
-                      ←
-                      </span>
-                      <span>
-                      {previous.frontmatter.title}
-                      </span>
-                    </Link>
-                  )}
-                </div>
-              </li>
-              <li className={'flex flex-row flex-1'}>
-                <div className={'text-right'}>
-                  {next && (
-                    <Link className={'hover:text-blue-400 flex flex-row flex-1 space-x-1 '} to={next.fields.slug} rel="ntext">
-                      <span>
-                      {next.frontmatter.title}
-                      </span>
-                      <span>
-                        →
-                      </span>
-                    </Link>
-                  )}
-                </div>
-              </li>
-            </ul>
+          <div className={'pt-8 space-y-4'}>
+            <h4 className={"text-gray-600 uppercase"}>Read next</h4>
+            <div key={nextArticle.fields.slug} className={'pt-2 space-y-1'}>
+                      <Link to={`/writing${nextArticle.fields.slug}`}>
+                        <h3 className={"hover:text-blue-400 rounded-md duration-150"}>
+                            {nextArticle.frontmatter.title}
+                        </h3>
+                      </Link>
+                      <p className={"text-gray-300"}>{nextArticle.frontmatter.perex}</p>
+                      <p className={"text-gray-600"}>— {nextArticle.frontmatter.date}</p>
+            </div>
           </div>
         </div>
         <hr className={'opacity-10'} />
@@ -88,7 +79,7 @@ export const pageQuery = graphql`
         author
       }
     }
-    mdx(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug }}, frontmatter: {type: {eq: "blog-post"}}) {
       id
       excerpt(pruneLength: 160)
       frontmatter {
@@ -97,6 +88,21 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
       }
       body
+    }
+    allMdx(filter: {frontmatter: {type: {eq: "blog-post"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            type
+            perex
+            date(formatString: "MMMM DD, YYYY")
+          }
+          fields {
+            slug
+          }
+        }
+      }
     }
   }
 `
