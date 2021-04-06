@@ -16,16 +16,16 @@ export default class BlogPostTemplate extends React.Component {
     const H4 = props => <h4 className='pt-2' {...props} />
 
     return (
-      <Layout location={this.props.location}  width={'3xl'} spacing={'6'}>
+      <Layout location={this.props.location}  width={'3xl'} spacing={'8'}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <div className={'px-0 md:px-12'}>
+        <div className={'px-0 md:px-12 space-y-8 pb-8'}>
           <div className={'space-y-6'}>
             <Link to={'/writing'} className={"text-gray-600 hover:text-blue-400"}>← Writing</Link>
-              <h1 className={'leading-tight'}>{post.frontmatter.title}</h1>
+              <h1 className={'leading-none'}>{post.frontmatter.title}</h1>
               <p className={'text-gray-600'}>
                 {post.frontmatter.date}
               </p>
-            <hr className={'opacity-10'} />
+            <hr className={'opacity-10 py-2'} />
           </div>
           <MDXProvider
             components={{

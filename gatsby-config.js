@@ -4,6 +4,7 @@ module.exports = {
     author: `Adam Amran`,
     description: `Adam Amran's writing and portfolio`,
     siteUrl: `https://amran.cz`,
+    email: `adam@amran.cz`,
     social: {
       twitter: `amrancz`,
     },

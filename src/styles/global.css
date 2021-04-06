@@ -1,6 +1,9 @@
 @tailwind base;
 
 @layer base {
+  html {
+    @apply smooth-scroll;
+  }
   body {
     @apply text-base md:text-lg list-disc list-inside leading-loose bg-gray-900 text-gray-100 font-inter text-white;
   }
@@ -29,6 +32,12 @@
 
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .smooth-scroll {
+    scroll-behavior: 'smooth';
+  }
+}
 
 @font-face {
   font-family: 'Inter';
