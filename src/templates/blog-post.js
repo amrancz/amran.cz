@@ -24,6 +24,7 @@ export default class BlogPostTemplate extends React.Component {
     const H3 = props => <h3 className='pt-4' {...props} />
     const H4 = props => <h4 className='pt-2' {...props} />
     const P = props => <p className='leading-loose' {...props} />
+    const HR = props => <hr className='opacity-10 pb-8' {...props} />
     const nextArticle = recommendArticle(allBlogPosts).node
 
     return (
@@ -44,6 +45,7 @@ export default class BlogPostTemplate extends React.Component {
               h3: H3,
               h4: H4,
               p: P,
+              hr: HR,
             }}>
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXProvider>
@@ -55,13 +57,13 @@ export default class BlogPostTemplate extends React.Component {
           <div className={'pt-8 space-y-4'}>
             <h4 className={"text-gray-600 uppercase"}>Read next</h4>
             <div key={nextArticle.fields.slug} className={'pt-2 space-y-1'}>
-                      <Link to={`/writing${nextArticle.fields.slug}`}>
-                        <h3 className={"hover:text-blue-400 rounded-md duration-150"}>
-                            {nextArticle.frontmatter.title}
-                        </h3>
-                      </Link>
-                      <p className={"text-gray-300"}>{nextArticle.frontmatter.perex}</p>
-                      <p className={"text-gray-600"}>— {nextArticle.frontmatter.date}</p>
+              <Link to={`/writing${nextArticle.fields.slug}`}>
+                <h3 className={"hover:text-blue-400 rounded-md duration-150"}>
+                    {nextArticle.frontmatter.title}
+                </h3>
+              </Link>
+              <p className={"text-gray-300"}>{nextArticle.frontmatter.perex}</p>
+              <p className={"text-gray-600"}>— {nextArticle.frontmatter.date}</p>
             </div>
           </div>
         </div>

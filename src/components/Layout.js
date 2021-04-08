@@ -4,18 +4,7 @@ import Footer from './Footer'
 class Layout extends React.Component {
   render() {
     const { location, title, children, width, spacing } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
 
-    if (location.pathname === rootPath) {
-
-    } else {
-      header = (
-        <h1>
-            {title}
-        </h1>
-      )
-    }
     return (
       <div className={'bg-grey-900'}>
         <Header></Header>

@@ -1,60 +1,91 @@
 ---
 title: Improving developer experience in a headless CMS
 product: Kentico Kontent (B2B Saas)
-years: '2019–2020'
+years: 'October 2019 — April 2020'
 type: 'case-study'
 color: 'yellow'
 thumbnail: kontentThumb
+
+role: 'Workshop facilitation, Information architecture, Prototyping, Usability testing, Interaction and Visual design'
+outcome: 'Shipped "Environments" feature with user-validated design. Feature successfully adopted by enterprise customers.'
+team: 'Collaborated closely with product manager and product team of 4 engineers. Also consulted design decisions with the UX team.'
 ---
 
-## Summary
+## Product
 
-- **Problem**: Giving developers working with Kentico Kontent the option to safely develop new functionality without breaking anything.
-- **Solution**: Building environments – a way to create a safe space for developers to work in.
-- **Team**: Product manager, product team of 4 engineers and me.
-- **Result**: Shipped feature successfully adopted by enterprise customers.
+Kentico Kontent is a content management platform with a headless CMS at heart. As a B2B SaaS, it enables companies to work with content in one place and distribute it to all their channels (websites, apps etc.).
 
-For more in-depth account, read on.
+### Target audience
 
-## Product and audience
+The main audience of this project were **developers integrating Kontent into their digital channels**. They are an **important user segment as they can become advocates for the product in companies**.
 
-Kentico Kontent is a content management platform with a headless CMS at heart. As a B2B SaaS, it enables companies to work with content in one place and distribute it to all their channels (websites, apps etc.). The main audience of this project were developers integrating this system into those channels. They are an important user segment as they can become advocates for the product in companies.
+---
 
-## Problem: Developers needed to make changes without breaking a live website
+## Goal: Enabling safe development of changes
 
-In Autumn 2019, developers were missing the ability to have multiple environments of projects. Why is that important?
+In Autumn 2019, developers had to make all changes on the production instance of the system. That was potentially dangerous as it could affect live content.
 
-Developers often **need to add new functionality to a website or change an existing one, which also means they need to update the content models** in Kentico Kontent and that can result in breaking the website. Developers also need to run separate instances of their websites: typically one for development, one for testing and a live one.
+We knew that **developing new functionality to a website or change an existing one often required updating the content models** in Kentico Kontent and that could result in breaking the website.
+Developers also needed to run separate instances of the websites: typically one for development, one for testing and a live one.
 
-Environments would enable them to do that by creating a safe space for testing and migrating those changes that work without problems.
+### Environments: Creating a safe space for development
 
-**Lack of this feature was also among common reasons for losing potential customers to competitors. Adding this to the product would, therefore, help the product be more competitive.**
+Environments would enable them to do that by **creating a safe space for testing and migrating those changes that work without problems**.
+
+Lack of this feature was also among common reasons for losing potential customers to competitors. **Solving this need would help the product be more competitive**.
 
 ## My role
 
 One of the product managers reached to the team he needed a designer for this project. I took this opportunity to get involved.
-My responsibility was to **design the management of environments in the product and validate it with users**. I worked primarily with the development team dedicated to this project and the product manager, but I also consulted my design decisions with the UX team.
+
+My responsibility was to **design the management of environments in the product and validate it with users**.
+
+I worked primarily with the product manager and product team dedicated to this initiative, but I also consulted my design decisions with the UX team.
+
+---
 
 ## Researching the problem space
 
-There were previous efforts to build this feature so I didn't start from scratch. I studied usability testing results of a previous design carefully to determine what to focus on when iterating on it. I learned that developers had a hard time understanding the hierarchy of "projects > environments" in the UI and also some key functionality (such as deleting environments).
+I started my design process with understanding the problem. In this case, it was also important to know what kind of product risk we were primarily dealing with.
+
+### Studying previous research
+
+There were previous efforts to build this feature so I didn't start from scratch. I reviewed usability testing results of a previous design carefully to determine what to focus on when iterating on it.
+
+I learned that developers had a hard time understanding the hierarchy of "projects > environments" in the UI and also some key functionality (such as deleting environments).
 
 As this was a highly technical topic, I dived into reading about development workflows and I also discussed with the team to understand the problem space better. Since the product manager has previously conducted some research among our users-developers on this, I studied it to understand their needs and circumstances.
 
-The main need was clear: to be able to develop some changes and test them safely. Developers mainly feared to break something in the live website or app.
+> **The main need was clear:** to be able to **develop changes and test them safely**. Developers mainly **feared breaking something in the live website** or app.
 
-I knew that developers didn't spend nearly as much time in our product as content editors. They would seldom go there, so the UI had to be intuitive for them. An important part of that was establishing a mental model of the functionality. But we needed also to establish a model of the underlying technical solution which might've posed constraints on the design.
+### Determining product risk
 
-## Uncovering constraints and ideating solutions with the team
+We knew that developers didn't spend nearly as much time in our product as content editors. They would seldom go there, so the UI had to be intuitive for them.
 
-I facilitated a workshop with the team to involve them in the design process. We explored what the underlying technical model could look like. Which entities (e.g. users, content models etc.) would be on which level (figure 1 below). This helped me see what kind of technical constraints I would have to work with.
+An important part of that was establishing a mental model of the functionality. But we needed also to establish a model of the underlying technical solution which might've posed constraints on the design.
 
-Establishing the model was also important for designing the navigation. During the same workshop, I led an ideation session for coming up with ideas for the navigation (figure 2 below).
+> **The value risk was fairly low here.** The problems and needs were clear from previous research. Results of past usability tests showed that **the biggest risk would be usability**. The focus of my work was on addressing that risk.
+
+## Designing the solution
+
+### Workshop with team to uncover constraints
+
+I involved the product team in the design process by facilitating a workshop to learn about technical constraints. We explored what the underlying technical model could look like. Which entities (e.g. users, content models etc.) would be on which level (figure 1 below).
+
+This helped me see what kind of technical constraints I would have to work with. Establishing the model was also important for designing the navigation.
+
+During the same workshop, I led an ideation session for coming up with ideas for the navigation (figure 2 below).
 
 ![Sketching navigation structures with product team](../../assets/kontent-sketches-1.png)
-<span className={'text-center flex justify-center'}><i>Figure 1 (Left): Technical model draft; Figure 2 (Right): Navigation sketches</i></span>
 
-## Interaction design
+<span className={'text-center flex justify-center'}>
+  <i>
+    Figure 1 (Left): Technical model draft; Figure 2 (Right): Navigation
+    sketches
+  </i>
+</span>
+
+### Defining main use cases
 
 Armed with ideas from the ideation workshop, I started working on the interaction design of the whole feature. I started with defining the main use cases:
 
@@ -64,21 +95,35 @@ Armed with ideas from the ideation workshop, I started working on the interactio
 
 It became clear that easy access to the environment management was necessary. A project dropdown already existed in the UI and the navigation ideas usually centred around either incorporating environments into the existing dropdown or into a separate one.
 
+### Designing clear navigation
+
 I made the decision to use a separate dropdown for environments as my hypothesis was it would better support the mental model of "projects > environments" and also provide space for a quick access button to environment management.
 
 I explored several avenues for the placement of the environments management section. One of them was the main menu (figure 3), but it would introduce too much complexity into the navigation.
 
-Ultimately I decided to place the management into settings (figure 4) as it would help establish the hierarchy even further by showing which entities are set up on the project level and which on the environment level. Another reason for this decision was that development-related settings were already there.
+Ultimately I decided to place the management into settings (figure 4). It would help establish the hierarchy even further by showing which entities are set up on the project level and which on the environment level. Another reason for this decision was that development-related settings were already there.
 
 ![Navigation to Environments in the main menu](../../assets/kontent-env-nav-v1.png)
-<span className={'text-center flex justify-center'}><i>Figure 3: Navigation to Environments in the main menu</i></span>
+
+<span className={'text-center flex justify-center'}>
+  <i>Figure 3: Navigation to Environments in the main menu</i>
+</span>
 
 ![Navigation to Environments in the Settings section](../../assets/kontent-env-nav-v2.png)
-<span className={'text-center flex justify-center'}><i>Figure 4: Navigation to Environments in the Settings section</i></span>
+
+<span className={'text-center flex justify-center'}>
+  <i>Figure 4: Navigation to Environments in the Settings section</i>
+</span>
 
 It was important to distinguish between settings on the project level and on the environment level. I solved this by clearly separating the Settings menu to Project settings and Environment settings.
 
-The last question mark was the naming of environments. We knew there would one by default that couldn't be changed (at least in the first release of the feature). There were several possibilities for the name: live, production or master. Initially, I decided for "master" as it's a familiar term for developers and therefore seemed like a good fit, but usability testing would prove me wrong later. Other environments could be freely named as users would see fit.
+### Naming of environments
+
+The last question mark was the naming of environments. We knew there would one by default that couldn't be changed (at least in the first release of the feature).
+
+There were several possibilities for the name: live, production or master. Initially, I decided for "master" as it's a familiar term for developers and therefore seemed like a good fit, but usability testing would prove me wrong later.
+
+Other environments could be freely named as users would see fit.
 
 ## Prototyping for usability testing
 
@@ -90,12 +135,17 @@ As my role was to validate the design with users before releasing it, I started 
 With the help of our researcher, I designed test scenarios. Based on them I prototyped the solution, but I limited the prototype only to what was necessary to test my hypotheses.
 
 ![Detail of the navigation dropdown in the prototype](../../assets/kontent-env-prototype-1.png)
-<span className={'text-center flex justify-center'}><i>Figure 5: Detail of the navigation dropdown in the prototype</i></span>
+
+<span className={'text-center flex justify-center'}>
+  <i>Figure 5: Detail of the navigation dropdown in the prototype</i>
+</span>
 
 My tool of choice was Axure as it enabled me to work with variables. The prototype had to change the environment name in the navigation elements pictured above (as it would in a real product) so that users wouldn't be needlessly confused during testing.
 
 [Check out the whole prototype.](https://iq1u47.axshare.com/#g=1&p=settings_environments&c=1)
 _(note: the prototype has been iterated since the usability testing based on the insights)_
+
+---
 
 ## Usability testing
 
@@ -124,7 +174,12 @@ In the end, several things in the design changed. For example, the naming of the
 Then, the design was ready to be groomed with the development team.
 
 ![Environments management section after a few iterations](../../assets/kontent-env-iteration.png)
-<span className={'text-center flex justify-center'}><i>Figure 6: Environments management section after a few iterations</i></span>
+
+<span className={'text-center flex justify-center'}>
+  <i>Figure 6: Environments management section after a few iterations</i>
+</span>
+
+---
 
 ## Grooming with the team
 
@@ -137,7 +192,13 @@ We also defined several ways of evolving the functionality in future releases. O
 I documented the whole solution in a handoff document for the team describing all the interaction details with including links to visuals in Zeplin. I made sure to capture all the different states of screens in the design.
 
 ![Preview of the handoff document with the detailed solution description](../../assets/kontent-env-doc.png)
-<span className={'text-center flex justify-center'}><i>Figure 7: Preview of the handoff document with the detailed solution description</i></span>
+
+<span className={'text-center flex justify-center'}>
+  <i>
+    Figure 7: Preview of the handoff document with the detailed solution
+    description
+  </i>
+</span>
 
 ## Validated design ready to be implemented
 
@@ -150,6 +211,8 @@ This was a really technical design challenge and it was a lot of work, but we en
 The first point was especially important as this was a highly requested capability in the product and we wanted it to deliver it to the customers as soon as possible.
 ![Environments creation dialogue](../../assets/kontent-env-dialog.png)
 
+---
+
 ## Shipping and impact
 
 It took us about two months to go through the design process. In the meantime, the team worked on some technical capabilities of the product that would be required for this feature. Then in May 2020, we shipped environments to our customers.
@@ -160,14 +223,18 @@ Since the release, several enterprise customers adopted this feature. It greatly
 
 [Read a guest blog post on Kontent.ai](https://kontent.ai/blog/deployment-with-kontent-environments) where a CTO of one of the customers talks about this feature.
 
+---
+
 ## What I learned
 
-### Make the team a part of the design process
+#### 1. Make the team a part of the design process
 
 Developers have good design ideas. Especially when it's about a feature that's highly technical and complex like this one was.
 
 Having a shared first-hand experience during the usability testing makes communication around the whole design much easier.
 
-### Usability testing can always prove you wrong
+#### 2. Usability testing can always prove you wrong
 
-Sure, it confirmed some of the hypotheses but revealed some gaps in the design. I could've easily said I fixed all the issues that arose during the testing of the previous design. However, by testing the new design again I still gathered some important insights.
+While confirming some hypotheses, it revealed several gaps in the design. I could've easily said I fixed all the issues that arose during the testing of the previous design.
+
+However, by testing the new design again I still gathered some important insights.
