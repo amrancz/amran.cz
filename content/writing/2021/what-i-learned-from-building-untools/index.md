@@ -1,8 +1,9 @@
 ---
 title: "What I learned from building Untools"
 date: "2021-03-14"
-categories: 
-  - "uncategorised"
+published: true
+type: 'blog-post'
+perex: Lessons from building a side-project on my own
 ---
 
 It's been over a year since I started building [Untools.co](http://untools.co) and almost 10 months since the launch.
