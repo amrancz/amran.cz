@@ -3,7 +3,7 @@ title: "Balancing input and reflection for the best thinking"
 date: "2020-06-23"
 published: true
 type: 'blog-post'
-perex: Consume high quality ideas and thoughts. Then give you mind enough space to reflect in solitude.
+perex: Consume high quality ideas and thoughts. Then give your mind enough space to reflect in solitude.
 ---
 
 I was listening to Cal Newport's Deep Questions podcast today. In [this episode](https://open.spotify.com/episode/0f1dgNLlmELK3vFLQxyMxT?si=AKJdY_1eTzuj5uZUvmb1SA) he talks about the need for letting the input of others into your mind—through reading books, listening to podcasts etc.—but then taking the time for your own reflection in solitude.
