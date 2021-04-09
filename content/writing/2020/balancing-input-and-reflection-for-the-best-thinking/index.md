@@ -1,0 +1,67 @@
+---
+title: "Balancing input and reflection for the best thinking"
+date: "2020-06-23"
+published: true
+type: 'blog-post'
+perex: Consume high quality ideas and thoughts. Then give you mind enough space to reflect in solitude.
+---
+
+I was listening to Cal Newport's Deep Questions podcast today. In [this episode](https://open.spotify.com/episode/0f1dgNLlmELK3vFLQxyMxT?si=AKJdY_1eTzuj5uZUvmb1SA) he talks about the need for letting the input of others into your mind—through reading books, listening to podcasts etc.—but then taking the time for your own reflection in solitude.
+
+This is something I thought about recently:
+
+https://twitter.com/amrancz/status/1259144896822181888?s=20
+
+And I think it's worth exploring a bit more. I'll talk about different forms of input, how we might best reflect on it and what it enables us to do.
+
+### All inputs aren't equal
+
+In the age of smartphones and social media, we spend much of our days glued to the screens and interacting with those platforms. Our smartphones are a gateway to the internet and social media are, in a way, gateways to other people's minds.
+
+Yet scrolling through our feeds is barely scratching the surface of the minds of others. I'd argue it's a poor way of discovering new ideas. This is what I'd call shallow input. News would fit into this category too.
+
+To me, it seems that books and long-format podcasts offer the biggest wealth of ideas. I'd call it deep input. Because it takes time to read a book or a listen to a long podcast, we have enough space to really absorb the ideas in them. For the author, these forms of expression offer enough space to really elaborate on their thinking in sufficient depth. This is where the best ideas are formed, I believe.
+
+I see articles somewhere in the middle. Often, they offer some cutting-edge thinking but it might not be fully formed yet. Or they're providing just an entry to a topic and don't go into real depth like books do. That can still be very valuable though.
+
+To me, deep input is worth our time more. But shallow input is obviously easier to consume. Shallow input is often our answer to boredom. We scroll our feeds, we check the news. When I do that, however, I typically feel mentally drained. Paradoxically, consuming deep input is often energising because those are more quality ideas. It's a bit like eating healthy vs. eating fast food. One lefts you feeling good, the other not so much.
+
+I have definitely not been very successful in making more time for deep input than shallow one but I've been making some progress recently. Making a conscious distinction between them is important and allows me to be aware where my attention goes.
+
+But the problem is when there's only input. Only consuming is not enough if we want that input to be useful. Passively consumed information is useless. It only becomes valuable when we do something with it.
+
+The question to ask now is: When we take in new (quality) ideas, new thoughts, what's next? What can we do to benefit from it? This is where reflection comes in.
+
+### Reflection requires solitude
+
+The problem with being connected all the time is that we rarely take the time to be bored. The importance of boredom is discussed in Cal Newport's book "Digital Minimalism" (by now, you probably see I'm a fan of Cal's work and thinking). I already mentioned social feeds and news.
+
+I often reach for my phone when I feel bored. I'm working on getting rid of this habit. Because otherwise, I'd never give my mind enough space to wander, to think freely.
+
+We often hear people say they have moments of inspiration in the shower. "Shower thoughts" is actually a term for thoughts that pop up into your head when the mind is free from outside input.
+
+For many people, this is the only moment of solitude in their day. It's only logical that's when creative thoughts have space to arise.
+
+In this context, solitude means being free from outside input, not necessarily being physically isolated from others although that usually helps.
+
+To get my daily dose of solitude, I've been meditating consistently for almost 4 years now. There are many benefits that I won't go into now but I noticed one thing only recently.
+
+Having reached a stage where my mind is generally calm, isn't too preoccupied with the past or the future, it starts surfacing more creative thoughts. Thoughts about things I read recently, ideas for my projects, potential solutions to the problems I'm solving etc.
+
+Now, with the meditation that I do, the goal is to catch my mind wander, let it go and re-focus on the breath. Sometimes I feel like it's a shame to let some of those interesting thoughts go.
+
+I'm considering starting another practice similar to meditation, only more "productive". Meaning that instead of letting the thoughts go, I'll capture them to a notepad next to me. I might give the mind complete freedom or I might give it a problem to think about.
+
+In Digital Minimalism, Cal Newport talks about taking long walks. I guess that can be a nice form for this kind of productive meditation. But it can just as well be sitting on a chair at home. The important thing is to give the mind the space it needs to reflect on the input I recently consumed.
+
+### Where does the best thinking come from?
+
+When we get an idea for a solution to a problem in solitude, that idea doesn't appear out of nowhere, even though it might feel like it. We previously thought about the problem, studied it (consumed input) and it was only when we gave our mind enough space to reflect that it came up with our own original idea.
+
+It's that combination of input and reflection that allows us to produce our best thoughts.
+
+Give the mind only input and it will never have the space needed to do anything with it.
+
+Give the mind only space to reflect and it will soon run out of new ideas without any new impulse.
+
+So we should to both. We should consume high quality ideas and thoughts—what I call deep input (best found in books, documentaries, podcasts). And then we should give our minds enough space to reflect in solitude (e.g. through productive meditation or long walks).

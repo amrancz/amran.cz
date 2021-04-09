@@ -11,6 +11,8 @@ outcome: 'Shipped "Environments" feature with user-validated design. Feature suc
 team: 'Collaborated closely with product manager and product team of 4 engineers. Also consulted design decisions with the UX team.'
 ---
 
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
+
 ## Product
 
 Kentico Kontent is a content management platform with a headless CMS at heart. As a B2B SaaS, it enables companies to work with content in one place and distribute it to all their channels (websites, apps etc.).
@@ -125,9 +127,13 @@ There were several possibilities for the name: live, production or master. Initi
 
 Other environments could be freely named as users would see fit.
 
+---
+
 ## Prototyping for usability testing
 
-As my role was to validate the design with users before releasing it, I started organising a round of usability testing. I formed hypotheses we wanted to test:
+As my role was to validate the design with users before releasing it, I started organising a round of usability testing.
+
+I formed **hypotheses** we wanted to test:
 
 - **Users understand the hierarchy of projects vs environments** when interacting with the navigation (especially in Settings).
 - **Users have no difficulties managing environments** (e.g. creating new, deleting, switching between them etc.).
@@ -149,15 +155,14 @@ _(note: the prototype has been iterated since the usability testing based on the
 
 ## Usability testing
 
-I recruited developers from our respondent pool and conducted remote usability testing sessions with them. It was very fruitful and it led to several results:
+I recruited developers from our respondent pool and **conducted remote usability testing sessions** with them. I also made sure that there was one engineer from the team present for each session, to build more empathy in the team.
+
+The whole study gave us several important insights:
 
 - Proved that the separate dropdown and the whole navigation worked well.
-
   - Developers understood the hierarchy and navigated around the system with the new functionality without problems. The "Manage environments" shortcut in the drop-down was used by pretty much everyone to navigate to the relevant Settings section. It helped with navigation a lot.
-
 - "Master" didn't really work as name for the default environment.
-
-Developers associated it with a git workflow which wasn't exactly the mental model we needed here. Based on this, we later changed the name to "production" as a more appropriate term.
+  - Developers associated it with a git workflow which wasn't exactly the mental model we needed here. Based on this, we later changed the name to "production" as a more appropriate term.
 
 There were a couple of other smaller insights into how the UI could be improved to be more intuitive. More importantly, though, we received good overall feedback and validated that the interaction design as a whole worked with only minor changes necessary.
 
@@ -169,7 +174,10 @@ Iteration is an important part of the design process. With insights from the usa
 
 I also submitted the whole solution for a design review from the UX team to identify any other possible issues.
 
-In the end, several things in the design changed. For example, the naming of the default environment went from "master" to "production" to avoid association with a wrong mental model. I also removed the accordion navigation (see figure 2 above) to simplify the whole navigation panel as it caused some minor confusion during testing.
+In the end, we iterated on several things in the design:
+
+- Changed the name of the default environment went from "master" to "production" to avoid association with a wrong mental model.
+- Removed accordion navigation (see figure 4 above) to simplify the whole navigation panel as it caused some confusion during testing.
 
 Then, the design was ready to be groomed with the development team.
 
@@ -183,9 +191,11 @@ Then, the design was ready to be groomed with the development team.
 
 ## Grooming with the team
 
-The team and I gathered for a whole afternoon to examine the design from a technical perspective. We discovered potential difficulties and identified several ways of implementing the feature. They were all tied to how the underlying technical model would look like.
+The team and I gathered for a whole afternoon to examine the design from a technical perspective. We discovered potential difficulties and identified several ways of implementing the feature. They were all tied to the underlying technical model.
 
 We agreed on an implementation that would allow the earliest possible delivery without compromising the interaction design we worked so carefully towards.
+
+### Defining ETP
 
 We also defined several ways of evolving the functionality in future releases. One of them was the colour coding of environments – while users found it interesting during the testing, we decided it was not necessary in the ETP (earliest testable product) version.
 
@@ -199,6 +209,8 @@ I documented the whole solution in a handoff document for the team describing al
     description
   </i>
 </span>
+
+However, I didn't rely only on a document. I made sure to be in contact with the team during development to address any questions or concerns that were arising.
 
 ## Validated design ready to be implemented
 
@@ -215,13 +227,19 @@ The first point was especially important as this was a highly requested capabili
 
 ## Shipping and impact
 
-It took us about two months to go through the design process. In the meantime, the team worked on some technical capabilities of the product that would be required for this feature. Then in May 2020, we shipped environments to our customers.
+It took us about two months to go through the design process. In the meantime, the team worked on some technical pre-requisites for this feature. Then in May 2020, we shipped environments to our customers.
 
 As the release date neared, I also participated in a webinar where our head of marketing, product manager and me introduced the feature to our customers.
 
 Since the release, several enterprise customers adopted this feature. It greatly improves the developer experience of Kentico Kontent and makes the product more competitive.
 
-[Read a guest blog post on Kontent.ai](https://kontent.ai/blog/deployment-with-kontent-environments) where a CTO of one of the customers talks about this feature.
+One customer said this about environments:
+
+> _"We’ve been using Kontent environments and migration scripts on our agency website to make, test, and deploy large changes to the underlying content model. Our team of content strategists and developers are happy to be out of production, and to leave that to the marketing folks creating content. Instead, the team can experiment in a safe Kontent environment that’s connected to a separate non-production build."_
+>
+> – **Michael Kinkaid**, CTO, Reason One
+
+Read a [blog post about Environments](https://kontent.ai/blog/deployment-with-kontent-environments) by Michael Kinkaid, Kentico Kontent's customer.
 
 ---
 
@@ -238,3 +256,5 @@ Having a shared first-hand experience during the usability testing makes communi
 While confirming some hypotheses, it revealed several gaps in the design. I could've easily said I fixed all the issues that arose during the testing of the previous design.
 
 However, by testing the new design again I still gathered some important insights.
+
+---

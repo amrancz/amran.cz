@@ -32,6 +32,9 @@ module.exports = {
         borderRadius: {
           '4xl': '2rem',
         },
+        margin: {
+          '-half-screen': '-50vw',
+        },
       }
   },
   variants: {

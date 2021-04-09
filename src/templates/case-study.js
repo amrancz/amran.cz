@@ -17,10 +17,11 @@ class CaseStudyTemplate extends React.Component {
     const H3 = props => <h3 className='pt-4' {...props} />
     const H4 = props => <h4 className='pt-2' {...props} />
     const P = props => <p className='leading-loose' {...props} />
-    const Quote = props => <blockquote className={`bg-${post.frontmatter.color}-500 text-gray-900 tracking-tight p-8 rounded-lg`} {...props} />
+    const Quote = props => <blockquote className={`bg-${post.frontmatter.color}-200 text-gray-900 tracking-tight leading-tight space-y-4 p-8 rounded-lg`} {...props} />
     const Strong = props => <strong className={`tracking-tight`} {...props} />
     const HR = props => <hr className='opacity-10 clear-both mt-8 pb-8' {...props} />
     const A = props => <a className={`underline text-${post.frontmatter.color}-600 hover:no-underline`} {...props} />
+    const Img = props => <img className='relative left-1/2 right-1/2 w-screen -ml-half-screen -mr-half-screen' {...props} />
 
     return (
       
@@ -76,6 +77,7 @@ class CaseStudyTemplate extends React.Component {
               blockquote: Quote,
               strong: Strong,
               a: A,
+              img: Img,
             }}>
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXProvider>

@@ -1,0 +1,92 @@
+---
+title: "Lessons from 6 years of designing in agencies"
+date: "2020-05-14"
+published: true
+type: 'blog-post'
+perex: Key lessons about working with clients, improving essential skills to thrive in agencies and more.
+---
+
+I spent 6 years of my design career in agencies. The first four I designed mostly websites. The last two I focused on mobile apps. This is the time that shaped me as a designer. I have learned a lot about the agency life.
+
+In this post, I'll try to sum up a few of the most important lessons I learned. Some of them might be agency-specific while others might apply more broadly. Feel free to cherry-pick what's useful for you.
+
+Let's dive in.
+
+_(Working on a product? You can change the word client for any other stakeholder in your company and I believe most of the lessons would still hold.)_
+
+## Make your client a member of your team
+
+Also known as "work _with_ your client, not _for_ them". You may not get to pick your clients but always do your best to involve them in the process.
+
+The best projects I worked on were with clients who were very much involved in the process. This doesn't mean standing over my shoulder. It means participating in workshops, feedback sessions and being available for the needs of the project.
+
+Your clients have the best knowledge of their business. That's why this point is so important. And it brings me to the second lesson.
+
+## Get to know your client's business as well as their customers/users
+
+We, designers, are traditionally user advocates. As we should be. But good design has to work both for the users and the business. Sometimes we may focus only or too much on the first side of the equation. You must not forget that your client has hired you to improve their business. They're investing in your help and expect returns.
+
+So you must put equal importance on learning about your client's business. You need to understand how your work can impact the business as well as its customers or users.
+
+## Communicating your designs is just as important as the designs themselves
+
+Most of the work you do in an agency requires the client's approval to see the light of day. You may produce the best designs but if you can't communicate them skilfully, your ideas will never be realized.
+
+Learn to articulate your design decisions. There's a [brilliant book on the topic by Tom Greever](http://shop.oreilly.com/product/0636920037422.do) (and I'm only reading it now!).
+
+Empathize with your clients. Focus on how the results of your work are going to help them. Talk less about the process and more about the impact.
+
+Jared Spool says that executives typically care about 5 things:
+
+https://twitter.com/jmspool/status/961804803440562176?lang=en
+
+This can also help you frame your communication.
+
+Presentation skills matter here as well. You'll be a much better designer if you can learn to communicate your work in an understandable and compelling way.
+
+## Meeting facilitation is a key yet underrated skill
+
+You are likely to present your work to a client in...a meeting. We spend so much time in meetings. Briefings. Workshops. Feedback sessions. You name it. And chances are that over the course of your career you will lead many of these meetings.
+
+Yet the skill of designing a meeting is not something that I see designers practice. I have certainly overlooked it for a long time too. There were many meetings that didn't produce the results I would've hoped for. Or they didn't help bring much progress to a project.
+
+Over time I learned to prepare better for some key meetings. I learned to better structure it, to lead it better. But it's something that doesn't come naturally to me and that I struggled with regularly.
+
+I wish more designers would focus on this skill. To learn more, I can definitely recommend the book [Meeting Design by Kevin Hoffman](https://rosenfeldmedia.com/books/meeting-design/).
+
+## Get involved as soon as possible
+
+One of my biggest frustrations in agencies was that information from clients would get lost throughout the process. Typically, clients would approach the agency and a project manager would meet with them for the first time. A lot of communication and meetings could happen before any designer would get involved in the project.
+
+Despite the best intentions, a lot of information would get lost. Clients would have to repeat themselves. Without some context, a lot of miscommunication would sometimes happen.
+
+So it's best if you, as a designer, can get involved in the project as soon as possible.
+
+You must do your best to capture all the important information that appears at the beginning of the project. This is the key context that's vital for the whole project and your work.
+
+We're talking about project goals, constraints and details about the business. You'd be surprised how often this key information gets lost or misunderstood. Take great care not to let it slip through the cracks. Document this precious information well.
+
+## Build your own respondent pool for user research
+
+When you work on a product, you have a user base that you can approach for user research (assuming it's not a brand new product or company). In agencies, the process of recruiting research participants is much harder.  
+You are starting from scratch almost every time. If you're lucky, the people you need for the research can be recruited from the general public. Often though, you will need a specific segment of people.
+
+And you might be surprised to learn that the biggest obstacle to doing research I encountered in my experience wasn't a lack of buy-in from the client. It was the lack of access to the right people.
+
+If you start building your own respondent pool, every time you'll need to recruit people for research will be a little easier.
+
+I regret not doing this in the agencies I worked at. Looking back, I'd definitely start this and it would likely enable me to do research on projects where I couldn't do it properly (or at all).
+
+## Consider investing in/developing your own products
+
+This is way beyond design but hear me out. The typical agency business model is renting out time the agency spends working for clients. The problem with this model is that it might force the agency to take on projects they might not like just to keep the lights on.
+
+Developing own product or investing in some is a way for an agency to diversify income and increase revenue. When an agency doesn't have to rely 100% on clients, it has more freedom to choose more "passion" projects.
+
+This freedom is important. The agency can bring in more interesting projects even when they might not be the most lucrative. Or even some pro bono work. Such projects are definitely more engaging to everyone on the team and their happiness matters.
+
+* * *
+
+These are the most important lessons I learned from designing in agencies.
+
+If you work or worked in an agency, I'd love to hear your perspective and what other lessons did you learn. [Let me know on Twitter](https://twitter.com/amrancz)!
