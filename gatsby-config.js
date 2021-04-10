@@ -100,7 +100,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        icon: `${__dirname}/src/images/portraitSmall.jpg`,
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
