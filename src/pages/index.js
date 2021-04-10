@@ -24,6 +24,7 @@ class Index extends React.Component {
               <StaticImage 
                 src={'../images/portraitSmall.jpg'}
                 alt='Portrait of Adam'
+                loading='eager'
                 style={{
                   justifySelf: 'center',
                   textAlign: 'center',

@@ -17,6 +17,7 @@ class About extends React.Component {
             <StaticImage 
                 src={'../images/portraitLarge.jpg'}
                 alt={'Portrait of Adam'}
+                loading='eager'
                 imgStyle={{
                   borderRadius: '12px',
                   overflow: 'hidden'

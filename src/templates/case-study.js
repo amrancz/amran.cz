@@ -18,11 +18,11 @@ class CaseStudyTemplate extends React.Component {
     const H4 = props => <h4 className='pt-2' {...props} />
     const P = props => <p className='leading-loose' {...props} />
     const Quote = props => <blockquote className={`bg-${post.frontmatter.color}-200 text-gray-900 tracking-tight leading-tight space-y-4 p-8 rounded-lg`} {...props} />
-    {/* purgecss: bg-orange-200 bg-blue-200 */}
+    {/* purgecss: bg-yellow-200 bg-blue-200 */}
     const Strong = props => <strong className={`tracking-tight`} {...props} />
     const HR = props => <hr className='opacity-10 clear-both mt-8 pb-8' {...props} />
     const A = props => <a className={`underline text-${post.frontmatter.color}-600 hover:no-underline`} {...props} />
-    {/* purgecss: text-orange-600 tet-blue-600 */}
+    {/* purgecss: text-yellow-600 tet-blue-600 */}
     const Img = props => <img className='relative left-1/2 right-1/2 w-screen -ml-half-screen -mr-half-screen' {...props} />
 
     return (
@@ -33,7 +33,7 @@ class CaseStudyTemplate extends React.Component {
         <div>
           <div className={'w-full relative text-white overflow-hidden flex'}>
             <div className={`w-full flex flex-1 flex-col bg-gradient-to-t pt-32 from-${post.frontmatter.color}-500 to-${post.frontmatter.color}-600`}>
-             {/* purgecss: bg-orange-500 bg-orange-600 bg-blue-500 bg-blue-600 */}
+             {/* purgecss: from-yellow-500 to-yellow-600 from-blue-500 to-blue-600 */}
               <div className={'flex flex-col items-start relative max-w-4xl mx-auto'}>
                 <span className={`font-medium text-${post.frontmatter.color}-200`}>{post.frontmatter.product}</span>
                 <span className={`font-medium text-${post.frontmatter.color}-200 pb-4`}>{post.frontmatter.years}</span>
@@ -44,7 +44,7 @@ class CaseStudyTemplate extends React.Component {
                 <div className={'flex flex-col lg:flex-row space-x-0 lg: space-x-12 space-y-6 lg:space-y-0 relative max-w-4xl mx-auto'}>
                   <div className={'space-y-2'}>
                     <h5 className={`font-bold text-${post.frontmatter.color}-900 uppercase`}>Role</h5>
-                    {/* purgecss: text-orange-900 text-blue-900 */}
+                    {/* purgecss: text-yellow-900 text-blue-900 */}
                     <p>{post.frontmatter.role}</p>
                   </div>
                   <div className={'space-y-2'}>
@@ -61,6 +61,7 @@ class CaseStudyTemplate extends React.Component {
                 <GatsbyImage
                         image={image}
                         key={post.frontmatter.thumbnail}
+                        loading='eager'
                         alt={`${post.frontmatter.thumbnail} thumbnail`}
                         style={{
                           maxWidth: 800,

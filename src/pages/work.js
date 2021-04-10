@@ -35,6 +35,7 @@ class Work extends React.Component {
                     <GatsbyImage
                       key={product}
                       image={image}
+                      loading='eager'
                       alt={`${product} thumbnail`}
                     ></GatsbyImage>
                   </div>
@@ -54,6 +55,7 @@ class Work extends React.Component {
                   src={'../images/untoolsThumb.png'}
                   alt='Untools Thumbnail'
                   key='Untools Thumbnail'
+                  loading='eager'
                   width={711}
                   height={400}
                   layout={'constrained'}
