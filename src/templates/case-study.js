@@ -37,7 +37,7 @@ class CaseStudyTemplate extends React.Component {
               <div className={'flex flex-col items-start relative max-w-4xl mx-auto'}>
                 <span className={`font-medium text-${post.frontmatter.color}-200`}>{post.frontmatter.product}</span>
                 <span className={`font-medium text-${post.frontmatter.color}-200 pb-4`}>{post.frontmatter.years}</span>
-                {/* purgecss: text-orange-200 text-blue-200 */}
+                {/* purgecss: text-yellow-200 text-blue-200 */}
                 <h1>{post.frontmatter.title}</h1>
               </div>
               <div className={`bg-transparent pt-12 px-8`}>
