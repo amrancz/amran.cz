@@ -32,7 +32,7 @@ class CaseStudyTemplate extends React.Component {
         <Header></Header>
         <div>
           <div className={'w-full relative text-white overflow-hidden flex'}>
-            <div className={`w-full flex flex-1 flex-col bg-gradient-to-t pt-32 from-${post.frontmatter.color}-500 to-${post.frontmatter.color}-600`}>
+            <div className={`w-full flex flex-1 flex-col bg-gradient-to-t pt-32 px-8 from-${post.frontmatter.color}-500 to-${post.frontmatter.color}-600`}>
              {/* purgecss: from-yellow-500 to-yellow-600 from-blue-500 to-blue-600 */}
               <div className={'flex flex-col items-start relative max-w-4xl mx-auto'}>
                 <span className={`font-medium text-${post.frontmatter.color}-200`}>{post.frontmatter.product}</span>
@@ -40,24 +40,24 @@ class CaseStudyTemplate extends React.Component {
                 {/* purgecss: text-yellow-200 text-blue-200 */}
                 <h1>{post.frontmatter.title}</h1>
               </div>
-              <div className={`bg-transparent pt-12 px-8`}>
-                <div className={'flex flex-col lg:flex-row space-x-0 lg: space-x-12 space-y-6 lg:space-y-0 relative max-w-4xl mx-auto'}>
+              <div className={`bg-transparent pt-12`}>
+                <div className={'flex flex-col md:flex-row space-x-0 md:space-x-12 space-y-6 md:space-y-0 relative max-w-4xl mx-auto'}>
+                <div className={'space-y-2'}>
+                    <h5 className={`font-bold text-${post.frontmatter.color}-900 uppercase`}>Team</h5>
+                    <p>{post.frontmatter.team}</p>
+                  </div>
                   <div className={'space-y-2'}>
                     <h5 className={`font-bold text-${post.frontmatter.color}-900 uppercase`}>Role</h5>
                     {/* purgecss: text-yellow-900 text-blue-900 */}
                     <p>{post.frontmatter.role}</p>
                   </div>
                   <div className={'space-y-2'}>
-                  <h5 className={`font-bold text-${post.frontmatter.color}-900 uppercase`}>Outcome</h5>
+                    <h5 className={`font-bold text-${post.frontmatter.color}-900 uppercase`}>Outcome</h5>
                     <p>{post.frontmatter.outcome}</p>
-                  </div>
-                  <div className={'space-y-2'}>
-                  <h5 className={`font-bold text-${post.frontmatter.color}-900 uppercase`}>Team</h5>
-                    <p>{post.frontmatter.team}</p>
                   </div>
                 </div>
               </div>
-              <div className={'relative px-4 py-12 mx-auto max-h-64 overflow-visible'}>
+              <div className={'relative px-4 py-12 mx-auto max-h-68 overflow-visible'}>
                 <GatsbyImage
                         image={image}
                         key={post.frontmatter.thumbnail}

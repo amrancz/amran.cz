@@ -118,7 +118,7 @@ Some specific activities that I consider deep work are:
 - reviewing others' designs
 - writing an article or preparing a presentation
 
-Since my job is designing digital products, I can only specific to that but you can get a better idea of what deep work might be.
+Since my job is designing digital products, I can be only specific to that but you can get a better idea of what deep work might be.
 
 ### Timing
 
