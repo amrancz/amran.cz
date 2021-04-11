@@ -14,6 +14,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Adam Amran`,
+        start_url: `/`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/writing`,
@@ -53,7 +62,16 @@ module.exports = {
         },
       },
     },
-    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 1200,
+        backgroundColor: 'transparent',
+        disableBgImageOnAlpha: true,
+        quality: 100,
+        wrapperStyle: 'border-radius: 12px; margin-top: 8px; margin-bottom: 8px'
+      },
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -62,6 +80,10 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
+              backgroundColor: 'transparent',
+              disableBgImageOnAlpha: true,
+              quality: 100,
+              wrapperStyle: 'border-radius: 12px; margin-top: 8px; margin-bottom: 8px'
             },
           },
         ],
