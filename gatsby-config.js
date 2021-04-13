@@ -96,14 +96,29 @@ module.exports = {
         // a workaround to solve mdx-remark plugin compat issue
         // https://github.com/gatsbyjs/gatsby/issues/15486
         plugins: [
-          `gatsby-remark-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+              backgroundColor: `transparent`,
+            },
+          },
+          `gatsby-remark-images-medium-zoom`
         ],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
+              linkImagesToOriginal: false,
+              backgroundColor: `transparent`,
             },
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`, // Important!
+            options: {
+              background: "#000",
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
