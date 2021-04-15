@@ -26,7 +26,7 @@ class WritingIndex extends React.Component {
                 return (
                   <div key={node.fields.slug} className={'py-4 space-y-1'}>
                     <Link to={`/writing${node.fields.slug}`}>
-                      <h4 className={"hover:text-blue-400 rounded-md duration-150"}>
+                      <h4 className={"hover:text-gray-400 rounded-md duration-150"}>
                           {title}
                       </h4>
                     </Link>

@@ -25,6 +25,7 @@ export default class BlogPostTemplate extends React.Component {
     const H4 = props => <h4 className='pt-2' {...props} />
     const P = props => <p className='leading-loose' {...props} />
     const HR = props => <hr className='opacity-10 pb-8' {...props} />
+    const A = props => <a className={'bg-white bg-opacity-20 py-1 px-1 rounded-md font-medium text-white hover:text-white hover:bg-black hover:bg-opacity-60 duration-100'} {...props} />
     const nextArticle = recommendArticle(allBlogPosts).node
 
     return (
@@ -46,6 +47,7 @@ export default class BlogPostTemplate extends React.Component {
               h4: H4,
               p: P,
               hr: HR,
+              a: A,
             }}>
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXProvider>

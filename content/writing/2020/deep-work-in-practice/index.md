@@ -62,7 +62,7 @@ As much as possible, I try to find a space where I can be alone. Just me and my 
 
 ![](images/workspace-768x1024.png)
 
-Being alone does wonders to my productivity. Spaces like the one pictured above ensure minimum distractions.
+_Being alone does wonders to my productivity. Spaces like the one pictured above ensure minimum distractions._
 
 From time to time, I also work from home or from a café. In addition to the physical location, I use noise-cancelling headphones (Sony WH-1000MX3 – terrible name, awesome headphones) to block out conversations and other noise.
 
@@ -80,12 +80,9 @@ I have 90% of notifications on my phone turned off. It's always on silent when I
 
 The computer setup is a bit more tricky to get. There is an infinite number of distractions. What works best for me is the following:
 
-- Single screen or one external monitor max.
-    - I've been trying out a second external monitor lately, but it's been more distracting than helpful so I'll probably go back to a single external monitor or just my Macbook.
-- Full-screen whenever possible. Or at least hide the dock.
-    - Out of sight, out of mind. When I don't see other apps' icons, I'm less tempted to switch.
-- Distraction blocking software (Freedom and Cold Turkey)
-    - When I need to be really strict with myself, I block distracting websites for some time period until I get my deep work done.
+- **Single screen or one external monitor max**: I've been trying out a second external monitor lately, but it's been more distracting than helpful so I'll probably go back to a single external monitor or just my Macbook.
+- **Full-screen whenever possible. Or at least hide the dock**: Out of sight, out of mind. When I don't see other apps' icons, I'm less tempted to switch.
+- **Distraction blocking software (Freedom and Cold Turkey)**: When I need to be really strict with myself, I block distracting websites for some time period until I get my deep work done.
 
 ### Internal distractions
 
