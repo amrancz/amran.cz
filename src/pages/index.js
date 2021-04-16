@@ -51,7 +51,7 @@ class Index extends React.Component {
           </div>
           <div className={'bg-gray-700 lg:flex-1 lg:flex-grow bg-opacity-10 rounded-2xl p-6 md:p-12 space-y-6 last:space-y-0'}>
             <Link to={'/writing'}>
-              <h4 className={"text-gray-600 uppercase hover:text-blue-400 duration-150"}>Recent writings</h4>
+              <h4 className={"text-gray-400 dark:text-gray-600 uppercase hover:text-gray-600 dark:hover:text-gray-400 duration-150"}>Recent writings</h4>
             </Link>
             <div className={'space-y-4 last:space-y-0'}>
               {posts.map(({ node }) => {
@@ -59,12 +59,12 @@ class Index extends React.Component {
                 return (
                   <div key={node.fields.slug} className={'pt-2 space-y-1'}>
                     <Link to={`/writing${node.fields.slug}`}>
-                      <h4 className={"hover:text-blue-400 rounded-md duration-150"}>
+                      <h4 className={"hover:text-gray-400 rounded-md duration-150"}>
                           {title}
                       </h4>
                     </Link>
-                    <p className={"text-gray-300"}>{node.frontmatter.perex}</p>
-                    <p className={"text-gray-600"}>— {node.frontmatter.date}</p>
+                    <p className={"text-gray-600 dark:text-gray-300"}>{node.frontmatter.perex}</p>
+                    <p className={"text-gray-400 dark:text-gray-600"}>— {node.frontmatter.date}</p>
                   </div>
                 )
               })}

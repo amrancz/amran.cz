@@ -25,7 +25,7 @@ export default class BlogPostTemplate extends React.Component {
     const H4 = props => <h4 className='pt-2' {...props} />
     const P = props => <p className='leading-loose' {...props} />
     const HR = props => <hr className='opacity-10 pb-8' {...props} />
-    const A = props => <a className={'bg-white bg-opacity-20 py-1 px-1 rounded-md font-medium text-white hover:text-white hover:bg-black hover:bg-opacity-60 duration-100'} {...props} />
+    const A = props => <a className={'bg-gray-500 dark:bg-white bg-opacity-20 py-1 px-1 rounded-md font-medium text-gray-900 dark:text-white hover:text-white hover:bg-black hover:bg-opacity-60 duration-100'} {...props} />
     const nextArticle = recommendArticle(allBlogPosts).node
 
     return (
@@ -60,7 +60,7 @@ export default class BlogPostTemplate extends React.Component {
             <h4 className={"text-gray-600 uppercase"}>Read next</h4>
             <div key={nextArticle.fields.slug} className={'pt-2 space-y-1'}>
               <Link to={`/writing${nextArticle.fields.slug}`}>
-                <h3 className={"hover:text-blue-400 rounded-md duration-150"}>
+                <h3 className={"hover:text-gray-400 rounded-md duration-150"}>
                     {nextArticle.frontmatter.title}
                 </h3>
               </Link>

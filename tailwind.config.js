@@ -9,7 +9,7 @@ module.exports = {
       whitelistPatterns: ['/^text/','/^bg','/^w','/^space','/^from','/^to']
     },
   },
-  darkMode: 'class',
+  darkMode: 'media',
   theme: {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
@@ -19,7 +19,7 @@ module.exports = {
       },
       backdropFilter: {
       'none': 'none',
-      'blur': 'blur(10px)',
+      'blur': 'blur(6px)',
     },
       extend: {
         colors: {

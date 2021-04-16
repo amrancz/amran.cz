@@ -23,7 +23,7 @@ class Work extends React.Component {
             const thumbnail = node.frontmatter.thumbnail
             const image = getImage(data[thumbnail])
             return (
-              <div className={'w-full relative text-white overflow-hidden rounded-2xl flex'}>
+              <div className={'w-full relative text-white overflow-hidden rounded-2xl flex shadow-lg'}>
                 <div key={node.fields.slug}  className={`w-full flex flex-1 flex-col md:flex-row xl:flex-col bg-gradient-to-br from-${color}-500 to-${color}-700`}>
                   {/* purgecss: from-yellow-500 to-yellow-700 from-blue-500 to-blue-700 */}
                   <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative p-8 xl:p-12'}>
@@ -44,7 +44,7 @@ class Work extends React.Component {
             )
           })}
           <div className={'w-full relative text-white overflow-hidden rounded-2xl flex shadow-lg'}>
-            <div className={`w-full flex flex-col md:flex-row xl:flex-col bg-opacity-10 bg-purple-600 `}>
+            <div className={`w-full flex flex-col md:flex-row xl:flex-col bg-gradient-to-br from-purple-700 to-purple-800`}>
               <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-12'}>
                 <span className={'font-medium text-white opacity-50 mb-2'}>Untools (Side project)</span>
                 <h3 className={'mb-8'}>Building a collection of tools for better thinking</h3>

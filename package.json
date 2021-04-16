@@ -12,6 +12,7 @@
     "gatsby": "^3.2.1",
     "gatsby-cli": "^3.2.0",
     "gatsby-image": "^3.2.0",
+    "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-feed": "^3.2.0",
     "gatsby-plugin-image": "^1.2.0",
     "gatsby-plugin-manifest": "^3.2.0",
@@ -21,6 +22,7 @@
     "gatsby-plugin-react-helmet": "^4.2.0",
     "gatsby-plugin-sharp": "^3.2.0",
     "gatsby-plugin-typography": "^3.2.0",
+    "gatsby-plugin-use-dark-mode": "^1.3.0",
     "gatsby-remark-copy-linked-files": "^3.2.0",
     "gatsby-remark-images": "^4.2.0",
     "gatsby-remark-images-medium-zoom": "^1.7.0",
@@ -42,7 +44,8 @@
     "react-typography": "^0.16.19",
     "tailwindcss-filters": "^3.0.0",
     "typography": "^0.16.19",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "typography-theme-wordpress-2016": "^0.16.19",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

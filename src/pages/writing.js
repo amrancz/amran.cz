@@ -8,15 +8,15 @@ class WritingIndex extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} width={'8xl'} spacing={'12'}>
+      <Layout location={this.props.location} width={'3xl'} spacing={'12'}>
         <SEO
           title="Writing / Adam Amran"
           keywords={[`blog`, `design`, `product design`]}
         />
-        <div className={'flex flex-col lg:flex-row lg:items-stretch lg:space-x-12 space-y-8 lg:space-y-0'}>
-          <div className={'bg-opacit-0 text-white flex-1 rounded-2xl pt-8 md:pt-12 space-y-6'}>
+        <div className={'flex flex-col space-y-8'}>
+          <div className={'bg-opacit-0 text-gray-900 dark:text-white flex-1 rounded-2xl pt-8 md:pt-12 space-y-6'}>
             <h1>Writing</h1>
-            <p className={"leading-8 text-gray-300"}>
+            <p className={"leading-8 text-gray-600 dark:text-gray-300"}>
                   My thoughts about (product) design, side-projects and whatever else interests me at the moment.
             </p>
           </div>
@@ -30,8 +30,8 @@ class WritingIndex extends React.Component {
                           {title}
                       </h4>
                     </Link>
-                    <p className={"text-gray-300"}>{node.frontmatter.perex}</p>
-                    <p className={"text-gray-600"}>— {node.frontmatter.date}</p>
+                    <p className={"text-gray-600 dark:text-gray-300"}>{node.frontmatter.perex}</p>
+                    <p className={"text-gray-400 dark:text-gray-600"}>— {node.frontmatter.date}</p>
                   </div>
                 )
               })}

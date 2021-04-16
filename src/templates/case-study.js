@@ -21,7 +21,7 @@ class CaseStudyTemplate extends React.Component {
     {/* purgecss: bg-yellow-200 bg-blue-200 */}
     const Strong = props => <strong className={`tracking-tight`} {...props} />
     const HR = props => <hr className='opacity-10 clear-both mt-8 pb-8' {...props} />
-    const A = props => <a className={`underline text-${post.frontmatter.color}-600 hover:no-underline`} {...props} />
+    const A = props => <a className={`bg-gray-500 dark:bg-white bg-opacity-20 py-1 px-1 rounded-md font-medium text-gray-900 dark:text-white hover:text-white hover:bg-black hover:bg-opacity-60 duration-100`} {...props} />
     {/* purgecss: text-yellow-600 text-blue-600 */}
     const Img = props => <img className='rounded-lg' {...props} />
 
