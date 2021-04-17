@@ -2,6 +2,8 @@ import React from 'react'
 
 import useDarkMode from 'use-dark-mode';
 
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
+
 import { SunIcon } from '@heroicons/react/outline'
 import { MoonIcon } from '@heroicons/react/solid'
 
@@ -9,6 +11,21 @@ function ToggleButton() {
     const darkMode = useDarkMode(true);
 
     return (
+        <ThemeToggler>
+        {({ theme, toggleTheme }) => (
+          <label>
+             <input type="checkbox" 
+               onChange={e => 
+                 toggleTheme(e.target.checked ? 'dark' : 'light')}
+                  checked={theme === 'dark'}
+               />{' '}  
+           
+            Dark mode           
+          </label>    
+         
+         )}
+        </ThemeToggler>
+        /*
         <button 
         aria-label={darkMode.value ? "Activate Light Mode" : "Activate Dark Mode"}
         title={darkMode.value ? "Activate Light Mode" : "Activate Dark Mode"}    
@@ -19,6 +36,7 @@ function ToggleButton() {
             : <MoonIcon className={'h-6 w-6 text-gray-900 dark:white hover:text-gray-400'} />
             }
         </button>
+        */
     )
 }
 
