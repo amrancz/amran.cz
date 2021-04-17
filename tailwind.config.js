@@ -19,7 +19,7 @@ module.exports = {
       },
       backdropFilter: {
       'none': 'none',
-      'blur': 'blur(8px)',
+      'blur': 'blur(16px)',
     },
       extend: {
         colors: {
