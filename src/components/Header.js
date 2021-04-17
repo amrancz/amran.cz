@@ -9,6 +9,23 @@ import { XIcon } from '@heroicons/react/outline'
 const activeStyle = 'bg-gray-500 dark:bg-white bg-opacity-20 py-2 px-2 inline-block rounded-md font-semibold tracking-tighter text-gray-800 dark:text-white'
 const defaultStyle = 'bg-gray-500 dark:bg-white bg-opacity-0 rounded-md py-2 px-2 hover:bg-opacity-20'
 
+export function ToggleButton(){
+  return(
+    <ThemeToggler>
+          {({ theme, toggleTheme }) => (
+            <button 
+              className={'p-2'} 
+              onClick={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+            >
+              {theme === 'dark' ? <SunIcon className={'h-6 w-6 text-gray-600 hover:text-gray-200'} />
+              : <MoonIcon className={'hidden h-6 w-6 text-gray-600 hover:text-gray-200'} />
+              }
+            </button>
+          )}
+        </ThemeToggler>
+  )
+}
+
 function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,20 +47,8 @@ function Header() {
         <Link to={`/about`}className={defaultStyle} activeClassName={activeStyle} partiallyActive={true}>
             About
         </Link>
-        <ThemeToggler>
-          {({ theme, toggleTheme }) => (
-            <button 
-              className={'p-2'} 
-              onClick={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-            >
-              {theme === 'dark' ? <SunIcon className={'h-6 w-6 text-gray-600 hover:text-gray-200'} />
-              : <MoonIcon className={'hidden h-6 w-6 text-gray-600 hover:text-gray-200'} />
-              }
-            </button>
-          )}
-        </ThemeToggler>
+        <ToggleButton></ToggleButton>
       </div>
-      
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={'block float-right md:hidden'}>
           {isMenuOpen ? <XIcon className={'h-6 w-6 text-gray-600 dark:text-gray-400'} />
            : <MenuIcon className={'h-6 w-6 text-gray-600 dark:text-gray-400'} />
@@ -62,18 +67,7 @@ function Header() {
         <Link to={`/about`}className={defaultStyle} activeClassName={activeStyle} partiallyActive={true}>
             About
         </Link>
-        <ThemeToggler>
-          {({ theme, toggleTheme }) => (
-            <button 
-              className={'p-2'} 
-              onClick={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-            >
-              {theme === 'dark' ? <SunIcon className={'h-6 w-6 text-gray-600 hover:text-gray-200'} />
-              : <MoonIcon className={'hidden h-6 w-6 text-gray-600 hover:text-gray-200'} />
-              }
-            </button>
-          )}
-        </ThemeToggler>
+        <ToggleButton></ToggleButton>
       </div>
       )}
 
