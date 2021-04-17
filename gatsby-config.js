@@ -9,9 +9,6 @@ module.exports = {
       twitter: `amrancz`,
     },
   },
-  flags: {
-    PRESERVE_WEBPACK_CACHE: true
-  },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,

@@ -5,7 +5,7 @@ import Button from '../components/Button'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import CustomLink from '../components/CustomLink'
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 
 class Index extends React.Component {
   render() {
