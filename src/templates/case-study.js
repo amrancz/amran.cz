@@ -88,6 +88,9 @@ class CaseStudyTemplate extends React.Component {
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXProvider>
         </div>
+
+        <button id="scroll-btn" className="hidden w-12 h-12 bg-gray-500 hover:bg-gray-600 fixed right-8 bottom-8 rounded-4xl" title="Scroll to top"><ArrowUpIcon className={'h-6 w-6 text-gray-900 dark:text-white mx-auto'} /></button>
+
         <Footer></Footer>
       </div>
     )

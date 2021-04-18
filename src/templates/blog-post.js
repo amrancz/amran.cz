@@ -5,6 +5,8 @@ import { MDXRenderer} from "gatsby-plugin-mdx"
 import BlogFooter from '../components/BlogFooter'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+
+import { ArrowUpIcon } from '@heroicons/react/outline'
 export default class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
@@ -70,6 +72,9 @@ export default class BlogPostTemplate extends React.Component {
           </div>
         </div>
         <hr className={'opacity-10'} />
+
+        <button id="scroll-btn" className="hidden w-12 h-12 bg-gray-500 hover:bg-gray-600 fixed right-8 bottom-8 rounded-4xl" title="Scroll to top"><ArrowUpIcon className={'h-6 w-6 text-gray-900 dark:text-white mx-auto'} /></button>
+
       </Layout>
     )
   }

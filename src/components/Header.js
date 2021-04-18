@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import { MenuIcon } from '@heroicons/react/outline'
 import { XIcon } from '@heroicons/react/outline'
 
-const activeStyle = 'bg-gray-500 dark:bg-white bg-opacity-20 py-1 px-2 inline-block rounded-md font-semibold tracking-tighter text-gray-800 dark:text-white'
+const activeStyle = 'bg-gray-500 dark:bg-white bg-opacity-20 py-1 px-2 inline-block rounded-md font-semibold tracking-tighter hover:bg-opacity-10 text-gray-800 dark:text-white'
 const defaultStyle = 'bg-gray-500 dark:bg-white bg-opacity-0 rounded-md py-1 px-2 hover:bg-opacity-20'
 
 function Header() {
