@@ -24,7 +24,7 @@ export default class BlogPostTemplate extends React.Component {
     const H3 = props => <h3 className='pt-4' {...props} />
     const H4 = props => <h4 className='pt-2' {...props} />
     const P = props => <p className='leading-loose' {...props} />
-    const HR = props => <hr className='opacity-10 pb-8' {...props} />
+    const HR = props => <hr className='opacity-20 clear-both !mt-4 pb-4 md:pb-8' {...props} />
     const A = props => <a className={'bg-gray-500 dark:bg-white bg-opacity-20 py-1 px-1 rounded-md font-medium text-gray-900 dark:text-white hover:text-white hover:bg-black hover:bg-opacity-60 duration-100'} {...props} />
     const nextArticle = recommendArticle(allBlogPosts).node
 
@@ -33,7 +33,7 @@ export default class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <div className={'px-0 md:px-12 space-y-8 pb-8'}>
           <div className={'space-y-6'}>
-            <Link to={'/writing'} className={"text-gray-600 hover:text-blue-400"}>← Writing</Link>
+            <Link to={'/writing'} className={"text-gray-600 hover:text-gray-400"}>← Writing</Link>
               <h1 className={'leading-none'}>{post.frontmatter.title}</h1>
               <p className={'text-gray-600'}>
                 {post.frontmatter.date}
@@ -57,15 +57,15 @@ export default class BlogPostTemplate extends React.Component {
         
         <div className={'px-0 md:px-12'}>
           <div className={'pt-8 space-y-4'}>
-            <h4 className={"text-gray-600 uppercase"}>Read next</h4>
+            <h4 className={"text-gray-400 dark:text-gray-600 uppercase"}>Read next</h4>
             <div key={nextArticle.fields.slug} className={'pt-2 space-y-1'}>
               <Link to={`/writing${nextArticle.fields.slug}`}>
                 <h3 className={"hover:text-gray-400 rounded-md duration-150"}>
                     {nextArticle.frontmatter.title}
                 </h3>
               </Link>
-              <p className={"text-gray-300"}>{nextArticle.frontmatter.perex}</p>
-              <p className={"text-gray-600"}>— {nextArticle.frontmatter.date}</p>
+              <p className={"text-gray-600 dark:text-gray-300"}>{nextArticle.frontmatter.perex}</p>
+              <p className={"text-gray-400 dark:text-gray-600"}>— {nextArticle.frontmatter.date}</p>
             </div>
           </div>
         </div>

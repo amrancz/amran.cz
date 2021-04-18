@@ -25,9 +25,10 @@ The main audience of this project were **developers integrating Kontent into the
 
 ## Goal: Enabling safe development of changes
 
-In Autumn 2019, developers had to make all changes on the production instance of the system. That was potentially dangerous as it could affect live content.
+The problem was that developers working with Kontent had to make any changes on the production instance of the system.
+That was potentially dangerous as it could affect live content.
 
-We knew that **developing new functionality to a website or change an existing one often required updating the content models** in Kentico Kontent and that could result in breaking the website.
+We knew that **developing new functionality to a website or changing an existing one often required updating the content models** in Kentico Kontent and that could result in breaking the website.
 Developers also needed to run separate instances of the websites: typically one for development, one for testing and a live one.
 
 ### Environments: Creating a safe space for development
@@ -35,6 +36,9 @@ Developers also needed to run separate instances of the websites: typically one 
 Environments would enable them to do that by **creating a safe space for testing and migrating those changes that work without problems**.
 
 Lack of this feature was also among common reasons for losing potential customers to competitors. **Solving this need would help the product be more competitive**.
+
+Why was there a clear solution from the beginning? There had been some discovery about this problem in the past but the solution never got into delivery.
+This time, the product team wanted to make it happen.
 
 ## My role
 
@@ -159,10 +163,8 @@ I recruited developers from our respondent pool and **conducted remote usability
 
 The whole study gave us several important insights:
 
-- Proved that the separate dropdown and the whole navigation worked well.
-  - Developers understood the hierarchy and navigated around the system with the new functionality without problems. The "Manage environments" shortcut in the drop-down was used by pretty much everyone to navigate to the relevant Settings section. It helped with navigation a lot.
-- "Master" didn't really work as name for the default environment.
-  - Developers associated it with a git workflow which wasn't exactly the mental model we needed here. Based on this, we later changed the name to "production" as a more appropriate term.
+- **Proved that the separate dropdown and the whole navigation worked well**: Developers understood the hierarchy and navigated around the system with the new functionality without problems. The "Manage environments" shortcut in the drop-down was used by pretty much everyone to navigate to the relevant Settings section. It helped with navigation a lot.
+- **"Master" didn't work as name for the default environment**: Developers associated it with a git workflow which wasn't exactly the mental model we needed here. Based on this, we later changed the name to "production" as a more appropriate term.
 
 There were a couple of other smaller insights into how the UI could be improved to be more intuitive. More importantly, though, we received good overall feedback and validated that the interaction design as a whole worked with only minor changes necessary.
 
@@ -221,6 +223,7 @@ This was a really technical design challenge and it was a lot of work, but we en
 - Accommodating various technical constraints
 
 The first point was especially important as this was a highly requested capability in the product and we wanted it to deliver it to the customers as soon as possible.
+
 ![Environments creation dialogue](../../assets/kontent-env-dialog.png)
 
 ---

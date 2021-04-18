@@ -16,7 +16,7 @@ function Header() {
   return (
   <header className={'fixed top-0 z-10 w-full backdrop-blur bg-gray-900 bg-opacity-0 flex-column  justify-between py-2 md:py-6 px-2 md:px-10 duration-150'}>
       <div className={'flex items-center justify-between px-4 py-2 sm:p-0 relativ'}>
-        <Link to={`/`} className={'bg-gray-900 dark:bg-white bg-opacity-0 py-1 px-2 rounded-md font-semibold tracking-tighter hover:bg-opacity-20'}>
+        <Link to={`/`} className={'bg-gray-500 dark:bg-white bg-opacity-0 py-1 px-2 rounded-md font-semibold tracking-tighter hover:bg-opacity-20'}>
             Adam Amran
         </Link>
         {/* Desktop nav */}

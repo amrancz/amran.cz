@@ -11,7 +11,7 @@
     @apply smooth-scroll duration-150;
   }
   body {
-    @apply text-base md:text-lg list-disc list-inside leading-relaxed text-gray-800 dark:text-gray-100 font-inter text-gray-800 dark:text-white duration-150;
+    @apply bg-white dark:bg-gray-900 text-base md:text-lg list-disc list-inside leading-relaxed text-gray-800 dark:text-gray-100 font-inter text-gray-800 dark:text-white duration-150;
   }
   h1 {
     @apply text-4xl md:text-5xl font-bold tracking-tighter;
@@ -27,6 +27,9 @@
   }
   a {
     @apply duration-100;
+  }
+  hr {
+    @apply border-gray-900 dark:border-white;
   }
   ul {
     @apply list-disc list-inside space-y-2;

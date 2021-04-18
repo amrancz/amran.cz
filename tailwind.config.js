@@ -1,8 +1,9 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+ // mode: 'jit',
   purge: {
-    content: ['./src/**/*.{js,jsx,ts,tsx}'],
+    content: ['./public/**/*.html','./src/**/*.{js,jsx,ts,tsx}'],
     options: {
       safelist: ['bg', 'text-green', 'from', 'to'],
       whitelist: ['green', 'yellow', 'blue', 'orange','pink','purple'],
