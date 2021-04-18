@@ -29,7 +29,7 @@ class Work extends React.Component {
                   <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative p-8 xl:p-12'}>
                     <span className={`font-medium text-${color}-200 mb-2`}>{product}</span>
                     <h3 className={'mb-8'}>{title}</h3>
-                    <Button primary={true} link={`${node.fields.slug}`} text={'Read case study'} textColor={`${color}-700`}></Button>
+                    <Button primary={true} link={`/work${node.fields.slug}`} text={'Read case study'} textColor={`${color}-700`}></Button>
                   </div>
                   <div className={'relative max-h-48 overflow-visible'}>
                     <GatsbyImage
