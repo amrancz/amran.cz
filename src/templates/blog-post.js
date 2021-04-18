@@ -73,7 +73,7 @@ export default class BlogPostTemplate extends React.Component {
         </div>
         <hr className={'opacity-10'} />
 
-        <button id="scroll-btn" className="hidden w-12 h-12 bg-gray-500 hover:bg-gray-600 fixed right-8 bottom-8 rounded-4xl" title="Scroll to top"><ArrowUpIcon className={'h-6 w-6 text-gray-900 dark:text-white mx-auto'} /></button>
+        <button id="scroll-btn" className="transition-opacity duration-200 hidden w-12 h-12 bg-gray-900 hover:bg-gray-600 fixed right-6 bottom-6 rounded-4xl" title="Scroll to top"><ArrowUpIcon className={'h-6 w-6 text-gray-900 dark:text-white mx-auto'} /></button>
 
       </Layout>
     )

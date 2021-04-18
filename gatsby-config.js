@@ -146,5 +146,6 @@ module.exports = {
     `gatsby-plugin-mdx-embed`,
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-use-dark-mode`,
+    `gatsby-plugin-smoothscroll`,
   ],
 }

@@ -1,11 +1,15 @@
 import React from 'react'
+
 import { Link, graphql } from 'gatsby'
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer} from "gatsby-plugin-mdx"
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
+
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import SEO from '../components/seo'
-import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
+
+import { ArrowUpIcon } from '@heroicons/react/outline'
 
 class CaseStudyTemplate extends React.Component {
   render() {
@@ -89,7 +93,7 @@ class CaseStudyTemplate extends React.Component {
           </MDXProvider>
         </div>
 
-        <button id="scroll-btn" className="hidden w-12 h-12 bg-gray-500 hover:bg-gray-600 fixed right-8 bottom-8 rounded-4xl" title="Scroll to top"><ArrowUpIcon className={'h-6 w-6 text-gray-900 dark:text-white mx-auto'} /></button>
+        <button id="scroll-btn" className="transition-opacity duration-200 hidden w-12 h-12 bg-gray-900 hover:bg-gray-600 fixed right-6 bottom-6 rounded-4xl" title="Scroll to top"><ArrowUpIcon className={'h-6 w-6 text-gray-900 dark:text-white mx-auto'} /></button>
 
         <Footer></Footer>
       </div>

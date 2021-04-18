@@ -12,9 +12,15 @@ class ButtonToTop {
 
     ToggleButton() {
         if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
-            document.getElementById('scroll-btn').style.display = 'block';
+          document.getElementById('scroll-btn').classList.remove('hidden');
+            setTimeout( function () {
+                document.getElementById('scroll-btn').classList.add('opacity-100');
+            }, 20)
         } else {
-            document.getElementById('scroll-btn').style.display = 'none';
+          document.getElementById('scroll-btn').classList.add('hidden');
+            setTimeout( function () {
+                document.getElementById('scroll-btn').classList.add('opacity-0');
+            }, 20)
         }
     }
 
