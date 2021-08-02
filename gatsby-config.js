@@ -147,5 +147,11 @@ module.exports = {
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-use-dark-mode`,
     `gatsby-plugin-smoothscroll`,
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `amran.cz`,
+      },
+    },
   ],
 }
