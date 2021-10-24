@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer utilities {
   .smooth-scroll {
@@ -38,9 +40,6 @@
     @apply list-decimal list-inside space-y-2;
   }
 }
-
-@tailwind components;
-@tailwind utilities;
 
 @font-face {
   font-family: 'Inter';

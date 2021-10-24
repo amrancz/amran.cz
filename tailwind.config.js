@@ -45,7 +45,4 @@ module.exports = {
   plugins: [
     require('tailwindcss-filters')
   ],
-  corePlugins: {
-    preFlight: true,
-  }
 }
