@@ -1100,7 +1100,7 @@
     "@babel/helper-validator-identifier" "^7.15.7"
     to-fast-properties "^2.0.0"
 
-"@browniebroke/gatsby-image-gallery@^7.0.1":
+"@browniebroke/gatsby-image-gallery@^7.0.3":
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/@browniebroke/gatsby-image-gallery/-/gatsby-image-gallery-7.0.3.tgz#3c034ef8b23dd7e3a1fa60b0cf2c6cab9c44aca0"
   integrity sha512-FrrFEjLWID87nmHoitUaUle0AGy+TJ19EbmRYqbE810pPwyiyrGuep+UCooMz/RVuSIwbNDZu8ieAfA4MJC7hA==

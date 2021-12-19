@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Adam Amran <adam@amran.cz>",
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "^7.0.1",
+    "@browniebroke/gatsby-image-gallery": "^7.0.3",
     "@heroicons/react": "^1.0.4",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",

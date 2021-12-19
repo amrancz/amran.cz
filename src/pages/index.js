@@ -12,17 +12,17 @@ class Index extends React.Component {
     const { data } = this.props
     const posts = data.allMdx.edges
     return (
-      <Layout location={this.props.location} width={'8xl'} spacing={'12'}>
+      <Layout location={this.props.location} width={'6xl'} spacing={'12'}>
         <SEO
           title="Adam Amran – Product Designer"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          keywords={[`product designer`, `portfolio`, `adam amran`, `blog`]}
         />
-        <div className={'flex flex-col lg:flex-row items-stretch lg:space-x-8 space-y-8 lg:space-y-0'}>
+        <div className={'flex flex-col lg:flex-row lg:space-x-6 space-y-6 lg:space-y-0'}>
 
-          <div id="column1" className={'flex-col space-y-8'}>
-            <div id="intro" className={'flex bg-gradient-to-br from-green-500 to-blue-600 text-white lg:flex-1 rounded-2xl p-6 md:p-12 space-x-4 md:space-x-6'}>
+          <div id="column1" className={'flex-col flex-1 space-y-6'}>
+            <div id="intro" className={'flex bg-gradient-to-br from-green-500 to-blue-600 text-white rounded-xl p-6 md:p-8 space-x-4 md:space-x-6'}>
               <div
-              className={'w-20 h-20 rounded-full bg-green-800 hidden lg:block'}>
+              className={'w-20 h-20 rounded-full bg-green-800 lg:block'}>
                 <StaticImage 
                   src={'../images/portraitSmall.jpg'}
                   alt='Portrait of Adam'
@@ -49,7 +49,7 @@ class Index extends React.Component {
               </div>
               
             </div>
-            <div id="writing" className={'bg-gray-700 lg:flex-1 lg:flex-grow bg-opacity-10 rounded-2xl p-6 md:p-12 space-y-6 last:space-y-0'}>
+            <div id="writing" className={'bg-gray-700 bg-opacity-10 rounded-xl p-6 md:p-8 space-y-6 last:space-y-0'}>
               <Link to={'/writing'}>
                 <h4 className={"text-gray-400 dark:text-gray-600 uppercase hover:text-gray-600 dark:hover:text-gray-400 duration-150"}>Recent writings</h4>
               </Link>
@@ -72,19 +72,19 @@ class Index extends React.Component {
             </div>
           </div>
 
-          <div id="column2" className={'flex-col space-y-8'}>
-          <div id="now" className={'bg-gray-700 lg:flex-1 lg:flex-grow bg-opacity-10 rounded-2xl p-6 md:p-12 space-y-6 last:space-y-0'}>
-              <h4 className={"text-gray-600 dark:text-gray-400 uppercase"}>What I'm up to these days</h4>
+          <div id="column2" className={'flex-col space-y-6'}>
+            <div id="now" className={'bg-gray-700 bg-opacity-10 rounded-xl p-6 md:p-8 space-y-6 last:space-y-0'}>
+              <h4 className={"text-gray-600 dark:text-gray-400 uppercase"}>Now</h4>
               <div>Designing <CustomLink link={'https://www.productboard.com'} target={"_blank"} text={`Productboard`}></CustomLink> <br /></div>
-              <div>Working on something new at <CustomLink link={'https://www.untools.co'} target={"_blank"} text={`Untools.co`}></CustomLink> <br /></div>
+              <div>Building <CustomLink link={'https://www.untools.co'} target={"_blank"} text={`Untools.co`}></CustomLink> <br /></div>
               <div>Reading TBD <br /></div>
               <div>Listening to TBD <br /></div>
 
             </div>
 
 
-            <div id="about" className={'bg-gray-700 lg:flex-1 lg:flex-grow bg-opacity-10 rounded-2xl p-6 md:p-12 space-y-6 last:space-y-0'}>
-                <h4>More about me</h4>
+            <div id="about" className={'bg-gray-700 bg-opacity-10 rounded-xl p-6 md:p-8 space-y-6 last:space-y-4'}>
+                <h4 className={"text-gray-600 dark:text-gray-400 uppercase"}>More about me</h4>
                 <p>I've been a designer for a decade.</p>
                 <Button primary={true} link={'/work'} text={'See my work'} textColor={'gray-900'}></Button>
             </div>
