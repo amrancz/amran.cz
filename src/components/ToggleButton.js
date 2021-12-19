@@ -32,8 +32,8 @@ function ToggleButton() {
         className={'p-1'} 
         onClick={darkMode.enable}
         >
-            {darkMode.value ? <SunIcon className={'h-6 w-6 text-gray-900 dark:white hover:text-gray-400'} />
-            : <MoonIcon className={'h-6 w-6 text-gray-900 dark:white hover:text-gray-400'} />
+            {darkMode.value ? <SunIcon className={'h-6 w-6 text-slate-900 dark:white hover:text-slate-400'} />
+            : <MoonIcon className={'h-6 w-6 text-slate-900 dark:white hover:text-slate-400'} />
             }
         </button>
         */
@@ -53,8 +53,8 @@ function ToggleButton(){
             className={'p-1'} 
                 onClick={toggleTheme}
             >
-                {theme === 'dark' ? <SunIcon className={'h-6 w-6 text-gray-900 dark:white hover:text-gray-400'} />
-                : <MoonIcon className={'h-6 w-6 text-gray-900 dark:white hover:text-gray-400'} />
+                {theme === 'dark' ? <SunIcon className={'h-6 w-6 text-slate-900 dark:white hover:text-slate-400'} />
+                : <MoonIcon className={'h-6 w-6 text-slate-900 dark:white hover:text-slate-400'} />
                 }
             </button>
             )}

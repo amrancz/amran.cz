@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Button from '../components/Button'
 import SEO from '../components/seo'
@@ -10,11 +10,13 @@ class Work extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} width={'8xl'} spacing={'16'}>
+      <Layout location={this.props.location} width={'6xl'} spacing={'8'}>
         <SEO
           title="Work / Adam Amran"
           keywords={[`product design`, `case studies`, `ux design`,]}
         />
+        <Link to={'/'} className={"text-slate-600 hover:text-slate-400"}>← Home</Link>
+        <h1>Work</h1>
         <div className={'flex flex-col xl:flex-row xl:items-stretch xl:space-x-8 space-y-8 xl:space-y-0'}>
         {posts.reverse().map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug

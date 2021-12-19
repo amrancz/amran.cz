@@ -21,17 +21,17 @@ class CaseStudyTemplate extends React.Component {
     const H3 = props => <h3 className='pt-4' {...props} />
     const H4 = props => <h4 className='pt-2' {...props} />
     const P = props => <p className='leading-loose' {...props} />
-    const Quote = props => <blockquote className={`bg-${post.frontmatter.color}-200 text-gray-900 tracking-tight leading-tight space-y-4 p-8 rounded-lg`} {...props} />
+    const Quote = props => <blockquote className={`text-white tracking-tight border border-slate-600 leading-tight space-y-4 p-8 rounded-lg`} {...props} />
     {/* purgecss: bg-yellow-200 bg-blue-200 */}
     const Strong = props => <strong className={`tracking-tight`} {...props} />
     const HR = props => <hr className='opacity-20 clear-both !mt-4 !md:mt-8 pb-4 md:pb-8' {...props} />
-    const A = props => <a className={`bg-gray-500 dark:bg-white bg-opacity-20 py-1 px-1 rounded-md font-medium text-gray-900 dark:text-white hover:text-white hover:bg-black hover:bg-opacity-60 duration-100`} {...props} />
+    const A = props => <a className={`bg-slate-500 dark:bg-white bg-opacity-20 py-1 px-1 rounded-md font-medium text-slate-900 dark:text-white hover:text-white hover:bg-black hover:bg-opacity-60 duration-100`} {...props} />
     {/* purgecss: text-yellow-600 text-blue-600 */}
     const Img = props => <img className='rounded-lg' {...props} />
 
     return (
       
-      <div className={'bg-white dark:bg-gray-900'}>
+      <div className={'bg-white dark:bg-slate-900'}>
         <SEO title={post.frontmatter.title} description={post.frontmatter.tite} />
         <Header></Header>
         <div>
@@ -93,7 +93,7 @@ class CaseStudyTemplate extends React.Component {
           </MDXProvider>
         </div>
 
-        <button id="scroll-btn" className="transition-opacity duration-200 hidden w-12 h-12 dark:bg-gray-900 bg-white dark:hover:bg-gray-600 hover:bg-gray-300 fixed right-6 bottom-6 rounded-4xl" title="Scroll to top"><ArrowUpIcon className={'h-6 w-6 text-gray-900 dark:text-white mx-auto'} /></button>
+        <button id="scroll-btn" className="transition-opacity duration-200 hidden w-12 h-12 dark:bg-slate-900 bg-white dark:hover:bg-slate-600 hover:bg-slate-300 fixed right-6 bottom-6 rounded-4xl" title="Scroll to top"><ArrowUpIcon className={'h-6 w-6 text-slate-900 dark:text-white mx-auto'} /></button>
 
         <Footer></Footer>
       </div>
