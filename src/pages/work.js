@@ -36,7 +36,27 @@ class Work extends React.Component {
               </div>
             </Link>
         <h1>Work</h1>
-        <div className={'flex flex-col xl:flex-row xl:items-stretch xl:space-x-8 space-y-8 xl:space-y-0'}>
+        <div className={'flex flex-wrap gap-4'}>
+        <div className={'w-full relative text-white overflow-hidden rounded-2xl flex min-w-min max-w-lg shadow-lg'}>
+            <div className={`w-full flex flex-col md:flex-row xl:flex-col border border-solid border-white border-opacity-20`}>
+              <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-12'}>
+                <span className={'font-medium text-white opacity-50 mb-2'}>Productboard (B2B Saas)</span>
+                <h3 className={'mb-8'}>Integrating Productboard with Salesforce Opportunities </h3>
+                <Button primary={true} link={'https://dribbble.com/shots/15942362-Salesforce-Opportunities-integration'} target={'_blank'} text={'See Dribbble shot'} textColor={'blue-700'}></Button>
+              </div>
+              <div className={'relative max-h-48 overflow-visible'}>
+                <StaticImage 
+                  src={'../images/pb-sfdc-opportunities.png'}
+                  alt='Untools Thumbnail'
+                  key='Untools Thumbnail'
+                  loading='eager'
+                  width={711}
+                  height={400}
+                  layout={'constrained'}
+                ></StaticImage>
+              </div>
+            </div>
+          </div>
         {posts.reverse().map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             const product = node.frontmatter.product
@@ -44,7 +64,7 @@ class Work extends React.Component {
             const thumbnail = node.frontmatter.thumbnail
             const image = getImage(data[thumbnail])
             return (
-              <div className={'w-full relative text-white overflow-hidden rounded-2xl flex shadow-lg'}>
+              <div className={'relative text-white overflow-hidden rounded-2xl min-w-min max-w-lg flex shadow-lg'}>
                 <div key={node.fields.slug}  className={`w-full flex flex-1 flex-col md:flex-row xl:flex-col bg-gradient-to-br from-${color}-500 to-${color}-700`}>
                   {/* purgecss: from-yellow-500 to-yellow-700 from-blue-500 to-blue-700 */}
                   <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative p-8 xl:p-12'}>
@@ -64,7 +84,27 @@ class Work extends React.Component {
               </div>
             )
           })}
-          <div className={'w-full relative text-white overflow-hidden rounded-2xl flex shadow-lg'}>
+          <div className={'w-full relative text-white overflow-hidden rounded-2xl flex min-w-min max-w-lg shadow-lg'}>
+            <div className={`w-full flex flex-col md:flex-row xl:flex-col border border-solid border-white border-opacity-20`}>
+              <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-12'}>
+                <span className={'font-medium text-white opacity-50 mb-2'}>Kentico Kontent (B2B Saas)</span>
+                <h3 className={'mb-8'}>New commenting experience for Kontent</h3>
+                <Button primary={true} link={'https://kontent.ai/blog/improved-commenting-experience'} target={'_blank'} text={'Read release article'} textColor={'yellow-700'}></Button>
+              </div>
+              <div className={'relative max-h-48 overflow-visible'}>
+                <StaticImage 
+                  src={'https://cdn.dribbble.com/users/7373/screenshots/10996897/media/ea7ff82de67c5869daad922975792713.png?compress=1&resize=1600x1200'}
+                  alt='Untools Thumbnail'
+                  key='Untools Thumbnail'
+                  loading='eager'
+                  width={711}
+                  height={400}
+                  layout={'constrained'}
+                ></StaticImage>
+              </div>
+            </div>
+          </div>
+          <div className={'w-full relative text-white overflow-hidden rounded-2xl flex min-w-min max-w-lg shadow-lg'}>
             <div className={`w-full flex flex-col md:flex-row xl:flex-col bg-gradient-to-br from-purple-700 to-purple-800`}>
               <div className={'sm:max-w-md sm:flex-none md:w-auto flex flex-col items-start relative z-10 p-8 xl:p-12'}>
                 <span className={'font-medium text-white opacity-50 mb-2'}>Untools (Side project)</span>

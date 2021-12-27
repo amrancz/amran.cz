@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import CustomLink from '../components/CustomLink'
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 function Spotify() {
@@ -13,24 +14,13 @@ function Spotify() {
                         const name = node.name
                         const image = getImage(node.image.localFile)
                         const link = node.external_urls.spotify
-                        console.log(image)
+
                         return (
-                            <span className={'flex flex-wrap pt-1'}>
-                                <span className={'w-6 h-6 rounded-full bg-slate-800'}>
-                                <GatsbyImage key={name} alt={`Image of ${name}`} image={image} loading='eager'
-                                    imgStyle={{
-                                        justifySelf: 'center',
-                                        textAlign: 'center',
-                                        borderRadius: '10rem',
-                                        overflow: 'hidden',
-                                        backgroundColor: 'none',
-                                      }}
-                                ></GatsbyImage>
-                                </span>
-                                <a href={link} target={'_blank'} className={"hover:text-blue-500 rounded-md duration-150 px-2 pr-4"}>
-                                {' '}{` ${name}`}
-                                </a>
+                            <span className={'flex flex-wrap mr-2 mb-2'}>
+                                <CustomLink link={link} target={'_blank'} style={'withImage'} className={"hover:text-blue-500 rounded-md duration-150 px-2 pr-4"} image={image} text={name}>
+                                </CustomLink>
                             </span>
+                            
                         )
                         })
         )
@@ -53,7 +43,7 @@ const spotifyData = graphql`query SpotifyData {
           image {
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 120)
+                gatsbyImageData(width: 24)
               }
             }
           }

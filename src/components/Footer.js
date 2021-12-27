@@ -2,7 +2,6 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import CustomLink from '../components/CustomLink'
 
-
 function Footer() {
   return(
   <StaticQuery
@@ -12,7 +11,7 @@ function Footer() {
         return (
     <footer className={'flex justify-center text-center py-8 px-12'}>
       <div>
-      © 2021  · <CustomLink link={`https://twitter.com/${social.twitter}`} target={'_blank'} style={'themeable'} text={'Twitter'}></CustomLink> · <CustomLink link={`mailto:${email}?subject=Message from amran.cz`} target={'_blank'} style={'themeable'}  text={'Email'}></CustomLink>  
+      © 2021  · <CustomLink link={`https://twitter.com/${social.twitter}`} target={'_blank'} text={'Twitter'}></CustomLink> · <CustomLink link={`mailto:${email}?subject=Message from amran.cz`} target={'_blank'} text={'Email'}></CustomLink>  
       </div>
     </footer>
         )
