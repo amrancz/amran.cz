@@ -5,7 +5,6 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer} from "gatsby-plugin-mdx"
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-import Header from '../components/Header'
 import Footer from '../components/Footer'
 import SEO from '../components/seo'
 
@@ -33,18 +32,46 @@ class CaseStudyTemplate extends React.Component {
       
       <div className={'bg-white dark:bg-slate-900'}>
         <SEO title={post.frontmatter.title} description={post.frontmatter.tite} />
-        <Header></Header>
         <div>
           <div className={'w-full relative text-white overflow-hidden flex'}>
-            <div className={`w-full flex flex-1 flex-col bg-gradient-to-t pt-32 px-8 from-${post.frontmatter.color}-500 to-${post.frontmatter.color}-600`}>
+            <div className={`w-full flex flex-1 flex-col bg-gradient-to-t pt-12 px-8 from-${post.frontmatter.color}-500 to-${post.frontmatter.color}-600`}>
              {/* purgecss: from-yellow-500 to-yellow-600 from-blue-500 to-blue-600 */}
+             
               <div className={'flex flex-col items-start relative max-w-4xl mx-auto'}>
+                <div className={'flex flex-col pb-6 space-y-4'}>
+                <Link to={'/'}>
+                  <div id="intro" className={`flex max-w-[11rem] text-${post.frontmatter.color}-200 hover:text-${post.frontmatter.color}-900 items-center rounded-xl space-x-2`}>
+                <div className={'w-5 h-5 rounded-full bg-slate-800'}>
+                  <StaticImage 
+                    src={'../images/portraitSmall.jpg'}
+                    alt='Portrait of Adam'
+                    loading='eager'
+                    imgStyle={{
+                      justifySelf: 'center',
+                      textAlign: 'center',
+                      borderRadius: '10rem',
+                      overflow: 'hidden',
+                      backgroundColor: 'none',
+                    }}
+                  ></StaticImage>
+                </div>
+                <span> Adam Amran</span>
+              </div>
+              </Link>
+                  <Link to={'/work'}>
+                    <div id="intro" className={`flex max-w-[11rem] border border-solid border-opacity-60 border-${post.frontmatter.color}-200 text-${post.frontmatter.color}-200 hover:text-${post.frontmatter.color}-900 hover:border-${post.frontmatter.color}-900 duration-150 items-center rounded-xl p-2 space-x-2`}>
+                      {/* purgecss: text-yellow-200 border-yellow-900 text-yellow-900 text-blue-200 border-blue-900 text-blue-900 */}
+                      <span>← Work</span>
+                    </div>
+                  </Link>
+                </div>
+                
+                <h1 className={'py-6'}>{post.frontmatter.title}</h1>
                 <span className={`font-medium text-${post.frontmatter.color}-200`}>{post.frontmatter.product}</span>
                 <span className={`font-medium text-${post.frontmatter.color}-200 pb-4`}>{post.frontmatter.years}</span>
                 {/* purgecss: text-yellow-200 text-blue-200 */}
-                <h1>{post.frontmatter.title}</h1>
               </div>
-              <div className={`bg-transparent pt-12`}>
+              <div className={`bg-transparent pt-4`}>
                 <div className={'flex flex-col md:flex-row space-x-0 md:space-x-12 space-y-6 md:space-y-0 relative max-w-4xl mx-auto'}>
                 <div className={'space-y-2'}>
                     <h5 className={`font-bold text-${post.frontmatter.color}-900 uppercase`}>Team</h5>

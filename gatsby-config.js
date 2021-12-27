@@ -48,6 +48,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-spotify`,
+      options: {
+        clientId: `698753a5718b45679931c2fe669574e3`,
+        clientSecret: `895126325d2f458dabe442736e04b742`,
+        refreshToken: `AQDZg-quG1dUUgVFnMoOQ8rgeyK9-YwTxPwySmluBpJa2E5bLqY3hO-UpUQSXGZD_tTRqTxE1Dh2wp2JJBOakg1J364iPZJTYvUBYcC_pokJ1vEgUOqk1urmNQ8oSyI_JKA`,
+    
+        fetchPlaylists: false, // optional. Set to false to disable fetching of your playlists
+        fetchRecent: true, // optional. Set to false to disable fetching of your recently played tracks
+        timeRanges: ['short_term', 'medium_term', 'long_term'], // optional. Set time ranges to be fetched
+      },
+    },
+    {
       resolve: 'gatsby-plugin-netlify',
       options: {
         headers: {

@@ -10,12 +10,31 @@ class Work extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} width={'6xl'} spacing={'8'}>
+      <Layout location={this.props.location} width={'6xl'} spacing={'12'}>
         <SEO
           title="Work / Adam Amran"
           keywords={[`product design`, `case studies`, `ux design`,]}
         />
-        <Link to={'/'} className={"text-slate-600 hover:text-slate-400"}>← Home</Link>
+        <Link to={'/'}>
+              <div id="intro" className={'flex max-w-[11rem] border border-solid border-slate-700 text-slate-600 hover:text-slate-400 transition-150 items-center rounded-xl p-2 space-x-2'}>
+                <span>←</span>
+                <div className={'w-5 h-5 rounded-full bg-slate-800'}>
+                  <StaticImage 
+                    src={'../images/portraitSmall.jpg'}
+                    alt='Portrait of Adam'
+                    loading='eager'
+                    imgStyle={{
+                      justifySelf: 'center',
+                      textAlign: 'center',
+                      borderRadius: '10rem',
+                      overflow: 'hidden',
+                      backgroundColor: 'none',
+                    }}
+                  ></StaticImage>
+                </div>
+                <span> Adam Amran</span>
+              </div>
+            </Link>
         <h1>Work</h1>
         <div className={'flex flex-col xl:flex-row xl:items-stretch xl:space-x-8 space-y-8 xl:space-y-0'}>
         {posts.reverse().map(({ node }) => {
