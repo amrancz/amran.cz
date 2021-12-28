@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-
 function CustomLink({ link, target, text, style, image }) {
   if (style==='withImage'){
     return (

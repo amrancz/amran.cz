@@ -27,7 +27,7 @@ export default class BlogPostTemplate extends React.Component {
     const H4 = props => <h4 className='pt-2' {...props} />
     const P = props => <p className='leading-loose' {...props} />
     const HR = props => <hr className='opacity-20 clear-both !mt-4 pb-4 md:pb-8' {...props} />
-    const A = props => <a className={'bg-slate-500 dark:bg-white bg-opacity-20 py-1 px-1 rounded-md font-medium text-slate-900 dark:text-white hover:text-white hover:bg-black hover:bg-opacity-60 duration-100'} {...props} />
+    const A = props => <a className={'bg-slate-500 dark:bg-slate-700 bg-opacity-20 py-1 px-1 rounded-md font-medium text-slate-900 dark:text-white hover:text-white hover:bg-slate-600 duration-100 items-center'} {...props} />
     const nextArticle = recommendArticle(allBlogPosts).node
 
     return (
@@ -62,7 +62,7 @@ export default class BlogPostTemplate extends React.Component {
             <h4 className={"text-slate-400 dark:text-slate-600 uppercase"}>Read next</h4>
             <div key={nextArticle.fields.slug} className={'pt-2 space-y-1'}>
               <Link to={`/writing${nextArticle.fields.slug}`}>
-                <h3 className={"hover:text-slate-400 rounded-md duration-150"}>
+                <h3 className={"hover:text-blue-400 rounded-md duration-150"}>
                     {nextArticle.frontmatter.title}
                 </h3>
               </Link>
@@ -73,7 +73,7 @@ export default class BlogPostTemplate extends React.Component {
         </div>
         <hr className={'opacity-10'} />
 
-        <button id="scroll-btn" className="transition-opacity duration-200 hidden w-12 h-12 dark:bg-slate-900 bg-white dark:hover:bg-slate-600 hover:bg-slate-300 fixed right-6 bottom-6 rounded-4xl" title="Scroll to top"><ArrowUpIcon className={'h-6 w-6 text-slate-900 dark:text-white mx-auto'} /></button>
+        <button id="scroll-btn" className="transition-opacity duration-200 hidden w-12 h-12 dark:bg-white/10 bg-black/20 dark:hover:bg-slate-600 hover:bg-slate-300 fixed right-6 bottom-6 rounded-4xl" title="Scroll to top"><ArrowUpIcon className={'h-6 w-6 text-slate-900 dark:text-white mx-auto'} /></button>
 
       </Layout>
     )
