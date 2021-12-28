@@ -17,7 +17,7 @@ class WritingIndex extends React.Component {
         <div className={'flex flex-col space-y-8'}>
           <div className={'bg-opacit-0 text-slate-900 dark:text-white flex-1 rounded-2xl  space-y-12'}>
             <Link to={'/'}>
-              <div id="intro" className={'flex max-w-[11rem] border border-solid border-slate-700 text-slate-600 hover:text-slate-400 duration-150 items-center rounded-xl p-2 space-x-2'}>
+              <div id="intro" className={'flex max-w-[11rem] border border-solid border-slate-300 dark:border-slate-700 font-medium text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400 duration-150 items-center rounded-xl p-2 space-x-2'}>
                 <span>←</span>
                 <div className={'w-5 h-5 rounded-full bg-slate-800'}>
                   <StaticImage 

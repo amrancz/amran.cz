@@ -52,7 +52,7 @@ module.exports = {
       options: {
         clientId: `698753a5718b45679931c2fe669574e3`,
         clientSecret: `895126325d2f458dabe442736e04b742`,
-        refreshToken: `AQDOAfM6DwRTMlNxbIcM-N2aqw5UZilxxfe9YOBIwJc54a_jJZHBLjgSxUo5IVqOQ7QEGqo6DMwGfq752DLeykJlN1CSTAIsUvmz31AduQsL6AXCCsJ_SDfpyUSdqU8O2qM`,
+        refreshToken: `AQDLlR3U4g6VPSuycrfiZF4ZDpgdtKiYXALl_a29HvJR87ZGiPlBHSqA5yGaxfmVfhkGYtZvafVSawV8RVcIzRspxDo38oXmAci1vWUlQKea6Cfjt_ZpqPPWzFpzx-yROVg`,
     
         fetchPlaylists: false, // optional. Set to false to disable fetching of your playlists
         fetchRecent: true, // optional. Set to false to disable fetching of your recently played tracks
@@ -80,6 +80,14 @@ module.exports = {
         quality: 100,
         wrapperStyle: 'border-radius: 12px; margin-top: 8px; margin-bottom: 8px'
       },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /images/
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-mdx`,

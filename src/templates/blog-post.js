@@ -36,7 +36,7 @@ export default class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} />
           <div className={'px-0 md:px-12 space-y-8 pb-8'}>
             <div className={'space-y-6'}>
-            <div className={'flex flex-row pb-6 items-center space-x-4'}>
+            <div className={'flex flex-row pb-6 items-center font-medium  space-x-4'}>
               <Link to={'/'}>
                 <div id="intro" className={'flex max-w-[11rem] text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400 items-center rounded-xl space-x-2'}>
               <div className={'w-5 h-5 rounded-full bg-slate-800'}>

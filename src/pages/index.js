@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Button from '../components/Button'
 import Layout from '../components/Layout'
 import Spotify from '../components/Spotify'
 import SEO from '../components/seo'
 import CustomLink from '../components/CustomLink'
 import { StaticImage } from 'gatsby-plugin-image'
+import LogoPB from '../images/logoPB.svg'
+import LogoKontent from '../images/logoKontent.svg'
+import LogoGrason from '../images/logoGrason.svg'
 
 class Index extends React.Component {
   render() {
@@ -46,44 +48,25 @@ class Index extends React.Component {
 
             <div>
               <a href={'/work'}>
-                <div className={"flex flex-row border opacity-50 hover:opacity-100 border border-solid border-slate-400 dark:border-slate-500 text-slate-600 dark:text-slate-400 hover:text-white hover:bg-gradient-to-br hover:from-indigo-500 hover:to-sky-600 hover:border-opacity-0 duration-650 ease-in shadow-md dark:shadow-lg items-center justify-between transition-all rounded-xl px-8 py-6"}>
+                <div className={"flex flex-row border bg-white dark:bg-opacity-0 border border-solid border-slate-200 dark:border-slate-500 text-slate-400 dark:text-slate-500 hover:text-white hover:bg-gradient-to-br hover:from-indigo-500 hover:to-sky-600 hover:border-opacity-0 duration-650 ease-in shadow-md dark:shadow-lg items-center justify-between transition-all rounded-xl px-6 md:px-8 py-6"}>
                   <h4 className={"uppercase"}>Discover my work →</h4>
-                  <div className={"flex flex-row gap-2 hidden"}>
-                    <span className={'w-10 h-10 rounded-full bg-white p-2'}>
-                      <StaticImage 
-                      src={'https://www.productboard.com/wp-content/themes/productboard/public/img/favicons/favicon-32x32.png'}
-                      alt='Portrait of Adam'
-                      loading='eager'
-                      imgStyle={{
-                        justifySelf: 'center',
-                        textAlign: 'center',
-                        borderRadius: '10rem',
-                        overflow: 'hidden',
-                        backgroundColor: 'white',
-                      }}
-                      ></StaticImage> 
+                  <div className={"flex flex-row gap-2"}>
+                    <span className={'flex items-center justify-center w-10 h-10 rounded-full'}>
+                      <LogoPB></LogoPB>
                     </span>
-                    <span className={'w-10 h-10 rounded-full bg-white p-2'}>
-                      <StaticImage 
-                      src={'https://www.productboard.com/wp-content/themes/productboard/public/img/favicons/favicon-32x32.png'}
-                      alt='Portrait of Adam'
-                      loading='eager'
-                      imgStyle={{
-                        justifySelf: 'center',
-                        textAlign: 'center',
-                        borderRadius: '10rem',
-                        overflow: 'hidden',
-                        backgroundColor: 'white',
-                      }}
-                      ></StaticImage> 
+                    <span className={'flex items-center justify-center w-10 h-10 rounded-full'}>
+                      <LogoKontent></LogoKontent>
                     </span>
-                    <span className={'p-2 text-slate-100 font-medium'}>+ more</span>
+                    <span className={'flex items-center justify-center w-10 h-10 rounded-full'}>
+                      <LogoGrason></LogoGrason>
+                    </span>
+                    
                   </div>
                 </div>
               </a>
             </div>
 
-            <div id="writing" className={'bg-slate-100 dark:bg-slate-800 dark:highlight-white/5 shadow-md dark:shadow-lg rounded-xl p-6 md:p-8 space-y-6'}>
+            <div id="writing" className={'border border-solid border-slate-200 dark:border-opacity-0 bg-slate-100 dark:bg-slate-800 dark:highlight-white/5 shadow-md dark:shadow-lg rounded-xl p-6 md:p-8 space-y-6'}>
               <Link to={'/writing'}>
                 <h4 className={"text-slate-400 dark:text-slate-500 uppercase hover:text-sky-600 dark:hover:text-sky-500 duration-150"}>Writing →</h4>
               </Link>
@@ -107,15 +90,15 @@ class Index extends React.Component {
           </div>
 
           <div id="column2" className={'flex-col basis-2/5 space-y-6'}>
-            <div id="now" className={'bg-slate-100 dark:bg-slate-800 dark:highlight-white/5 shadow-md dark:shadow-lg rounded-xl p-6 md:p-8 space-y-6 last:space-y-0'}>
+            <div id="now" className={'border border-solid border-slate-200 dark:border-opacity-0 bg-slate-100 dark:bg-slate-800 dark:highlight-white/5 shadow-md dark:shadow-lg rounded-xl p-6 md:p-8 space-y-6 last:space-y-0'}>
               <div class={'flex space-x-2 items-center'}>
-                <div class={'w-2 h-2 rounded-xl block bg-green-600 animate-pulse'}></div>
+                <div class={'w-2 h-2 rounded-xl block bg-green-600 animate-pulse ml-1'}></div>
                 <h4 className={"flex-col text-slate-400 dark:text-slate-500 uppercase"}>Now</h4>
               </div>
-              <div className={'text-slate-400'}><span className={'text-slate-400'}>{`👨‍💻 Designing: `} </span> <CustomLink link={'https://www.productboard.com'} target={"_blank"} text={`Productboard`}></CustomLink> <br /></div>
-              <div className={'text-slate-400'}><span className={'text-slate-400'}>{`🧠 Building: `} </span> <CustomLink link={'https://www.untools.co'} target={"_blank"} text={`Untools.co`}></CustomLink> <br /></div>
+              <div><span className={'text-slate-500 dark:text-slate-400'}>{`👨‍💻 Designing `} </span> <CustomLink link={'https://www.productboard.com'} target={"_blank"} text={`Productboard`}></CustomLink> <br /></div>
+              <div><span className={'text-slate-500 dark:text-slate-400'}>{`🧠 Building `} </span> <CustomLink link={'https://www.untools.co'} target={"_blank"} text={`Untools.co`}></CustomLink> <br /></div>
               <span className={'flex flex-wrap gap-2'}>
-                      <span className={'text-slate-400'}>{`📚 Reading: `} </span>
+                      <span className={'text-slate-500 dark:text-slate-400'}>{`📚 Reading `} </span>
                       <div className={'flex flex-wrap gap-2 pl-6'}>
                       <span><CustomLink link={'https://www.goodreads.com/book/show/58046715-continuous-discovery-habits'} target={'_blank'} className={"hover:text-sky-500 rounded-md duration-150 "}
                       text={`'Continuous Discovery Habits' by Teresa Torres`}></CustomLink></span> 
@@ -124,13 +107,13 @@ class Index extends React.Component {
                       </div>
                 </span>
               <div className={'flex flex-col gap-2'}>
-                <span className={'text-slate-400'}>{`🎧 Listening to: `} <br/> </span>
+                <span className={'text-slate-500 dark:text-slate-400'}>{`🎧 Listening to `} <br/> </span>
                 <p className={'flex flex-wrap pl-6'}> <Spotify></Spotify> </p>
               </div>
               
             </div>
 
-            <div id="about" className={'border border-solid border-slate-300 dark:border-slate-700 shadow-md dark:shadow-lg rounded-xl p-6 md:p-8 space-y-6'}>
+            <div id="about" className={'border border-solid border-slate-200 dark:border-slate-700 shadow-md dark:shadow-lg rounded-xl p-6 md:p-8 space-y-6'}>
                 <h4 className={"text-slate-400 dark:text-slate-500 uppercase"}>More about me</h4>
                 <div className={"space-y-4 text-slate-600 dark:text-slate-300"}>
                   <p>Since 2011, I have been designing digital products: SaaS, mobile apps, e-commerce and websites. </p>
