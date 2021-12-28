@@ -17,7 +17,7 @@ function Spotify() {
 
                         return (
                             <span className={'flex flex-wrap mr-2 mb-2'}>
-                                <CustomLink link={link} target={'_blank'} style={'withImage'} className={"hover:text-blue-500 rounded-md duration-150 px-2 pr-4"} image={image} text={name}>
+                                <CustomLink link={link} target={'_blank'} style={'withImage'} className={"hover:text-sky-500 rounded-md duration-150 px-2 pr-4"} image={image} text={name}>
                                 </CustomLink>
                             </span>
                             

@@ -52,7 +52,7 @@ module.exports = {
       options: {
         clientId: `698753a5718b45679931c2fe669574e3`,
         clientSecret: `895126325d2f458dabe442736e04b742`,
-        refreshToken: `AQBmirySuZ8GIn3K9ZMuPOkAZlneEqzs-21Chn1ehHjA8H1Hrhx7GHzN8r2IDoIKcRWU_r6gTRMohiLD51JlZYWYp5F8Ukki0epGmCf65m8z20cdTpUBROovOhHOc2cBrkY`,
+        refreshToken: `AQDOAfM6DwRTMlNxbIcM-N2aqw5UZilxxfe9YOBIwJc54a_jJZHBLjgSxUo5IVqOQ7QEGqo6DMwGfq752DLeykJlN1CSTAIsUvmz31AduQsL6AXCCsJ_SDfpyUSdqU8O2qM`,
     
         fetchPlaylists: false, // optional. Set to false to disable fetching of your playlists
         fetchRecent: true, // optional. Set to false to disable fetching of your recently played tracks

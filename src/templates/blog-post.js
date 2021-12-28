@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer} from "gatsby-plugin-mdx"
 import BlogFooter from '../components/BlogFooter'
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
@@ -33,9 +34,34 @@ export default class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location}  width={'3xl'} spacing={'8'}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <div className={'px-0 md:px-12 space-y-8 pb-8'}>
-          <div className={'space-y-6'}>
-            <Link to={'/writing'} className={"text-slate-600 hover:text-slate-400"}>← Writing</Link>
+          <div className={'px-0 md:px-12 space-y-8 pb-8'}>
+            <div className={'space-y-6'}>
+            <div className={'flex flex-row pb-6 items-center space-x-4'}>
+              <Link to={'/'}>
+                <div id="intro" className={'flex max-w-[11rem] text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400 items-center rounded-xl space-x-2'}>
+              <div className={'w-5 h-5 rounded-full bg-slate-800'}>
+                <StaticImage 
+                  src={'../images/portraitSmall.jpg'}
+                  alt='Portrait of Adam'
+                  loading='eager'
+                  imgStyle={{
+                    justifySelf: 'center',
+                    textAlign: 'center',
+                    borderRadius: '10rem',
+                    overflow: 'hidden',
+                    backgroundColor: 'none',
+                  }}
+                ></StaticImage>
+              </div>
+              <span> Adam Amran</span>
+            </div>
+              </Link>
+              <Link to={'/writing'}>
+                <div id="intro" className={'flex max-w-[6rem] border border-solid border-slate-300 dark:border-slate-700 text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400 duration-150 items-center rounded-xl p-2 space-x-2'}>
+                  <span>← Writing</span>
+                </div>
+              </Link>
+            </div>
               <h1 className={'leading-none'}>{post.frontmatter.title}</h1>
               <p className={'text-slate-600'}>
                 {post.frontmatter.date}
@@ -62,7 +88,7 @@ export default class BlogPostTemplate extends React.Component {
             <h4 className={"text-slate-400 dark:text-slate-600 uppercase"}>Read next</h4>
             <div key={nextArticle.fields.slug} className={'pt-2 space-y-1'}>
               <Link to={`/writing${nextArticle.fields.slug}`}>
-                <h3 className={"hover:text-blue-400 rounded-md duration-150"}>
+                <h3 className={"hover:text-sky-400 rounded-md duration-150"}>
                     {nextArticle.frontmatter.title}
                 </h3>
               </Link>

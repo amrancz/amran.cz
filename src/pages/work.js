@@ -23,7 +23,7 @@ class Work extends React.Component {
           keywords={[`product design`, `case studies`, `ux design`,]}
         />
         <Link to={'/'}>
-            <div id="intro" className={'flex max-w-[11rem] border border-solid border-slate-700 text-slate-600 hover:text-slate-400 transition-150 items-center rounded-xl p-2 space-x-2'}>
+            <div id="intro" className={'flex max-w-[11rem] border border-solid border-slate-300 dark:border-slate-700 text-slate-400 dark:text-slate-600 hover:text-slate-600 dark:hover:text-slate-400 duration-150 items-center rounded-xl p-2 space-x-2'}>
               <span>←</span>
               <div className={'w-5 h-5 rounded-full bg-slate-800'}>
                 <StaticImage 
