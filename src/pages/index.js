@@ -100,10 +100,8 @@ class Index extends React.Component {
               <span className={'flex flex-wrap gap-2'}>
                       <span className={'text-slate-500 dark:text-slate-400'}>{`📚 Reading `} </span>
                       <div className={'flex flex-wrap gap-2 pl-6'}>
-                      <span><CustomLink link={'https://www.goodreads.com/book/show/58046715-continuous-discovery-habits'} target={'_blank'} className={"hover:text-sky-500 rounded-md duration-150 "}
-                      text={`'Continuous Discovery Habits' by Teresa Torres`}></CustomLink></span> 
-                      <span><CustomLink link={'https://www.goodreads.com/book/show/50261264-slep-skvrny'} target={'_blank'} className={"hover:text-sky-500 rounded-md duration-150"}
-                      text={`'Slepé skvrny' by Daniel Prokop`}></CustomLink></span>
+                      <span><CustomLink link={'https://www.goodreads.com/book/show/53503835-the-art-of-doing-science-and-engineering'} target={'_blank'} className={"hover:text-sky-500 rounded-md duration-150 "}
+                      text={`'The Art of Doing Science and Engineering: Learning to Learn' by Richard Hamming`}></CustomLink></span> 
                       </div>
                 </span>
               <div className={'flex flex-col gap-2'}>
